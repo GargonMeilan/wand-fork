@@ -49,6 +49,9 @@ services:
       - wand
     links:
       - dash:dash
+    depends_on:
+      websocket:
+        condition: service_started
     volumes:
       - ./www:/usr/share/nginx/html
       - ./legacy-media:/usr/share/nginx/legacy
@@ -87,6 +90,21 @@ services:
     labels:
       net.unraid.docker.webui: http://[IP]:[PORT:${WEB_PORT}]
       net.unraid.docker.icon: https://raw.githubusercontent.com/solero/wand/refs/heads/master/icons/houdini.png
+  websocket:
+    build: ./websocket
+    restart: always
+    environment:
+      WEB_LEGACY_PLAY: ${WEB_LEGACY_PLAY}
+      GAME_LOGIN_PORT: ${GAME_LOGIN_PORT}
+    networks:
+      - wand
+    read_only: true
+    tmpfs:
+      - /tmp:size=1m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
   houdini_login:
     build: ./houdini
     restart: always

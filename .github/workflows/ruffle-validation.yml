@@ -1,0 +1,22 @@
+name: Ruffle validation
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: docker compose config --quiet
+      - run: docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
+      - run: node --test tests/legacy-player.test.cjs
+      - run: pip install -r websocket/requirements.txt websocket-client==1.9.0
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: docker build -t wand-websocket-test websocket
+      - run: sh tests/check-nginx.sh

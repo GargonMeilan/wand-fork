@@ -1,2 +1,5 @@
 /.data/
 /.redis/
+/.validation/
+**/node_modules/
+**/__pycache__/

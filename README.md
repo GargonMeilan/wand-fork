@@ -2,6 +2,10 @@
 
 Wand makes it easy to configure dash, houdini and a media server utilizing docker & docker-compose.
 
+Legacy now uses a locally hosted, pinned Ruffle runtime and a WebSocket/TCP
+bridge. See [Ruffle and Dokploy deployment](docs/ruffle.md) for HTTPS domains,
+configuration, validation, limitations and rollback. Vanilla keeps its Flash client.
+
 > [!NOTE]
 > This can also be ran on Windows using WSL.
 

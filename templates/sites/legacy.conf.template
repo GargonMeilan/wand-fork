@@ -1,26 +1,50 @@
 server {
-    server_name {{ (parseUrl .Env.WEB_LEGACY_PLAY).Host }};
+    server_name {{ (parseUrl .Env.WEB_LEGACY_PLAY).Hostname }};
 
+    location ^~ /__wand/ruffle/ {
+        alias /opt/wand/ruffle/;
+        add_header X-Content-Type-Options nosniff always;
+    }
+
+    location ~ ^/__wand/ws/(login|blizzard|glaciar|avalanche|yeti)$ {
+        # Compare the full public origin, including scheme and optional port.
+        if ($http_origin != "{{ (parseUrl .Env.WEB_LEGACY_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_LEGACY_PLAY).Host }}") {
+            return 403;
+        }
+        resolver 127.0.0.11 valid=10s;
+        set $socket_backend websocket:8080;
+        proxy_pass http://$socket_backend/?token=$1;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Origin $http_origin;
+        proxy_buffering off;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
+    # Root assets (/css, /scripts, /images) are referenced by the original HTML.
+    root /usr/share/nginx/legacy/play;
+    location / {
+        index index.html index.htm;
+    }
     {{ if (parseUrl .Env.WEB_LEGACY_PLAY).Path }}
-    location {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }} {
-        root /usr/share/nginx/legacy/;
+    location {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }}/ {
+        alias /usr/share/nginx/legacy/play/;
         index index.html index.htm;
     }
-    location / {
-        root /usr/share/nginx/legacy/{{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }};
-        index index.html index.htm;
+    location = {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }} {
+        return 301 {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }}/;
     }
-    location {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Path }} {
-        root /usr/share/nginx/legacy/;
-        index index.html index.htm;
+    {{ end }}
+
+    # boots.swf requests its first loader at the media origin's /play/v2/.
+    location ^~ /play/v2/ {
+        alias /usr/share/nginx/legacy/media/play/v2/;
     }
-    location {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }}/v2 {
-        root /usr/share/nginx/legacy/media/;
-    }
-    {{ else }}
-    location / {
-        root   /usr/share/nginx/legacy/play;
-        index  index.html index.htm;
+    {{ if eq (parseUrl .Env.WEB_LEGACY_PLAY).Host (parseUrl .Env.WEB_LEGACY_MEDIA).Host }}
+    location {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Path }}/ {
+        alias /usr/share/nginx/legacy/media/;
     }
     {{ end }}
 
@@ -50,12 +74,20 @@ server {
 
 }
 
+{{ if ne (parseUrl .Env.WEB_LEGACY_PLAY).Host (parseUrl .Env.WEB_LEGACY_MEDIA).Host }}
 server {
-    server_name  {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Host }};
+    server_name {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Hostname }};
+    add_header Access-Control-Allow-Origin "{{ (parseUrl .Env.WEB_LEGACY_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_LEGACY_PLAY).Host }}" always;
+    add_header Vary Origin always;
 
+    root /usr/share/nginx/legacy/media;
     location / {
-        root   /usr/share/nginx/legacy/media;
-        index  index.html index.htm;
+        index index.html index.htm;
     }
-
+    {{ if (parseUrl .Env.WEB_LEGACY_MEDIA).Path }}
+    location {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Path }}/ {
+        alias /usr/share/nginx/legacy/media/;
+    }
+    {{ end }}
 }
+{{ end }}

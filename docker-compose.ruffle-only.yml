@@ -1,0 +1,23 @@
+# Optional production overlay for Dokploy HTTPS domains. Compose >= 2.24.4.
+# Keep the original project name and working directory to preserve data mounts.
+services:
+  web:
+    ports: !reset []
+  db:
+    ports: !reset []
+  redis:
+    ports: !reset []
+  houdini_login:
+    ports: !reset []
+  houdini_blizzard:
+    ports: !reset []
+  houdini_glaciar:
+    ports: !reset []
+  houdini_avalanche:
+    ports: !reset []
+  houdini_yeti:
+    ports: !reset []
+  dash:
+    ports: !reset []
+  snowflake:
+    ports: !reset []
