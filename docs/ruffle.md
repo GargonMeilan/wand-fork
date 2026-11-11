@@ -1,4 +1,4 @@
-# Legacy con Ruffle y Dokploy
+# Ruffle y Dokploy
 
 ## Alcance y arquitectura
 
@@ -21,7 +21,8 @@ Navegador -- HTTPS/WSS --> Traefik de Dokploy -- HTTP/WS --> web:80
 Wand conserva PostgreSQL, Redis, Houdini, Dash y Snowflake. La base de datos no
 cambia. Dash sigue atendiendo registro, activación y administración por las rutas
 Nginx existentes; Snowflake corresponde a Card-Jitsu Snow/Vanilla, fuera de esta
-integración. Vanilla conserva su HTML Flash. Los puertos TCP internos se
+integración. Vanilla conserva su página original y usa un adaptador Ruffle;
+consulta [Vanilla / AS3](vanilla.md). Los puertos TCP internos se
 conservan. El Compose base no publica puertos del host; para acceso directo y
 clientes Flash externos añade `docker-compose.direct.yml` al archivo base.
 

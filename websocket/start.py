@@ -9,6 +9,13 @@ def configuration(environment):
     if play.scheme not in ("http", "https") or not play.hostname or play.username or play.password:
         raise ValueError("WEB_LEGACY_PLAY must be an absolute HTTP(S) URL without credentials")
     origin = f"{play.scheme}://{play.netloc}"
+    if environment.get("WEB_VANILLA_PLAY"):
+        vanilla = urlsplit(environment["WEB_VANILLA_PLAY"])
+        if vanilla.scheme not in ("http", "https") or not vanilla.hostname or vanilla.username or vanilla.password:
+            raise ValueError("WEB_VANILLA_PLAY must be an absolute HTTP(S) URL without credentials")
+        vanilla_origin = f"{vanilla.scheme}://{vanilla.netloc}"
+        if vanilla_origin != origin:
+            origin += " " + vanilla_origin
     port = int(environment.get("GAME_LOGIN_PORT", "6112"))
     if not 1 <= port <= 65535:
         raise ValueError("GAME_LOGIN_PORT must be between 1 and 65535")

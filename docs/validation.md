@@ -1,5 +1,21 @@
 # Validación de Ruffle — 11 de noviembre de 2026
 
+## Ampliación Vanilla / AS3
+
+- Seis pruebas Node y seis Python correctas, incluidos FlashVars/callback de
+  Vanilla, HTTPS/WSS y allowlist explícito de ambos clientes.
+- Chromium 141 con el HTML, scripts, CSS y SWF originales de Vanilla: formulario
+  de login visible; `club_penguin.swf`, `environment_data.xml`, world, shell,
+  módulos AS2 y `servers.xml` cargados, sin recursos fallidos ni errores en la
+  prueba final. Captura e informe en `.validation/vanilla-*` (ignorados por Git).
+- Corrección del proxy Legacy de registro en host de juego y medios hacia la
+  ruta canónica de Dash. Se añade a la prueba Docker la conservación del POST
+  y su cuerpo. Falta confirmar el error original en producción con sus logs.
+- Nginx y el recorrido de proxies ampliados están preparados para ambos
+  clientes y se ejecutan en el workflow de esta ampliación.
+- Pendientes login real, selección de servidor y sala. No se ha modificado la
+  instalación de producción. Detalles en [vanilla.md](vanilla.md).
+
 ## Ejecutado en desarrollo (Windows)
 
 - `docker compose config --quiet`: correcto para el archivo base y para la

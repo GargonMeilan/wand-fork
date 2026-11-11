@@ -1,10 +1,44 @@
 server {
-    server_name  {{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }};
+    server_name  {{ (parseUrl .Env.WEB_VANILLA_PLAY).Hostname }};
 
-    location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
-        root   /usr/share/nginx/vanilla/play/;
-        index  index.html index.htm;
+    location ^~ /__wand/ruffle/ {
+        alias /opt/wand/ruffle/;
+        add_header X-Content-Type-Options nosniff always;
     }
+
+    location ~ ^/__wand/ws/(login|blizzard|glaciar|avalanche|yeti)$ {
+        # Compare the full public origin, including scheme and optional port.
+        if ($http_origin != "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}") {
+            return 403;
+        }
+        resolver 127.0.0.11 valid=10s;
+        set $socket_backend websocket:8080;
+        proxy_pass http://$socket_backend/?token=$1;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Origin $http_origin;
+        proxy_buffering off;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
+    root /usr/share/nginx/vanilla/play;
+    location / { index index.html index.htm; }
+    {{ if (parseUrl .Env.WEB_VANILLA_PLAY).Path }}
+    location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
+        alias /usr/share/nginx/vanilla/play/;
+        index index.html index.htm;
+    }
+    {{ end }}
+    {{ if eq (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
+    location {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/ {
+        alias /usr/share/nginx/vanilla/media/;
+    }
+    {{ end }}
+
+    # Historic Disney analytics is not a game service.
+    location = /datatech/serverlog/v1/json { return 204; }
 
     location ~ ^/(.*)/penguin/create {
         proxy_pass http://dash:3000/create/vanilla/$1;
@@ -114,13 +148,23 @@ server {
 
 }
 
+{{ if ne (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
 server {
-    server_name  {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Host }};
+    server_name  {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Hostname }};
+
+    add_header Access-Control-Allow-Origin "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}" always;
+    add_header Vary Origin always;
 
     location / {
         root   /usr/share/nginx/vanilla/media;
         index  index.html index.htm;
     }
+
+    {{ if (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}
+    location {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/ {
+        alias /usr/share/nginx/vanilla/media/;
+    }
+    {{ end }}
 
     location /social/autocomplete/v2/search/suggestions {
         proxy_pass http://dash:3000/autocomplete;
@@ -130,3 +174,5 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
+
+{{ end }}

@@ -49,7 +49,7 @@ server {
     {{ end }}
 
     location /create_account/create_account.php {
-        proxy_pass http://dash:3000/create/legacy;
+        proxy_pass http://dash:3000/create/legacy/;
         proxy_redirect off;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -79,6 +79,14 @@ server {
     server_name {{ (parseUrl .Env.WEB_LEGACY_MEDIA).Hostname }};
     add_header Access-Control-Allow-Origin "{{ (parseUrl .Env.WEB_LEGACY_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_LEGACY_PLAY).Host }}" always;
     add_header Vary Origin always;
+
+    # XMLSocket client modules can resolve this absolute path on the media host.
+    location = /create_account/create_account.php {
+        proxy_pass http://dash:3000/create/legacy/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
 
     root /usr/share/nginx/legacy/media;
     location / {

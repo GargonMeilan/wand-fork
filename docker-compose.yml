@@ -89,6 +89,7 @@ services:
     restart: always
     environment:
       WEB_LEGACY_PLAY: ${WEB_LEGACY_PLAY}
+      WEB_VANILLA_PLAY: ${WEB_VANILLA_PLAY}
       GAME_LOGIN_PORT: ${GAME_LOGIN_PORT}
     networks:
       - wand

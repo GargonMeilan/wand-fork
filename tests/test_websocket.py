@@ -34,6 +34,12 @@ class ProxyTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test", "GAME_LOGIN_PORT": "0"})
 
+    def test_vanilla_origin_is_explicitly_allowed(self):
+        origins, _ = proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test", "WEB_VANILLA_PLAY": "https://play.example.test/es"})
+        self.assertEqual(origins.split(), ["https://old.example.test", "https://play.example.test"])
+        with self.assertRaises(ValueError):
+            proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test", "WEB_VANILLA_PLAY": "ftp://play.example.test"})
+
     def exchange(self, origin, token="login", reject=False):
         with socket.socket() as target, tempfile.TemporaryDirectory() as tmp:
             target.bind(("127.0.0.1", 0))
