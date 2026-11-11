@@ -27,9 +27,15 @@ MIME WASM en cinco escenarios. También repitió correctamente las pruebas Node 
 Python y la validación de ambos Compose. No se pudo ejecutar Docker localmente:
 el CLI está instalado pero no hay motor accesible/iniciado.
 
-Se añadió además `tests/check-proxy-chain.py` para verificar la cadena completa
-Nginx -> Websockify -> TCP con los cinco destinos, bajo las restricciones del
-contenedor de producción y sin base de datos. Pendiente del siguiente workflow.
+El [segundo workflow](https://github.com/GargonMeilan/wand-fork/actions/runs/43049718521)
+también terminó **correctamente**, incluida `tests/check-proxy-chain.py`: cadena
+completa Nginx -> Websockify -> TCP con los cinco destinos, mensajes binarios y
+rechazo de origen, bajo las restricciones del contenedor de producción y sin
+base de datos.
+
+`scripts/prepare-sources.sh` se ejecutó correctamente con los cinco submódulos
+en sus commits fijados. El checkout local de Vanilla requirió recuperar un fallo
+de permisos de Git en Windows; no se cambió su URL, commit ni código versionado.
 
 ## Pendiente de integración real
 
