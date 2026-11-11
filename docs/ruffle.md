@@ -193,6 +193,7 @@ node --test tests/legacy-player.test.cjs
 pip install -r websocket/requirements.txt websocket-client==1.9.0
 python -m unittest discover -s tests -p 'test_*.py' -v
 sh tests/check-nginx.sh
+python tests/check-proxy-chain.py
 ```
 
 Las primeras cuatro pruebas cubren las opciones Ruffle, los cinco sockets,
@@ -206,6 +207,9 @@ reales dominios distintos, prefijos de rutas, host compartido, rollback Flash y
 reCAPTCHA; comprueba también rutas SWF/JS y MIME WASM. Usa contenedores
 desechables sin montar datos. El workflow `ruffle-validation.yml` ejecuta estas
 comprobaciones en los PR, junto con el build del proxy.
+`check-proxy-chain.py` usa esas imágenes para comprobar además la cadena real
+Nginx -> Websockify -> TCP en los cinco destinos y el rechazo de origen, sin
+servicios Houdini ni datos persistentes.
 
 Prueba opcional de navegador con los medios fijados ya descargados:
 

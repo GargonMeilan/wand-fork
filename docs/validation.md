@@ -18,13 +18,18 @@
   registro. El lockfile de Ruffle y su descarga mediante `npm ci` se verificaron.
 - `git diff --check`: correcto.
 
-## Automatización añadida, pendiente de ejecutar con Docker
+## Ejecutado en GitHub Actions con Docker
 
-`ruffle-validation.yml` ejecuta builds web/proxy y `tests/check-nginx.sh` para
+El [workflow inicial](https://github.com/GargonMeilan/wand-fork/actions/runs/43049286101)
+terminó **correctamente**. Ejecutó builds web/proxy y `tests/check-nginx.sh` para
 renderizar las plantillas con Dockerize y comprobarlas con `nginx -t`, rutas y
-MIME WASM en cinco escenarios. No se pudo ejecutar localmente: Docker CLI está
-instalado pero no hay motor Docker accesible/iniciado. No se presenta esta
-comprobación como aprobada hasta obtener el resultado del workflow.
+MIME WASM en cinco escenarios. También repitió correctamente las pruebas Node y
+Python y la validación de ambos Compose. No se pudo ejecutar Docker localmente:
+el CLI está instalado pero no hay motor accesible/iniciado.
+
+Se añadió además `tests/check-proxy-chain.py` para verificar la cadena completa
+Nginx -> Websockify -> TCP con los cinco destinos, bajo las restricciones del
+contenedor de producción y sin base de datos. Pendiente del siguiente workflow.
 
 ## Pendiente de integración real
 
