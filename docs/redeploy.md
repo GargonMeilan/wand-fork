@@ -13,6 +13,20 @@ vivos con estado unhealthy.
 
 ## Reaplicar un checkout nuevo de Dokploy
 
+Todos los bind mounts de fuentes, medios y plantillas usan ahora
+`create_host_path: false`. Así un contenedor que se reinicie durante la
+reclonación no crea carpetas como `vanilla-media` o `houdini` antes de que Git
+las clone. Los archivos de entrada son de solo lectura cuando no necesitan
+generarse dentro del contenedor. `www/.gitkeep` mantiene el montaje web opcional
+presente en un checkout nuevo.
+
+Para recuperar una instalación cuyos contenedores aún tienen los montajes
+antiguos, detener **una vez** la aplicación desde General -> Stop antes de
+Deploy. Mantener Auto Deploy desactivado durante esa recuperación y cancelar
+despliegues en cola. No borrar la aplicación ni sus volúmenes. El comando
+personalizado solo se ejecuta después del clon, por lo que `--force-recreate`
+no puede corregir por sí solo un fallo de Git anterior a Compose.
+
 Los backends de Wand montan sus fuentes desde el host. Cuando Dokploy vuelve a
 clonar el directorio, un contenedor reutilizado puede seguir ligado al montaje
 anterior. Tras asegurar la persistencia fuera de `code/`, configura **una vez**

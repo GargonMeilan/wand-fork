@@ -28,6 +28,7 @@ jobs:
       - run: python tests/check-proxy-chain.py
       - run: python tests/check-redis-health.py
       - run: python tests/check-data-persistence.py
+      - run: python tests/check-bind-sources.py
   backend-build:
     runs-on: ubuntu-latest
     steps:

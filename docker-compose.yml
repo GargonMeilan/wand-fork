@@ -7,7 +7,12 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini/houdini.sql:/docker-entrypoint-initdb.d/houdini.sql
+      - type: bind
+        source: ./houdini/houdini.sql
+        target: /docker-entrypoint-initdb.d/houdini.sql
+        read_only: true
+        bind:
+          create_host_path: false
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", 'pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_USER"']
@@ -51,22 +56,94 @@ services:
         condition: service_started
         restart: true
     volumes:
-      - ./www:/usr/share/nginx/html
-      - ./legacy-media:/usr/share/nginx/legacy
-      - ./vanilla-media:/usr/share/nginx/vanilla
-      - ./servers.xml:/t/servers.xml
+      - type: bind
+        source: ./www
+        target: /usr/share/nginx/html
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./legacy-media
+        target: /usr/share/nginx/legacy
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media
+        target: /usr/share/nginx/vanilla
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./servers.xml
+        target: /t/servers.xml
+        read_only: true
+        bind:
+          create_host_path: false
 
-      - ./templates/sites/legacy.conf.template:/etc/nginx/conf.d/legacy.conf.template
-      - ./templates/sites/vanilla.conf.template:/etc/nginx/conf.d/vanilla.conf.template
-      - ./templates/legacy-media/play/index.html.template:/t/legacy/play/index.html.template
-      - ./templates/legacy-media/play/es/index.html.template:/t/legacy/play/es/index.html.template
-      - ./templates/legacy-media/play/fr/index.html.template:/t/legacy/play/fr/index.html.template
-      - ./templates/legacy-media/play/pt/index.html.template:/t/legacy/play/pt/index.html.template
-      - ./templates/vanilla-media/play/index.html.template:/t/vanilla/play/index.html.template
-      - ./templates/vanilla-media/play/es/index.html.template:/t/vanilla/play/es/index.html.template
-      - ./templates/vanilla-media/play/fr/index.html.template:/t/vanilla/play/fr/index.html.template
-      - ./templates/vanilla-media/play/pt/index.html.template:/t/vanilla/play/pt/index.html.template
-      - ./templates/vanilla-media/media/play/web_service/environment_data.xml.template:/t/vanilla/media/play/web_service/environment_data.xml.template
+      - type: bind
+        source: ./templates/sites/legacy.conf.template
+        target: /etc/nginx/conf.d/legacy.conf.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/sites/vanilla.conf.template
+        target: /etc/nginx/conf.d/vanilla.conf.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/index.html.template
+        target: /t/legacy/play/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/es/index.html.template
+        target: /t/legacy/play/es/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/fr/index.html.template
+        target: /t/legacy/play/fr/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/pt/index.html.template
+        target: /t/legacy/play/pt/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/index.html.template
+        target: /t/vanilla/play/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/es/index.html.template
+        target: /t/vanilla/play/es/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/fr/index.html.template
+        target: /t/vanilla/play/fr/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/pt/index.html.template
+        target: /t/vanilla/play/pt/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/media/play/web_service/environment_data.xml.template
+        target: /t/vanilla/media/play/web_service/environment_data.xml.template
+        read_only: true
+        bind:
+          create_host_path: false
     command: ["dockerize",
               "-template", "/etc/nginx/conf.d/legacy.conf.template:/etc/nginx/conf.d/legacy.conf",
               "-template", "/etc/nginx/conf.d/vanilla.conf.template:/etc/nginx/conf.d/vanilla.conf",
@@ -112,8 +189,17 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini:/usr/src/houdini
-      - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -150,8 +236,17 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini:/usr/src/houdini
-      - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -188,8 +283,17 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini:/usr/src/houdini
-      - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -226,8 +330,17 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini:/usr/src/houdini
-      - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -264,8 +377,17 @@ services:
     networks:
       - wand
     volumes:
-      - ./houdini:/usr/src/houdini
-      - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -304,9 +426,22 @@ services:
     env_file:
       - .env
     volumes:
-      - ./dash:/usr/src/dash
-      - ./vanilla-media/media/avatar/paper:/usr/src/dash/items
-      - ./templates/dash/config.py.template:/usr/src/dash/config.py.template
+      - type: bind
+        source: ./dash
+        target: /usr/src/dash
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media/media/avatar/paper
+        target: /usr/src/dash/items
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/dash/config.py.template
+        target: /usr/src/dash/config.py.template
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
@@ -340,8 +475,17 @@ services:
       - MEDIA_LOCATION=${WEB_VANILLA_MEDIA}
       - PORT=${SNOWFLAKE_PORT}
     volumes:
-      - ./snowflake:/usr/src/snowflake
-      - ./.env:/usr/src/snowflake/.env
+      - type: bind
+        source: ./snowflake
+        target: /usr/src/snowflake
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./.env
+        target: /usr/src/snowflake/.env
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy

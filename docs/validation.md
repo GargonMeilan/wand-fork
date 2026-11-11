@@ -1,5 +1,19 @@
 # Validación de Ruffle — 11 de noviembre de 2026
 
+## Clonación de submódulos y montajes de fuentes
+
+Los 31 bind mounts de fuentes, medios, plantillas y configuración especifican
+`create_host_path: false`; las entradas que no se generan son de solo lectura.
+Esto evita que el daemon cree carpetas de submódulos ausentes durante un
+reinicio concurrente con la clonación. Se añade `www/.gitkeep` para que ese
+montaje también exista en un checkout nuevo.
+
+`check-bind-sources.py` comprueba todos los bind mounts y reproduce el caso con
+un proyecto Docker/Git desechable: el arranque sin carpeta debe fallar sin
+crearla, Git debe poder clonar y el contenedor debe poder leer el recurso
+después. Para reemplazar la configuración de contenedores ya existentes hay
+que detener una vez la aplicación antes de clonar/desplegar.
+
 ## Persistencia y redespliegue coordinado
 
 Se confirmó Auto Deploy activo y una instalación de prueba sin datos importantes
