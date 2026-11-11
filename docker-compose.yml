@@ -8,7 +8,7 @@ services:
       - wand
     volumes:
       - ./houdini/houdini.sql:/docker-entrypoint-initdb.d/houdini.sql
-      - ./.data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", 'pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_USER"']
       interval: 8s
@@ -29,7 +29,7 @@ services:
       retries: 15
       start_period: 30s
     volumes:
-      - ./.redis:/data
+      - redis_data:/data
     networks:
       - wand
     labels:
@@ -366,3 +366,11 @@ services:
 networks:
   wand:
     driver: bridge
+
+# Keep state outside Dokploy's Git checkout. Stable names survive container
+# recreation and Dokploy service-name randomization; retain the project name.
+volumes:
+  postgres_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_postgres_data
+  redis_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_redis_data

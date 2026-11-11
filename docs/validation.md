@@ -1,5 +1,23 @@
 # Validación de Ruffle — 11 de noviembre de 2026
 
+## Persistencia y redespliegue coordinado
+
+Se confirmó Auto Deploy activo y una instalación de prueba sin datos importantes
+que conservar. El usuario lo ha desactivado antes de publicar la corrección de
+almacenamiento. Ambos Compose usan ahora volúmenes Docker estables, fuera de
+`code/`, en lugar de `./.data` y `./.redis`. Esto inicia una base nueva en esos
+volúmenes; no migra datos ni elimina almacenamiento anterior.
+
+El [workflow de coordinación](https://github.com/GargonMeilan/wand-fork/actions/runs/43093354638)
+pasó con PostgreSQL, Redis y los cinco Houdini reales: arranque en frío, respuesta
+de protocolo apiOK, reinicio automático tras recrear la DB de prueba y arranque
+de los cuatro mundos detenidos con un único Compose up. Los datos de esa prueba
+eran temporales y no se usó la instalación de producción.
+
+Se añade una comprobación separada de persistencia con volúmenes desechables
+exclusivos del test: una fila SQL y una clave Redis deben sobrevivir a
+`--force-recreate`. Consultar el workflow de la corrección de persistencia.
+
 ## Redis: comprobación de salud
 
 Se corrigió el healthcheck heredado `CMD-SHELL, redis-cli, ping` a la forma exec

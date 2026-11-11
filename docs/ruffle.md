@@ -124,28 +124,18 @@ anteriores, pero ya no es necesario para retirar publicaciones del archivo base.
    al valor predeterminado de Dokploy. No pongas `sh scripts/prepare-sources.sh`
    en ese campo: Dokploy antepone `docker` y no es un hook de shell. El script
    queda disponible para checkouts gestionados fuera de Dokploy.
-3. Conserva todo el entorno actual, incluidas credenciales. Activa la creación
-   de `.env` de Dokploy y fusiona las URLs públicas HTTPS del ejemplo anterior.
-   Añade `POSTGRES_DATA_PATH` y `REDIS_DATA_PATH` con las **rutas existentes de
-   datos persistentes en el host**, fuera del directorio Git `code/`. Deben ser
-   directorios absolutos existentes. El Compose exige ambas variables y no crea
-   directorios vacíos si hay un error en la ruta.
-4. **Antes de redesplegar**, inspecciona Mounts de los contenedores actuales o
-   ejecuta en el servidor estos comandos de solo lectura:
-
-   ```sh
-   docker inspect --format '{{json .Mounts}}' NOMBRE_CONTENEDOR_DB
-   docker inspect --format '{{json .Mounts}}' NOMBRE_CONTENEDOR_REDIS
-   ```
-
-   Identifica `Source` del montaje que apunta a `/var/lib/postgresql/data` y
-   `/data`. No introduzcas una ruta nueva vacía para un despliegue existente.
-   Si los datos actuales están dentro de `code/`, **hace falta migrarlos fuera
-   del checkout antes de redesplegar**, con los servicios detenidos y backup:
-   el proveedor Git de Dokploy puede borrar y reclonar `code/`. Esta PR no migra
-   datos automáticamente. Si usas volúmenes Docker o montajes gestionados por
-   Dokploy, conserva esos mismos montajes en ambos destinos y adapta la
-   configuración de almacenamiento a ese tipo; no cambies a bind mounts vacíos.
+3. Conserva las credenciales y las URLs públicas HTTPS. PostgreSQL y Redis
+   usan **volúmenes Docker persistentes fuera de `code/`**, con nombres estables
+   basados en el proyecto. No se necesitan `POSTGRES_DATA_PATH` ni
+   `REDIS_DATA_PATH`. Mantén el nombre de proyecto de la aplicación y no actives
+   Fresh Volumes ni opciones que reinicialicen el almacenamiento.
+4. **Cambio de almacenamiento:** si vienes del Compose que usaba `./.data` y
+   `./.redis`, este cambio comienza una instalación nueva en los volúmenes
+   Docker; no migra automáticamente los datos anteriores. En la instalación de
+   prueba del usuario se ha confirmado que no hay datos importantes que conservar.
+   Si otra instalación necesita conservar cuentas/progreso, hay que hacer backup
+   y migración con los servicios detenidos antes de desplegar. No elimines los
+   datos antiguos ni selecciones volúmenes nuevos a ciegas.
 5. En **Domains**, añade cada host al servicio **web**, puerto de contenedor
    **80**, ruta `/`, sin Strip Path ni Internal Path, con certificado HTTPS.
    Enruta los hosts completos de juego y medios; también los Vanilla si los
@@ -162,16 +152,13 @@ anteriores, pero ya no es necesario para retirar publicaciones del archivo base.
    No hay comandos dentro de contenedores tras cada despliegue. Comprueba los
    logs y el recorrido completo de login/selección/sala como se indica abajo.
 
-Ejemplo de las variables adicionales, **solo para una instalación cuyos datos
-ya estén en esos directorios**:
+Los volúmenes serán `<proyecto>_postgres_data` y `<proyecto>_redis_data`. En el
+proyecto actual: `club-penguin-club-penguin-urkw6u_postgres_data` y
+`club-penguin-club-penguin-urkw6u_redis_data`. Sobreviven a recreaciones de
+contenedores y a la sustitución del checkout Git.
 
-```dotenv
-POSTGRES_DATA_PATH=/srv/penguins/postgres
-REDIS_DATA_PATH=/srv/penguins/redis
-```
-
-No ejecutes `down -v`, no borres datos y no reinicialices PostgreSQL. Esta revisión
-no modifica producción ni mueve los datos de la aplicación existente.
+No ejecutes `down -v` ni uses Fresh Volumes en producción. Esta revisión no
+borra ni migra automáticamente datos anteriores.
 
 El archivo específico se mantiene con:
 

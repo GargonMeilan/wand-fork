@@ -11,6 +11,22 @@ recrearse. Por eso una antigüedad de varias horas no demuestra duplicados.
 `restart: always` reinicia procesos que terminan, pero no procesos que siguen
 vivos con estado unhealthy.
 
+## Reaplicar un checkout nuevo de Dokploy
+
+Los backends de Wand montan sus fuentes desde el host. Cuando Dokploy vuelve a
+clonar el directorio, un contenedor reutilizado puede seguir ligado al montaje
+anterior. Tras asegurar la persistencia fuera de `code/`, configura **una vez**
+en Advanced -> Command el comando Compose predeterminado que muestra Dokploy,
+añadiendo `--force-recreate --wait --wait-timeout 180` al final de `up`.
+Conserva su nombre de proyecto, `--env-file` y el archivo Compose seleccionado.
+El campo Command ya lleva `docker` delante; empieza por `compose`, sin scripts
+shell. Todos los despliegues posteriores usan ese ajuste automáticamente.
+
+`--force-recreate` es una opción de la operación de despliegue, no una propiedad
+que se pueda forzar desde el YAML. Recrea contenedores, no borra sus datos
+persistentes. **No resuelve que el propio checkout contenga los datos:** si los
+montajes aún son `./.data` o `./.redis`, hay que preservarlos fuera antes.
+
 ## Cambios de coordinación
 
 - Login espera PostgreSQL y Redis healthy y declara `depends_on.restart: true`.
@@ -29,11 +45,12 @@ datos y no oculta fallos de credenciales, redes o almacenamiento.
 
 ## Persistencia antes de desplegar
 
-Conserva el nombre del proyecto y usa `docker-compose.dokploy.yml`, con los
-directorios **existentes** de PostgreSQL y Redis fuera del checkout Git. Si los
-datos actuales están dentro de `code/.data` o `code/.redis`, preservarlos y
-migrarlos es un requisito previo: Dokploy puede borrar code al clonar.
-No cambies a directorios vacíos, no uses Fresh Volumes y no elimines volúmenes.
+Conserva el nombre del proyecto y usa `docker-compose.dokploy.yml`. Ambos
+archivos Compose usan ahora volúmenes Docker persistentes para PostgreSQL y
+Redis fuera del checkout Git. El cambio desde `./.data` y `./.redis` inicia una
+instalación nueva: se ha autorizado para esta instalación de prueba sin datos
+importantes. Una instalación con cuentas que conservar requiere backup y
+migración previa; no hay migración automática ni eliminación de datos antiguos.
 Ver [guía Dokploy](ruffle.md).
 
 ## Prueba de integración

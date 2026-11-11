@@ -8,9 +8,10 @@ bridge. Vanilla also uses Ruffle through its original page and FlashVars; see
 for HTTPS domains, configuration, validation, limitations and rollback.
 
 For Dokploy, select **`docker-compose.dokploy.yml`**, enable Git submodules and
-set the existing persistent directories in `POSTGRES_DATA_PATH` and
-`REDIS_DATA_PATH`. Configure HTTPS domains on `web:80`. Read the deployment
-guide before redeploying an existing database; the Git checkout is not storage.
+configure HTTPS domains on `web:80`. PostgreSQL and Redis use stable Docker
+volumes outside the Git checkout. Keep the project name unchanged. Existing
+bind-mount data is not migrated automatically; read the deployment guide before
+switching an installation whose accounts must be preserved.
 
 The base Compose publishes no host ports. For direct access without Dokploy,
 add `-f docker-compose.direct.yml` after `-f docker-compose.yml` to publish the

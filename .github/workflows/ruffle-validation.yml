@@ -21,15 +21,13 @@ jobs:
       - run: pip install PyYAML==6.0.3
       - run: python scripts/generate-dokploy-compose.py --check
       - name: Validate Dokploy Compose without starting containers
-        env:
-          POSTGRES_DATA_PATH: /existing-persistent/postgres
-          REDIS_DATA_PATH: /existing-persistent/redis
         run: docker compose -f docker-compose.dokploy.yml config --quiet
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: docker build -t wand-websocket-test websocket
       - run: sh tests/check-nginx.sh
       - run: python tests/check-proxy-chain.py
       - run: python tests/check-redis-health.py
+      - run: python tests/check-data-persistence.py
   backend-build:
     runs-on: ubuntu-latest
     steps:
