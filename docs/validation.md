@@ -1,5 +1,16 @@
 # Validación de Ruffle — 11 de noviembre de 2026
 
+## Redis: comprobación de salud
+
+Se corrigió el healthcheck heredado `CMD-SHELL, redis-cli, ping` a la forma exec
+`CMD, redis-cli, ping`. El shell anterior interpretaba `ping` como argumento del
+shell, sin pasarlo a redis-cli. El log de despliegue mostraba imágenes
+construidas y Redis unhealthy bloqueando el arranque.
+
+`tests/check-redis-health.py` verifica la imagen, comando y healthcheck reales
+en un servicio aislado con `/data` en tmpfs, sin montar datos del proyecto ni
+publicar puertos. Comprueba que pasa a healthy y responde PONG.
+
 ## Ampliación Vanilla / AS3
 
 - Seis pruebas Node y seis Python correctas, incluidos FlashVars/callback de

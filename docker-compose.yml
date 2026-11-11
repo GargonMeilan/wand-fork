@@ -23,7 +23,7 @@ services:
     restart: always
     command: redis-server --save 60 1 --loglevel warning
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 15

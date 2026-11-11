@@ -34,7 +34,7 @@ services:
     command: redis-server --save 60 1 --loglevel warning
     healthcheck:
       test:
-      - CMD-SHELL
+      - CMD
       - redis-cli
       - ping
       interval: 5s
