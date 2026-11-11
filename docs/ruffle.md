@@ -102,49 +102,79 @@ desactivan TLS, CORS ni las comprobaciones de origen.
 
 ## Despliegue desde GitHub en Dokploy
 
-1. Usa la aplicación **Compose existente**, su directorio y su nombre de
-   proyecto actuales. Selecciona la rama revisada (o `master` tras aprobar el PR).
-   No cambies producción para probar esta rama sin revisar antes los cambios.
-2. Conserva todo el entorno actual de Dokploy, especialmente credenciales,
-   `.data` y `.redis`. Dokploy escribe el entorno en `.env`; `web` lo recibe
-   mediante `env_file`, y el proxy recibe solo sus dos variables necesarias.
-3. Inicializa los submódulos **antes** de que Compose evalúe los contextos de
-   build y los bind mounts. Configura una vez el comando personalizado de
-   despliegue de Dokploy para anteponer:
+Usa **`docker-compose.dokploy.yml` como Compose Path**. Es un archivo completo,
+generado desde el Compose base, sin publicaciones de puertos ni tags `!reset`.
+Dokploy lee ese mismo archivo al añadir dominios y redes; no necesitas overlays
+ni un comando personalizado. `docker-compose.ruffle-only.yml` queda como opción
+para Compose directo fuera de este flujo.
+
+1. Conserva la aplicación Compose existente, su nombre de proyecto y sus datos.
+   En GitHub/Git selecciona `feature/ruffle-support` (o master tras el merge) y
+   activa **Enable Submodules**. Esa opción hace el clon recursivo antes del
+   build; requiere acceso HTTPS a GitHub y `git.solero.me`. Los historiales de
+   medios ocupan varios GB. Usa modo **Docker Compose**, no Stack/Swarm.
+2. Configura **Compose Path: `docker-compose.dokploy.yml`**. Restablece Command
+   al valor predeterminado de Dokploy. No pongas `sh scripts/prepare-sources.sh`
+   en ese campo: Dokploy antepone `docker` y no es un hook de shell. El script
+   queda disponible para checkouts gestionados fuera de Dokploy.
+3. Conserva todo el entorno actual, incluidas credenciales. Activa la creación
+   de `.env` de Dokploy y fusiona las URLs públicas HTTPS del ejemplo anterior.
+   Añade `POSTGRES_DATA_PATH` y `REDIS_DATA_PATH` con las **rutas existentes de
+   datos persistentes en el host**, fuera del directorio Git `code/`. Deben ser
+   directorios absolutos existentes. El Compose exige ambas variables y no crea
+   directorios vacíos si hay un error en la ruta.
+4. **Antes de redesplegar**, inspecciona Mounts de los contenedores actuales o
+   ejecuta en el servidor estos comandos de solo lectura:
 
    ```sh
-   sh scripts/prepare-sources.sh && <comando Compose actual de Dokploy>
+   docker inspect --format '{{json .Mounts}}' NOMBRE_CONTENEDOR_DB
+   docker inspect --format '{{json .Mounts}}' NOMBRE_CONTENEDOR_REDIS
    ```
 
-   Sustituye el marcador por el comando real mostrado por tu instalación,
-   preservando sus flags de proyecto, archivos generados y configuración de
-   dominios. No pegues el marcador literalmente. El script usa los commits
-   fijados por los gitlinks, nunca `--remote`, y falla antes de arrancar
-   contenedores si faltan medios. Requiere Git y acceso HTTPS a GitHub y
-   `git.solero.me`. Los medios incluyen historiales grandes: reserva disco y
-   tiempo de descarga. Un Dockerfile no puede reparar por sí solo submódulos
-   vacíos usados como contextos y bind mounts del host.
-4. En **Domains**, añade cada host web al servicio `web`, **puerto de contenedor
-   80**, con HTTPS/certificado de Dokploy. Los registros DNS A/AAAA deben apuntar
-   al servidor. Traefik termina TLS y conserva `Host`, `Origin` y el upgrade
-   WebSocket. No hace falta otro dominio ni certificado para WSS.
-5. Para producción exclusivamente Ruffle, usa Compose >= 2.24.4 y añade
-   `-f docker-compose.ruffle-only.yml` después del archivo base, conservando los
-   demás argumentos que usa Dokploy. Comprueba **Preview Compose**: este overlay
-   elimina publicaciones de puertos, incluidos DB, TCP de juego y web; Traefik
-   accede a `web:80` por la red de Dokploy. Los volúmenes y puertos internos no
-   cambian. No uses el overlay si necesitas clientes Flash/TCP externos o
-   Snowflake externo. Si conservas el Compose base, administra explícitamente
-   sus publicaciones anteriores con el firewall del servidor.
-6. Despliega con build de las imágenes nuevas `web` y `websocket`. Dockerize
-   regenera las configuraciones al arrancar. No hay comandos dentro de los
-   contenedores tras cada despliegue. Comprueba el resultado con Preview Compose
-   antes de usar el comando personalizado: el modo de inyección de dominios
-   puede variar entre versiones de Dokploy.
+   Identifica `Source` del montaje que apunta a `/var/lib/postgresql/data` y
+   `/data`. No introduzcas una ruta nueva vacía para un despliegue existente.
+   Si los datos actuales están dentro de `code/`, **hace falta migrarlos fuera
+   del checkout antes de redesplegar**, con los servicios detenidos y backup:
+   el proveedor Git de Dokploy puede borrar y reclonar `code/`. Esta PR no migra
+   datos automáticamente. Si usas volúmenes Docker o montajes gestionados por
+   Dokploy, conserva esos mismos montajes en ambos destinos y adapta la
+   configuración de almacenamiento a ese tipo; no cambies a bind mounts vacíos.
+5. En **Domains**, añade cada host al servicio **web**, puerto de contenedor
+   **80**, ruta `/`, sin Strip Path ni Internal Path, con certificado HTTPS.
+   Enruta los hosts completos de juego y medios; también los Vanilla si los
+   usas. DNS A/AAAA debe apuntar al servidor. No publiques `websocket:8080` ni los
+   puertos de Houdini. WSS usa el mismo host y certificado del juego.
+6. Comprueba **Preview Compose**: `web` debe seguir en la red interna `wand`
+   además de la red de Traefik que añade Dokploy; los backends deben conservar
+   `wand`. El archivo añade aliases DNS estables para que nombres como
+   `websocket`, `db` y `houdini_login` sigan resolviendo si Dokploy renombra
+   servicios. No hace falta conectar las bases de datos a la red de Traefik.
+   No cambies el aislamiento ni randomización de la aplicación existente como
+   parte de este despliegue; revisa el resultado de Preview.
+7. Despliega con build. Dockerize regenera configuraciones y HTML al arrancar.
+   No hay comandos dentro de contenedores tras cada despliegue. Comprueba los
+   logs y el recorrido completo de login/selección/sala como se indica abajo.
 
-No ejecutes `down -v`, no borres `.data`/`.redis` y no reinicialices PostgreSQL.
-La persistencia sigue exactamente en los bind mounts anteriores. No se toca
-directamente la configuración de producción con esta implementación.
+Ejemplo de las variables adicionales, **solo para una instalación cuyos datos
+ya estén en esos directorios**:
+
+```dotenv
+POSTGRES_DATA_PATH=/srv/penguins/postgres
+REDIS_DATA_PATH=/srv/penguins/redis
+```
+
+No ejecutes `down -v`, no borres datos y no reinicialices PostgreSQL. Esta revisión
+no modifica producción ni mueve los datos de la aplicación existente.
+
+El archivo específico se mantiene con:
+
+```sh
+pip install PyYAML==6.0.3
+python scripts/generate-dokploy-compose.py
+```
+
+CI comprueba que el generado coincide con el base. El comando de despliegue
+predeterminado de Dokploy aplica únicamente el archivo seleccionado.
 
 ## Verificación y diagnóstico
 
@@ -153,7 +183,7 @@ despliegue cuando corresponda:
 
 ```sh
 docker compose config --quiet
-docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
+docker compose -f docker-compose.dokploy.yml config --quiet
 docker compose exec web nginx -t
 docker compose logs --tail=100 web websocket houdini_login houdini_blizzard houdini_glaciar
 ```
@@ -233,8 +263,8 @@ No se garantiza compatibilidad completa por alcanzar la pantalla de inicio.
 ## Rollback
 
 Para volver al HTML Flash, configura `LEGACY_PLAYER=flash` y redespliega `web`;
-los usuarios necesitarán un reproductor compatible como antes. Si usaste el
-overlay Ruffle, retíralo para restaurar los puertos TCP externos necesarios.
+los usuarios necesitarán un reproductor compatible como antes. El archivo Dokploy no publica puertos TCP: para clientes Flash externos tendrás
+que restaurar explícitamente las publicaciones anteriores o el Compose base.
 Para revertir toda la integración, vuelve al commit anterior mediante el flujo
 de Git/Dokploy, con el mismo nombre de proyecto, directorio y montajes de datos.
 No elimines volúmenes. Los datos y el esquema no han cambiado.
@@ -248,6 +278,8 @@ No elimines volúmenes. Los datos y el esquema no han cambiado.
 - `websocket/*`, `docker-compose.yml`: puente interno; overlay opcional de puertos.
 - `.env`, `README.md`, `.gitignore`, `.gitattributes`, `scripts/prepare-sources.sh`:
   configuración, documentación, exclusiones y preparación de fuentes.
+- `docker-compose.dokploy.yml`, `scripts/generate-dokploy-compose.py`: archivo
+  de despliegue único, aliases internos y almacenamiento persistente explícito.
 - `tests/*`, `.github/workflows/ruffle-validation.yml`: validaciones reproducibles.
 - No se edita código de submódulos, SQL, servidores Houdini ni `servers.xml`.
 
@@ -258,3 +290,5 @@ Fuentes primarias consultadas:
 [Websockify 0.13](https://github.com/novnc/websockify/tree/v0.13.0),
 [Dokploy Compose](https://docs.dokploy.com/docs/core/docker-compose),
 [Dominios Dokploy](https://docs.dokploy.com/docs/core/docker-compose/domains).
+
+Revisión de Dokploy: [submódulos GitHub](https://github.com/Dokploy/dokploy/blob/canary/packages/server/src/utils/providers/github.ts), [Command](https://docs.dokploy.com/docs/core/docker-compose#advanced).

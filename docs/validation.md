@@ -45,6 +45,24 @@ de permisos de Git en Windows; no se cambió su URL, commit ni código versionad
 - Firefox y Edge, idiomas adicionales, registro/activación y reCAPTCHA real.
 - Minijuegos, sonido, LocalConnection entre instancias y demás compatibilidad AS2.
 
+## Revisión específica de despliegue Dokploy
+
+Se añadió `docker-compose.dokploy.yml`, generado desde el base y comprobado en
+CI para evitar divergencias. Configuración Compose validada: ningún puerto
+publicado, aliases internos estables, sin links y montajes de datos explícitos
+con `create_host_path: false`. La configuración falla si faltan las variables
+de directorios persistentes, antes de crear contenedores.
+
+Se corrigió la guía: activar **Enable Submodules** en el proveedor Git de
+Dokploy y usar su comando predeterminado. Command no es un hook de shell.
+El checkout Git puede borrarse al redesplegar; los directorios de PostgreSQL y
+Redis deben verificarse fuera de ese checkout. No se inspeccionó ni migró el
+almacenamiento real del servidor de producción.
+
+Se añadió el build de los tres backends existentes a CI. Su resultado debe
+consultarse en el workflow de esta revisión; no implica que se haya arrancado
+el stack con datos reales.
+
 No se ha cambiado el despliegue de producción, ni se han borrado volúmenes o
 alterado datos. La prueba de navegador es una prueba de arranque del cliente;
 la prueba de eco verifica transporte. Ninguna demuestra por sí sola que se

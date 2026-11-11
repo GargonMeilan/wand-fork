@@ -6,6 +6,11 @@ Legacy now uses a locally hosted, pinned Ruffle runtime and a WebSocket/TCP
 bridge. See [Ruffle and Dokploy deployment](docs/ruffle.md) for HTTPS domains,
 configuration, validation, limitations and rollback. Vanilla keeps its Flash client.
 
+For Dokploy, select **`docker-compose.dokploy.yml`**, enable Git submodules and
+set the existing persistent directories in `POSTGRES_DATA_PATH` and
+`REDIS_DATA_PATH`. Configure HTTPS domains on `web:80`. Read the deployment
+guide before redeploying an existing database; the Git checkout is not storage.
+
 > [!NOTE]
 > This can also be ran on Windows using WSL.
 

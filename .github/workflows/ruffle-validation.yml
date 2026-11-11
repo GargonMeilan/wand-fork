@@ -17,7 +17,22 @@ jobs:
       - run: docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
       - run: node --test tests/legacy-player.test.cjs
       - run: pip install -r websocket/requirements.txt websocket-client==1.9.0
+      - run: pip install PyYAML==6.0.3
+      - run: python scripts/generate-dokploy-compose.py --check
+      - name: Validate Dokploy Compose without starting containers
+        env:
+          POSTGRES_DATA_PATH: /existing-persistent/postgres
+          REDIS_DATA_PATH: /existing-persistent/redis
+        run: docker compose -f docker-compose.dokploy.yml config --quiet
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: docker build -t wand-websocket-test websocket
       - run: sh tests/check-nginx.sh
       - run: python tests/check-proxy-chain.py
+  backend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch backend sources without downloading media histories
+        run: git submodule update --init --recursive houdini dash snowflake
+      - name: Build all existing backend images
+        run: docker compose build houdini_login dash snowflake
