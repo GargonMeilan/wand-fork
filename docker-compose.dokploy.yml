@@ -65,6 +65,10 @@ services:
     depends_on:
       websocket:
         condition: service_started
+        restart: true
+      dash:
+        condition: service_started
+        restart: true
     volumes:
     - ./www:/usr/share/nginx/html
     - ./legacy-media:/usr/share/nginx/legacy
@@ -148,11 +152,14 @@ services:
         - houdini_login
     volumes:
     - ./houdini:/usr/src/houdini
+    - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
     depends_on:
       db:
         condition: service_healthy
+        restart: true
       redis:
         condition: service_healthy
+        restart: true
     entrypoint:
     - python
     - bootstrap.py
@@ -161,8 +168,7 @@ services:
       test:
       - CMD
       - python
-      - -c
-      - import socket, sys; socket.create_connection(('127.0.0.1', int(sys.argv[1])), timeout=3).close()
+      - /opt/wand/check_houdini.py
       - ${GAME_LOGIN_PORT}
       interval: 60s
       timeout: 5s
@@ -193,9 +199,28 @@ services:
         - houdini_blizzard
     volumes:
     - ./houdini:/usr/src/houdini
+    - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - /opt/wand/check_houdini.py
+      - '9875'
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
     entrypoint:
     - python
     - bootstrap.py
@@ -230,9 +255,28 @@ services:
         - houdini_glaciar
     volumes:
     - ./houdini:/usr/src/houdini
+    - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - /opt/wand/check_houdini.py
+      - '9876'
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
     entrypoint:
     - python
     - bootstrap.py
@@ -267,9 +311,28 @@ services:
         - houdini_avalanche
     volumes:
     - ./houdini:/usr/src/houdini
+    - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - /opt/wand/check_houdini.py
+      - '9877'
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
     entrypoint:
     - python
     - bootstrap.py
@@ -304,9 +367,28 @@ services:
         - houdini_yeti
     volumes:
     - ./houdini:/usr/src/houdini
+    - ./web/check_houdini.py:/opt/wand/check_houdini.py:ro
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - /opt/wand/check_houdini.py
+      - '9878'
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
     entrypoint:
     - python
     - bootstrap.py
@@ -347,11 +429,14 @@ services:
     - ./templates/dash/config.py.template:/usr/src/dash/config.py.template
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     entrypoint:
     - dockerize
     - -template
@@ -382,13 +467,17 @@ services:
     - ./.env:/usr/src/snowflake/.env
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       dash:
         condition: service_started
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     entrypoint:
     - python
     - ./main.py

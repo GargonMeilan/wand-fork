@@ -38,3 +38,5 @@ jobs:
         run: git submodule update --init --recursive houdini dash snowflake
       - name: Build all existing backend images
         run: docker compose build houdini_login dash snowflake
+      - name: Verify cold start and automatic recovery after database recreation
+        run: python tests/check-backend-startup.py

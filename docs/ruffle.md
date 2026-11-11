@@ -104,6 +104,10 @@ desactivan TLS, CORS ni las comprobaciones de origen.
 
 ## Despliegue desde GitHub en Dokploy
 
+Un deploy debe arrancar el conjunto completo, sin iniciar contenedores uno a
+uno. Ver [coordinación de redespliegues](redeploy.md) para las dependencias,
+comprobaciones de protocolo y límites de recuperación.
+
 Usa **`docker-compose.dokploy.yml` como Compose Path**. Es un archivo completo,
 generado desde el Compose base, sin publicaciones de puertos ni tags `!reset`.
 Dokploy lee ese mismo archivo al añadir dominios y redes; no necesitas overlays
