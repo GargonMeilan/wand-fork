@@ -375,7 +375,7 @@ echo "Done!"
 
 
 if [ "$run_game" == "y" ] || [ "$run_game" == "Y" ]; then
-    sudo docker-compose up
+    sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up
 else
-    echo "You chose not to run the game. To run the game later, execute the command: cd wand && sudo docker-compose up"
+    echo "You chose not to run the game. To run the game later, execute the command: cd wand && sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up"
 fi

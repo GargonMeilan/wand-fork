@@ -21,8 +21,9 @@ Navegador -- HTTPS/WSS --> Traefik de Dokploy -- HTTP/WS --> web:80
 Wand conserva PostgreSQL, Redis, Houdini, Dash y Snowflake. La base de datos no
 cambia. Dash sigue atendiendo registro, activación y administración por las rutas
 Nginx existentes; Snowflake corresponde a Card-Jitsu Snow/Vanilla, fuera de esta
-integración. Vanilla conserva su HTML Flash. Las rutas y puertos TCP anteriores
-siguen disponibles en el Compose base para compatibilidad.
+integración. Vanilla conserva su HTML Flash. Los puertos TCP internos se
+conservan. El Compose base no publica puertos del host; para acceso directo y
+clientes Flash externos añade `docker-compose.direct.yml` al archivo base.
 
 Antes del cambio, cuatro plantillas Legacy incrustaban un `<object>` Flash con
 `boots.swf` y `lang`. Dockerize v0.7.0 genera esos HTML, ambos sitios Nginx y
@@ -105,8 +106,9 @@ desactivan TLS, CORS ni las comprobaciones de origen.
 Usa **`docker-compose.dokploy.yml` como Compose Path**. Es un archivo completo,
 generado desde el Compose base, sin publicaciones de puertos ni tags `!reset`.
 Dokploy lee ese mismo archivo al añadir dominios y redes; no necesitas overlays
-ni un comando personalizado. `docker-compose.ruffle-only.yml` queda como opción
-para Compose directo fuera de este flujo.
+ni un comando personalizado. El archivo base tampoco publica puertos externos.
+`docker-compose.ruffle-only.yml` se conserva por compatibilidad con comandos
+anteriores, pero ya no es necesario para retirar publicaciones del archivo base.
 
 1. Conserva la aplicación Compose existente, su nombre de proyecto y sus datos.
    En GitHub/Git selecciona `feature/ruffle-support` (o master tras el merge) y
@@ -264,7 +266,7 @@ No se garantiza compatibilidad completa por alcanzar la pantalla de inicio.
 
 Para volver al HTML Flash, configura `LEGACY_PLAYER=flash` y redespliega `web`;
 los usuarios necesitarán un reproductor compatible como antes. El archivo Dokploy no publica puertos TCP: para clientes Flash externos tendrás
-que restaurar explícitamente las publicaciones anteriores o el Compose base.
+que añadir explícitamente `docker-compose.direct.yml` al Compose base.
 Para revertir toda la integración, vuelve al commit anterior mediante el flujo
 de Git/Dokploy, con el mismo nombre de proyecto, directorio y montajes de datos.
 No elimines volúmenes. Los datos y el esquema no han cambiado.

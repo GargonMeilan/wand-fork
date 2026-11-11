@@ -11,6 +11,10 @@ set the existing persistent directories in `POSTGRES_DATA_PATH` and
 `REDIS_DATA_PATH`. Configure HTTPS domains on `web:80`. Read the deployment
 guide before redeploying an existing database; the Git checkout is not storage.
 
+The base Compose publishes no host ports. For direct access without Dokploy,
+add `-f docker-compose.direct.yml` after `-f docker-compose.yml` to publish the
+original ports. Do not enable that optional file behind Dokploy's proxy.
+
 > [!NOTE]
 > This can also be ran on Windows using WSL.
 
@@ -26,7 +30,7 @@ bash <(curl -s https://raw.githubusercontent.com/solero/wand/master/install.sh)
 **Step 3** Run and enjoy.
 Run this command:
 ```bash
-$ cd wand && sudo docker-compose up
+$ cd wand && sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up
 ```
 ## Manual setup
 
@@ -85,7 +89,7 @@ $ nano .env
 
 **Step 4** Start the services
 ```bash
-$ sudo docker-compose up
+$ sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up
 ```
 
 **Step 5** You're done!

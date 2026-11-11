@@ -1,4 +1,5 @@
-# Optional production overlay for Dokploy HTTPS domains. Compose >= 2.24.4.
+# Compatibility overlay; the base Compose now publishes no ports itself.
+# Existing commands may keep this file. Compose >= 2.24.4.
 # Keep the original project name and working directory to preserve data mounts.
 services:
   web:

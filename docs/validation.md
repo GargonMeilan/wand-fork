@@ -47,6 +47,12 @@ de permisos de Git en Windows; no se cambió su URL, commit ni código versionad
 
 ## Revisión específica de despliegue Dokploy
 
+Se retiraron también las diez secciones `ports` del `docker-compose.yml`
+principal para evitar colisiones incluso si Dokploy selecciona ese archivo.
+Se trasladaron sin cambiar sus valores a `docker-compose.direct.yml`, opcional
+para acceso directo. Ambos modos pasan `docker compose config --quiet`; las
+instrucciones e instalador de uso directo incluyen ahora ese archivo opcional.
+
 Se añadió `docker-compose.dokploy.yml`, generado desde el base y comprobado en
 CI para evitar divergencias. Configuración Compose validada: ningún puerto
 publicado, aliases internos estables, sin links y montajes de datos explícitos

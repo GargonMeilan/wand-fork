@@ -14,6 +14,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: docker compose config --quiet
+      - run: docker compose -f docker-compose.yml -f docker-compose.direct.yml config --quiet
       - run: docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
       - run: node --test tests/legacy-player.test.cjs
       - run: pip install -r websocket/requirements.txt websocket-client==1.9.0
