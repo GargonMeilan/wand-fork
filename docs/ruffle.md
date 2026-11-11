@@ -268,6 +268,8 @@ que restaurar explícitamente las publicaciones anteriores o el Compose base.
 Para revertir toda la integración, vuelve al commit anterior mediante el flujo
 de Git/Dokploy, con el mismo nombre de proyecto, directorio y montajes de datos.
 No elimines volúmenes. Los datos y el esquema no han cambiado.
+Si vuelves al Compose anterior, conserva los montajes persistentes que uses en
+producción; no vuelvas por accidente a los directorios relativos del checkout.
 
 ## Archivos y referencias
 

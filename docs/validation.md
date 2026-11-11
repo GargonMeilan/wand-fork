@@ -59,9 +59,12 @@ El checkout Git puede borrarse al redesplegar; los directorios de PostgreSQL y
 Redis deben verificarse fuera de ese checkout. No se inspeccionó ni migró el
 almacenamiento real del servidor de producción.
 
-Se añadió el build de los tres backends existentes a CI. Su resultado debe
-consultarse en el workflow de esta revisión; no implica que se haya arrancado
-el stack con datos reales.
+El [workflow de revisión Dokploy](https://github.com/GargonMeilan/wand-fork/actions/runs/43051909194)
+terminó **correctamente**, incluidos el archivo generado, su sintaxis Compose,
+las pruebas anteriores y los builds de **Houdini, Dash y Snowflake**. Se
+comprobó además localmente que la ausencia de cada variable de persistencia
+bloquea por separado la configuración. Esto no implica que se haya arrancado
+el stack con datos reales ni inspeccionado la instalación del usuario.
 
 No se ha cambiado el despliegue de producción, ni se han borrado volúmenes o
 alterado datos. La prueba de navegador es una prueba de arranque del cliente;
