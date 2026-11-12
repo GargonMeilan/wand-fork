@@ -23,7 +23,8 @@ variables, sin depender de que un host se llame `old` o `play`.
 La página original usa SWFObject para crear `club_penguin.swf`. El adaptador
 `web/ruffle/vanilla.js` reemplaza su comprobación del plugin y su método de
 incrustación antes del arranque de la página; crea un reproductor Ruffle con los
-mismos FlashVars, ID, tamaño y callbacks. Conserva los scripts, estilos y
+FlashVars, ID, tamaño y callbacks originales, salvo la decodificación de
+`queryString` de Nieve descrita abajo. Conserva los scripts, estilos y
 ExternalInterface originales. No carga `boots.swf`, que pertenece a Legacy.
 
 Se mantienen los parámetros originales `play`, `client`, `content`, `games`,
@@ -47,6 +48,25 @@ configurado. Es necesario reconstruir web/websocket y regenerar las páginas al
 desplegar. No se ha validado una partida completa con Ruffle.
 Tampoco se garantiza el funcionamiento de todos los minijuegos, amigos,
 activación, reCAPTCHA, módulos AS3 o puentes AS2/AS3 solo por llegar al login.
+
+### Rechazo al entrar en Nieve
+
+El JavaScript original codifica `queryString` con `encodeURIComponent` para
+insertarlo en la cadena `flashvars` de SWFObject. Flash decodificaba esa cadena
+una vez; Ruffle conserva literalmente los valores de su objeto `parameters`.
+Sin adaptar ese paso, el SWF enviaba
+`/place_context "snow_lobby" battleMode%3D0%26base_asset_url%3D...` y Snowflake
+no encontraba `battleMode` ni `base_asset_url`, devolvía `user code 900` y cerraba
+la conexión antes del login. El manejador de errores del cliente producía a su
+vez `Error #1009` y dejaba un panel «Already Logged In» que no respondía.
+
+El adaptador decodifica una vez solo `queryString` de `mpProduct=cjsnow`, sin
+modificar el objeto original de la página ni los FlashVars del cliente principal.
+Se contrastaron ambos formatos con el servidor usando únicamente contexto y
+versión, sin autenticar cuentas: el codificado fue rechazado y el normal recibió
+`S_VERSION`. Una prueba con el SWF real reproduce el rechazo antes del cambio y
+verifica el paquete correcto después. Esto no verifica una partida completa ni
+resuelve por sí solo el fallo comunicado en Card-Jitsu Agua.
 
 ## Registro de cuentas Legacy
 
@@ -74,8 +94,15 @@ Hay siete pruebas Node y siete Python. Las pruebas Docker comprueban ambos
 vhosts, rutas, plantillas e incrustación Flash/Ruffle; la cadena de proxies
 cubre ambos clientes, el destino Snowflake y el POST Legacy. La prueba de
 Snowflake en esta cadena usa un servidor TCP de eco; no valida el protocolo de
-una partida. El aviso «Already Logged In» al cruzar el puente y el fallo de Agua
-siguen pendientes de reproducción y diagnóstico con los logs del mundo.
+una partida. `tests/snow-browser-smoke.cjs` usa Chromium, Ruffle y los medios
+reales de Nieve contra un WebSocket de prueba; comprueba el formato de
+`place_context` y la ausencia del error de ejecución antes de autenticar.
+Requiere Playwright 1.56.1 instalado en `.validation` y su Chromium, igual que
+la prueba Vanilla. Ejecutar con
+`PLAYWRIGHT_BROWSERS_PATH=.validation/browsers node tests/snow-browser-smoke.cjs`.
+No conecta con el servidor real y no crea cuentas; guarda captura e informe en
+`.validation/snow-transport.png` y `.validation/snow-transport-report.json`.
+El fallo de Agua sigue pendiente de diagnóstico.
 `tests/vanilla-browser-smoke.cjs` sirve
 el HTML original y los medios Vanilla desde el checkout, con una sustitución
 de variables para la prueba; las plantillas Go se validan por separado con

@@ -42,7 +42,21 @@
             // Snow embeds a separate SWF and connects to Snowflake, rather
             // than the Houdini world used by the main client and Water.
             let playerSockets = socketProxy;
+            let parameters = flashVars;
             if (flashVars?.mpProduct === "cjsnow") {
+                // MPClient URI-encodes this value for SWFObject's raw
+                // flashvars string. Flash decoded that string once. Ruffle's
+                // parameters object preserves values literally, so reproduce
+                // that decode here or Snowflake rejects /place_context.
+                if (typeof flashVars.queryString === "string") {
+                    try {
+                        parameters = { ...flashVars, queryString: decodeURIComponent(flashVars.queryString) };
+                    } catch (error) {
+                        fail(new Error("El contexto de Card-Jitsu Nieve tiene una codificación inválida."));
+                        callback?.({ success: false, id });
+                        return;
+                    }
+                }
                 const host = settings.dataset.snowHost;
                 const port = Number(settings.dataset.snowPort);
                 if (!host || !Number.isInteger(port) || port < 1 || port > 65535) {
@@ -63,7 +77,7 @@
             target.replaceWith(player);
             player.ruffle().load({
                 url: new URL(url, location.href).href,
-                parameters: flashVars,
+                parameters,
                 // The original client resolves ../web_service from its SWF.
                 // Keep the SWF URL as base; the FlashVars carry full media paths.
                 socketProxy: playerSockets,

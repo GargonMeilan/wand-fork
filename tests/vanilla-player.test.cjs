@@ -44,11 +44,15 @@ test('Vanilla rejects HTTP media on an HTTPS page', () => {
 
 test('Snow embeds with its own advertised host and port through same-origin WSS', async () => {
     const state = adapter();
-    const vars = { mpProduct: 'cjsnow', snfSession: 'session-token', pid: 102 };
+    const query = 'battleMode=0&base_asset_url=https://media.example.test/game/mpassets/';
+    const vars = { mpProduct: 'cjsnow', snfSession: 'session-token', pid: 102, queryString: encodeURIComponent(query) };
     state.window.swfobject.embedSWF('https://media.example.test/game/mpassets/playclients/r3662/flash_client_base_fp11.swf',
         'mpClient', '100%', '100%', '11.3', false, vars, {}, { id: 'mpClient' });
     await Promise.resolve();
-    assert.equal(state.loaded.parameters, vars);
+    assert.equal(state.loaded.parameters.queryString, query);
+    assert.equal(state.loaded.parameters.snfSession, vars.snfSession);
+    assert.equal(state.loaded.parameters.pid, vars.pid);
+    assert.equal(vars.queryString, encodeURIComponent(query), 'original page settings are unchanged');
     assert.equal(state.loaded.socketProxy.length, 6);
     const snow = state.loaded.socketProxy[5];
     assert.equal(snow.host, 'snow.example.test');
