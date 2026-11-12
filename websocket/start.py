@@ -23,6 +23,10 @@ def configuration(environment):
     targets.update({name: f"houdini_{name}:{port}" for name, port in (
         ("blizzard", 9875), ("glaciar", 9876), ("avalanche", 9877), ("yeti", 9878)
     )})
+    snow_port = int(environment.get("SNOWFLAKE_PORT", "7002"))
+    if not 1 <= snow_port <= 65535:
+        raise ValueError("SNOWFLAKE_PORT must be between 1 and 65535")
+    targets["snow"] = f"snowflake:{snow_port}"
     return origin, targets
 
 

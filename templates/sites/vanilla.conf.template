@@ -6,7 +6,7 @@ server {
         add_header X-Content-Type-Options nosniff always;
     }
 
-    location ~ ^/__wand/ws/(login|blizzard|glaciar|avalanche|yeti)$ {
+    location ~ ^/__wand/ws/(login|blizzard|glaciar|avalanche|yeti|snow)$ {
         # Compare the full public origin, including scheme and optional port.
         if ($http_origin != "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}") {
             return 403;

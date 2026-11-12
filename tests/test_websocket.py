@@ -25,7 +25,14 @@ class ProxyTest(unittest.TestCase):
         origin, targets = proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test/play", "GAME_LOGIN_PORT": "7112"})
         self.assertEqual(origin, "https://old.example.test")
         self.assertEqual(targets, {"login": "houdini_login:7112", "blizzard": "houdini_blizzard:9875",
-                                  "glaciar": "houdini_glaciar:9876", "avalanche": "houdini_avalanche:9877", "yeti": "houdini_yeti:9878"})
+                                  "glaciar": "houdini_glaciar:9876", "avalanche": "houdini_avalanche:9877", "yeti": "houdini_yeti:9878",
+                                  "snow": "snowflake:7002"})
+
+    def test_snow_uses_fixed_internal_host_and_configured_port(self):
+        _, targets = proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test", "SNOWFLAKE_PORT": "17002"})
+        self.assertEqual(targets["snow"], "snowflake:17002")
+        with self.assertRaises(ValueError):
+            proxy.configuration({"WEB_LEGACY_PLAY": "https://old.example.test", "SNOWFLAKE_PORT": "65536"})
 
     def test_invalid_configuration(self):
         for value in ("not-a-url", "ftp://old.example.test", "https://user:password@old.example.test"):

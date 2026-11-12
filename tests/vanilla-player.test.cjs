@@ -8,7 +8,8 @@ function adapter(protocol = 'https:', media = 'https://media.example.test') {
     let loaded, rendered;
     const status = { setAttribute() {} };
     const target = { replaceWith(player) { rendered = player; } };
-    const settings = { dataset: { media, address: 'game.example.test', loginPort: '7112', captcha: '' } };
+    const settings = { dataset: { media, address: 'game.example.test', loginPort: '7112', captcha: '',
+        snowHost: 'snow.example.test', snowPort: '17002' } };
     const player = { style: {}, setAttribute() {}, ruffle: () => ({ load: async options => { loaded = options; } }) };
     const window = { RufflePlayer: { newest: () => ({ createPlayer: () => player }) }, swfobject: { ua: {} } };
     vm.runInNewContext(source, { window, URL, location: { protocol, href: `${protocol}//play.example.test/` },
@@ -39,4 +40,19 @@ test('Vanilla rejects HTTP media on an HTTPS page', () => {
     const state = adapter('https:', 'http://media.example.test');
     assert.match(state.status.textContent, /HTTPS/);
     assert.equal(state.loaded, undefined);
+});
+
+test('Snow embeds with its own advertised host and port through same-origin WSS', async () => {
+    const state = adapter();
+    const vars = { mpProduct: 'cjsnow', snfSession: 'session-token', pid: 102 };
+    state.window.swfobject.embedSWF('https://media.example.test/game/mpassets/playclients/r3662/flash_client_base_fp11.swf',
+        'mpClient', '100%', '100%', '11.3', false, vars, {}, { id: 'mpClient' });
+    await Promise.resolve();
+    assert.equal(state.loaded.parameters, vars);
+    assert.equal(state.loaded.socketProxy.length, 6);
+    const snow = state.loaded.socketProxy[5];
+    assert.equal(snow.host, 'snow.example.test');
+    assert.equal(snow.port, 17002);
+    assert.equal(snow.proxyUrl, 'wss://play.example.test/__wand/ws/snow');
+    assert.equal(state.rendered.id, 'mpClient');
 });

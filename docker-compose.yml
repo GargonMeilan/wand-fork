@@ -172,6 +172,7 @@ services:
       WEB_LEGACY_PLAY: ${WEB_LEGACY_PLAY}
       WEB_VANILLA_PLAY: ${WEB_VANILLA_PLAY}
       GAME_LOGIN_PORT: ${GAME_LOGIN_PORT}
+      SNOWFLAKE_PORT: ${SNOWFLAKE_PORT}
     networks:
       - wand
     read_only: true

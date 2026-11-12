@@ -38,7 +38,13 @@ Se atiende localmente con 204 el endpoint histórico de telemetría Disney
 registro de los cuatro idiomas se dirigen al Dash local, evitando los dominios
 históricos externos que permanecían en algunas plantillas.
 
-Card-Jitsu Snow usa otra incrustación y protocolo: no se ha validado con Ruffle.
+Card-Jitsu Snow usa otra incrustación y protocolo. Su reproductor recibe una
+entrada adicional en `socketProxy` con `SNOWFLAKE_HOST` y `SNOWFLAKE_PORT` (los
+mismos valores que anuncia Dash). La ruta WSS `/__wand/ws/snow` del host Vanilla
+conecta exclusivamente con `snowflake:SNOWFLAKE_PORT` dentro de Docker; no hace
+falta publicar ese puerto. El servicio websocket recibe ahora también el puerto
+configurado. Es necesario reconstruir web/websocket y regenerar las páginas al
+desplegar. No se ha validado una partida completa con Ruffle.
 Tampoco se garantiza el funcionamiento de todos los minijuegos, amigos,
 activación, reCAPTCHA, módulos AS3 o puentes AS2/AS3 solo por llegar al login.
 
@@ -64,9 +70,13 @@ sh tests/check-nginx.sh
 python tests/check-proxy-chain.py
 ```
 
-Hay seis pruebas Node y seis Python. Las pruebas Docker comprueban ambos
+Hay siete pruebas Node y siete Python. Las pruebas Docker comprueban ambos
 vhosts, rutas, plantillas e incrustación Flash/Ruffle; la cadena de proxies
-cubre ambos clientes y el POST Legacy. `tests/vanilla-browser-smoke.cjs` sirve
+cubre ambos clientes, el destino Snowflake y el POST Legacy. La prueba de
+Snowflake en esta cadena usa un servidor TCP de eco; no valida el protocolo de
+una partida. El aviso «Already Logged In» al cruzar el puente y el fallo de Agua
+siguen pendientes de reproducción y diagnóstico con los logs del mundo.
+`tests/vanilla-browser-smoke.cjs` sirve
 el HTML original y los medios Vanilla desde el checkout, con una sustitución
 de variables para la prueba; las plantillas Go se validan por separado con
 Dockerize real. Requiere los mismos Playwright/Chromium y runtime de la prueba

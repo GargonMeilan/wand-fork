@@ -11,7 +11,8 @@ const runtime = 'web/ruffle/node_modules/@ruffle-rs/ruffle';
 const requests = [];
 const errors = [];
 const failures = [];
-const env = { WEB_VANILLA_PLAY: '', WEB_VANILLA_MEDIA: '', GAME_ADDRESS: 'game.example.test', GAME_LOGIN_PORT: '6112', WEB_RECAPTCHA_SITE: '' };
+const env = { WEB_VANILLA_PLAY: '', WEB_VANILLA_MEDIA: '', GAME_ADDRESS: 'game.example.test', GAME_LOGIN_PORT: '6112', WEB_RECAPTCHA_SITE: '',
+    SNOWFLAKE_HOST: 'snow.example.test', SNOWFLAKE_PORT: '7002' };
 function render(text) {
     return text.replace(/{{ if \.Env.WEB_RECAPTCHA_SITE }}[\s\S]*?{{ end }}/g, '')
         .replace(/{{ if ne \.Env.VANILLA_PLAYER "flash" }}|{{ end }}/g, '')

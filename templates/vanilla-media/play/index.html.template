@@ -138,6 +138,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </script>
 <div id="wand-vanilla-config" hidden data-media="{{ .Env.WEB_VANILLA_MEDIA | html }}"
  data-address="{{ .Env.GAME_ADDRESS | html }}" data-login-port="{{ .Env.GAME_LOGIN_PORT | html }}"
+ data-snow-host="{{ .Env.SNOWFLAKE_HOST | html }}" data-snow-port="{{ .Env.SNOWFLAKE_PORT | html }}"
  data-captcha="{{ .Env.WEB_RECAPTCHA_SITE | html }}"></div>
 </body>
 </html>

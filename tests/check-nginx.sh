@@ -23,6 +23,7 @@ for scenario in domains paths shared flash captcha; do
         -e WEB_LEGACY_PLAY="$play" -e WEB_LEGACY_MEDIA="$media" \
         -e WEB_VANILLA_PLAY="$vanilla_play" -e WEB_VANILLA_MEDIA="$vanilla_media" -e VANILLA_PLAYER="$player" \
         -e GAME_ADDRESS=game.example.test -e GAME_LOGIN_PORT=7112 \
+        -e SNOWFLAKE_HOST=snow.example.test -e SNOWFLAKE_PORT=7002 \
         -e LEGACY_PLAYER="$player" -e WEB_RECAPTCHA_SITE="$captcha" \
         -v "$(pwd)/templates:/t:ro" --entrypoint sh wand-ruffle-web-test -ec '
             rm /etc/nginx/conf.d/default.conf

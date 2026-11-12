@@ -29,7 +29,7 @@ def fixture():
             while data := self.request.recv(65536):
                 self.request.sendall(str(self.server.server_address[1]).encode() + b":" + data)
 
-    for port in (7112, 9875, 9876, 9877, 9878):
+    for port in (7112, 9875, 9876, 9877, 9878, 7002):
         server = socketserver.ThreadingTCPServer(("0.0.0.0", port), Echo)
         threading.Thread(target=server.serve_forever, daemon=True).start()
     threading.Event().wait()
@@ -53,7 +53,7 @@ def check():
     try:
         docker("network", "create", network)
         run(prefix + "-tcp", "--network-alias", "dash", "--network-alias", "houdini_login", "--network-alias", "houdini_blizzard",
-            "--network-alias", "houdini_glaciar", "--network-alias", "houdini_avalanche", "--network-alias", "houdini_yeti",
+            "--network-alias", "houdini_glaciar", "--network-alias", "houdini_avalanche", "--network-alias", "houdini_yeti", "--network-alias", "snowflake",
             "-v", f"{Path.cwd()}/tests:/tests:ro", "--entrypoint", "python", "wand-websocket-test", "/tests/check-proxy-chain.py", "fixture")
         run(prefix + "-ws", "--network-alias", "websocket", "--read-only", "--tmpfs", "/tmp:size=1m,mode=1777",
             "--cap-drop", "ALL", "--security-opt", "no-new-privileges:true", "-e", "WEB_LEGACY_PLAY=http://old.example.test",
@@ -100,6 +100,11 @@ def check():
             assert selftest == str(port).encode() + b":vanilla\0", selftest
             ws.close()
             print(f"Vanilla Nginx -> Websockify -> {name}:{port}: OK")
+        ws = websocket.create_connection(url + "snow", origin="http://play.example.test", host="play.example.test", timeout=3)
+        ws.send_binary(b"snow\0")
+        assert ws.recv() == b"7002:snow\0"
+        ws.close()
+        print("Vanilla Nginx -> Websockify -> snowflake:7002: OK")
         for host in ("old.example.test", "legacy.example.test"):
             request = urllib.request.Request(f"http://{address}/create_account/create_account.php",
                 data=b"action=validate_agreement&agree_to_rules=1&agree_to_terms=1",

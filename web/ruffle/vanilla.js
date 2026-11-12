@@ -39,6 +39,21 @@
                 return;
             }
             const player = window.RufflePlayer.newest().createPlayer();
+            // Snow embeds a separate SWF and connects to Snowflake, rather
+            // than the Houdini world used by the main client and Water.
+            let playerSockets = socketProxy;
+            if (flashVars?.mpProduct === "cjsnow") {
+                const host = settings.dataset.snowHost;
+                const port = Number(settings.dataset.snowPort);
+                if (!host || !Number.isInteger(port) || port < 1 || port > 65535) {
+                    fail(new Error("SNOWFLAKE_HOST y SNOWFLAKE_PORT deben configurar Card-Jitsu Nieve."));
+                    callback?.({ success: false, id });
+                    return;
+                }
+                const proxy = new URL("/__wand/ws/snow", location.href);
+                proxy.protocol = location.protocol === "https:" ? "wss:" : "ws:";
+                playerSockets = [...socketProxy, { host, port, proxyUrl: proxy.href }];
+            }
             player.id = attributes?.id || id;
             player.setAttribute("name", attributes?.name || player.id);
             if (attributes?.class) player.className = attributes.class;
@@ -51,7 +66,7 @@
                 parameters: flashVars,
                 // The original client resolves ../web_service from its SWF.
                 // Keep the SWF URL as base; the FlashVars carry full media paths.
-                socketProxy,
+                socketProxy: playerSockets,
                 allowScriptAccess: true,
                 autoplay: "on",
                 unmuteOverlay: "visible",
