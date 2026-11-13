@@ -1,0 +1,28 @@
+{% extends 'manager/base.html' %}{% set manager_section = 'login' %}
+{% block title %}Sign in{% endblock %}
+{% block content %}
+<h1>Manager sign in</h1><section>
+{% if success_message %}<p class="success" role="status">{{ success_message }}</p>{% endif %}
+{% if error_message %}<p class="notice" role="alert">{{ error_message }}</p>{% endif %}
+<form action="/manager/login" method="post">
+<label>Username<input type="text" name="username" required minlength="4" maxlength="12" autocomplete="username"></label>
+<label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+<button type="submit" {% if site_key %}disabled id="manager-login-submit"{% endif %}>Sign in</button>
+</form><p>A moderator account is required.</p></section>
+{% if site_key %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ site_key|urlencode }}"></script>
+<script>
+grecaptcha.ready(async function () {
+    try {
+        document.getElementById('recaptchaResponse').value = await grecaptcha.execute({{ site_key|tojson }}, {action: 'login'});
+        document.getElementById('manager-login-submit').disabled = false;
+    } catch (_) {
+        const error = document.createElement('p');
+        error.textContent = 'reCAPTCHA could not be verified. Reload the page.';
+        error.setAttribute('role', 'alert');
+        document.querySelector('form').append(error);
+    }
+});
+</script>
+{% endif %}{% endblock %}

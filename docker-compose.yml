@@ -6,11 +6,14 @@ services:
       - .env
     networks:
       - wand
-    ports:
-      - 5432:5432
     volumes:
-      - ./houdini/houdini.sql:/docker-entrypoint-initdb.d/houdini.sql
-      - ./.data:/var/lib/postgresql/data
+      - type: bind
+        source: ./houdini/houdini.sql
+        target: /docker-entrypoint-initdb.d/houdini.sql
+        read_only: true
+        bind:
+          create_host_path: false
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", 'pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_USER"']
       interval: 8s
@@ -25,17 +28,15 @@ services:
     restart: always
     command: redis-server --save 60 1 --loglevel warning
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 15
       start_period: 30s
     volumes:
-      - ./.redis:/data
+      - redis_data:/data
     networks:
       - wand
-    ports:
-      - 127.0.0.1:6379:6379
     labels:
       net.unraid.docker.icon: https://raw.githubusercontent.com/solero/wand/refs/heads/master/icons/redis.png
   web:
@@ -43,29 +44,106 @@ services:
     restart: always
     env_file:
       - .env
-    ports:
-      - ${WEB_PORT}:80
     networks:
       - wand
     links:
       - dash:dash
+    depends_on:
+      websocket:
+        condition: service_started
+        restart: true
+      dash:
+        condition: service_healthy
+        restart: true
     volumes:
-      - ./www:/usr/share/nginx/html
-      - ./legacy-media:/usr/share/nginx/legacy
-      - ./vanilla-media:/usr/share/nginx/vanilla
-      - ./servers.xml:/t/servers.xml
+      - type: bind
+        source: ./www
+        target: /usr/share/nginx/html
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./legacy-media
+        target: /usr/share/nginx/legacy
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media
+        target: /usr/share/nginx/vanilla
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./servers.xml
+        target: /t/servers.xml
+        read_only: true
+        bind:
+          create_host_path: false
 
-      - ./templates/sites/legacy.conf.template:/etc/nginx/conf.d/legacy.conf.template
-      - ./templates/sites/vanilla.conf.template:/etc/nginx/conf.d/vanilla.conf.template
-      - ./templates/legacy-media/play/index.html.template:/t/legacy/play/index.html.template
-      - ./templates/legacy-media/play/es/index.html.template:/t/legacy/play/es/index.html.template
-      - ./templates/legacy-media/play/fr/index.html.template:/t/legacy/play/fr/index.html.template
-      - ./templates/legacy-media/play/pt/index.html.template:/t/legacy/play/pt/index.html.template
-      - ./templates/vanilla-media/play/index.html.template:/t/vanilla/play/index.html.template
-      - ./templates/vanilla-media/play/es/index.html.template:/t/vanilla/play/es/index.html.template
-      - ./templates/vanilla-media/play/fr/index.html.template:/t/vanilla/play/fr/index.html.template
-      - ./templates/vanilla-media/play/pt/index.html.template:/t/vanilla/play/pt/index.html.template
-      - ./templates/vanilla-media/media/play/web_service/environment_data.xml.template:/t/vanilla/media/play/web_service/environment_data.xml.template
+      - type: bind
+        source: ./templates/sites/legacy.conf.template
+        target: /etc/nginx/conf.d/legacy.conf.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/sites/vanilla.conf.template
+        target: /etc/nginx/conf.d/vanilla.conf.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/index.html.template
+        target: /t/legacy/play/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/es/index.html.template
+        target: /t/legacy/play/es/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/fr/index.html.template
+        target: /t/legacy/play/fr/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/legacy-media/play/pt/index.html.template
+        target: /t/legacy/play/pt/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/index.html.template
+        target: /t/vanilla/play/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/es/index.html.template
+        target: /t/vanilla/play/es/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/fr/index.html.template
+        target: /t/vanilla/play/fr/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/play/pt/index.html.template
+        target: /t/vanilla/play/pt/index.html.template
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/vanilla-media/media/play/web_service/environment_data.xml.template
+        target: /t/vanilla/media/play/web_service/environment_data.xml.template
+        read_only: true
+        bind:
+          create_host_path: false
     command: ["dockerize",
               "-template", "/etc/nginx/conf.d/legacy.conf.template:/etc/nginx/conf.d/legacy.conf",
               "-template", "/etc/nginx/conf.d/vanilla.conf.template:/etc/nginx/conf.d/vanilla.conf",
@@ -87,6 +165,23 @@ services:
     labels:
       net.unraid.docker.webui: http://[IP]:[PORT:${WEB_PORT}]
       net.unraid.docker.icon: https://raw.githubusercontent.com/solero/wand/refs/heads/master/icons/houdini.png
+  websocket:
+    build: ./websocket
+    restart: always
+    environment:
+      WEB_LEGACY_PLAY: ${WEB_LEGACY_PLAY}
+      WEB_VANILLA_PLAY: ${WEB_VANILLA_PLAY}
+      GAME_LOGIN_PORT: ${GAME_LOGIN_PORT}
+      SNOWFLAKE_PORT: ${SNOWFLAKE_PORT}
+    networks:
+      - wand
+    read_only: true
+    tmpfs:
+      - /tmp:size=1m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
   houdini_login:
     build: ./houdini
     restart: always
@@ -94,15 +189,25 @@ services:
       - .env
     networks:
       - wand
-    ports:
-      - ${GAME_LOGIN_PORT}:${GAME_LOGIN_PORT}
     volumes:
-      - ./houdini:/usr/src/houdini
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
         condition: service_healthy
+        restart: true
       redis:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
@@ -111,8 +216,7 @@ services:
       test:
         - CMD
         - python
-        - -c
-        - "import socket, sys; socket.create_connection(('127.0.0.1', int(sys.argv[1])), timeout=3).close()"
+        - /opt/wand/check_houdini.py
         - "${GAME_LOGIN_PORT}"
       interval: 60s
       timeout: 5s
@@ -132,18 +236,46 @@ services:
     restart: always
     networks:
       - wand
-    ports:
-      - 9875:9875
     volumes:
-      - ./houdini:/usr/src/houdini
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
       - houdini_login:login
-    entrypoint: ["python", "bootstrap.py", "world"]
+    healthcheck:
+      test: ["CMD", "python", "/opt/wand/check_houdini.py", "9875"]
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3100", "--name", "blizzard", "--port", "9875", "--lang", "en",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -157,18 +289,46 @@ services:
     restart: always
     networks:
       - wand
-    ports:
-      - 9876:9876
     volumes:
-      - ./houdini:/usr/src/houdini
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
       - houdini_login:login
-    entrypoint: ["python", "bootstrap.py", "world"]
+    healthcheck:
+      test: ["CMD", "python", "/opt/wand/check_houdini.py", "9876"]
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3101", "--name", "glaciar", "--port", "9876", "--lang", "es",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -182,18 +342,46 @@ services:
     restart: always
     networks:
       - wand
-    ports:
-      - 9877:9877
     volumes:
-      - ./houdini:/usr/src/houdini
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
       - houdini_login:login
-    entrypoint: ["python", "bootstrap.py", "world"]
+    healthcheck:
+      test: ["CMD", "python", "/opt/wand/check_houdini.py", "9877"]
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3102", "--name", "avalanche", "--port", "9877", "--lang", "pt",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -207,18 +395,46 @@ services:
     restart: always
     networks:
       - wand
-    ports:
-      - 9878:9878
     volumes:
-      - ./houdini:/usr/src/houdini
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./houdini
+        target: /usr/src/houdini
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./web/check_houdini.py
+        target: /opt/wand/check_houdini.py
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      redis:
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
       - houdini_login:login
-    entrypoint: ["python", "bootstrap.py", "world"]
+    healthcheck:
+      test: ["CMD", "python", "/opt/wand/check_houdini.py", "9878"]
+      interval: 30s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
+      start_interval: 5s
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3103", "--name", "yeti", "--port", "9878", "--lang", "fr",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -230,30 +446,64 @@ services:
   dash:
     build: ./dash
     restart: always
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:3000/world/revision', timeout=2).read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+      start_interval: 5s
     networks:
       - wand
     env_file:
       - .env
-    ports:
-      - 3000
     volumes:
-      - ./dash:/usr/src/dash
-      - ./vanilla-media/media/avatar/paper:/usr/src/dash/items
-      - ./templates/dash/config.py.template:/usr/src/dash/config.py.template
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media
+        target: /opt/wand/vanilla
+        read_only: true
+        bind:
+          create_host_path: false
+      - world_data:/var/lib/wand-world
+      - type: bind
+        source: ./dash
+        target: /usr/src/dash
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media/media/avatar/paper
+        target: /usr/src/dash/items
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./templates/dash/config.py.template
+        target: /usr/src/dash/config.py.template
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
       - houdini_login:login
     entrypoint: ["dockerize",
                 "-template", "/usr/src/dash/config.py.template:/usr/src/dash/config.py",
-                "python", "bootstrap.py"]
+                "python", "/opt/wand/world_manager/boot.py"]
     command: ["-c", "config.py"]
     labels:
       net.unraid.docker.icon: https://raw.githubusercontent.com/solero/wand/refs/heads/master/icons/dash.png
@@ -262,8 +512,6 @@ services:
     restart: always
     networks:
       - wand
-    ports:
-      - ${SNOWFLAKE_PORT}:${SNOWFLAKE_PORT}
     env_file:
       - .env
     environment:
@@ -272,17 +520,30 @@ services:
       - MEDIA_LOCATION=${WEB_VANILLA_MEDIA}
       - PORT=${SNOWFLAKE_PORT}
     volumes:
-      - ./snowflake:/usr/src/snowflake
-      - ./.env:/usr/src/snowflake/.env
+      - type: bind
+        source: ./snowflake
+        target: /usr/src/snowflake
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./.env
+        target: /usr/src/snowflake/.env
+        read_only: true
+        bind:
+          create_host_path: false
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       dash:
         condition: service_started
+        restart: true
       houdini_login:
         condition: service_healthy
+        restart: true
     links:
       - db:db
       - redis:redis
@@ -294,3 +555,13 @@ services:
 networks:
   wand:
     driver: bridge
+
+# Keep state outside Dokploy's Git checkout. Stable names survive container
+# recreation and Dokploy service-name randomization; retain the project name.
+volumes:
+  postgres_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_postgres_data
+  redis_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_redis_data
+  world_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_world_data

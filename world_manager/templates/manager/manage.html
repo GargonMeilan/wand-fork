@@ -1,0 +1,93 @@
+{% extends "manager/base.html" %}
+{% set manager_section = "manage" %}
+{% block title %}Players{% endblock %}
+{% block content %}
+<div class="legacy-content">
+        <div class="page-heading"><div><h1>Players</h1><p>Search accounts and review player details.</p></div></div>
+
+        {% if success_message != '' %}
+        <div class="alert alert-success" role="alert">{{ success_message }}</div>
+        {% endif %}
+        {% if error_message != '' %}
+        <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+        {% endif %}
+
+          <div class="container  d-flex ">
+                <h4>Search: </h4>
+                </div>
+                <div class="container  d-flex ">
+                <form action="/manager/manage/search" name='verify' method="POST" onsubmit="">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm " id="search_query" name="search_query" oninput="check_username();" placeholder="Search" required>
+                        </div>
+                        <p>Search by:</p>
+                        <div class="form-group">
+                            <select name="search_type" class="form-control">
+                              <option value="id"> ID</option>
+                              <option value="username">Username</option>
+                              <option value="email">Email</option>
+                            </select>
+                          </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary"type="submit">Search</button>
+                        </div>
+                </form>
+
+                </div>
+        <div class="container  d-flex ">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-verify" role="tabpanel" aria-labelledby="nav-verify-tab">
+
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        {% for page_number in penguins %}
+                        {% if page_number == 1 %}
+                            <a class="nav-item nav-link active" id="page_{{ page_number }}-tab" data-toggle="tab" href="#page_{{ page_number }}" role="tab" aria-controls="page_{{ page_number }}" aria-selected="true">
+                                {{ page_number }}
+                            </a>
+                        {% else %}
+                            <a class="nav-item nav-link" id="page_{{ page_number }}-tab" data-toggle="tab" href="#page_{{ page_number }}" role="tab" aria-controls="page_{{ page_number }}" aria-selected="false">
+                                {{ page_number }}
+                            </a>
+                        {% endif %}
+                        {% endfor %}
+                        </div>
+
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                    {% for page_number in penguins %}
+                    {% if page_number == 1 %}
+                        <div class="tab-pane fade show active" id="page_{{ page_number }}" role="tabpanel" aria-labelledby="page_{{ page_number }}-tab">
+                    {% else %}
+                            <div class="tab-pane fade" id="page_{{ page_number }}" role="tabpanel" aria-labelledby="page_{{ page_number }}-tab">
+                    {% endif %}
+                                <table class="table table-bordered">
+                                    <thead><tr><th>Username</th><th>Account</th></tr></thead><tbody>
+                    {% for penguin in penguins[page_number] %}
+                                        <tr>
+                                            <td>
+                                                <span title="Registered {{ penguin.registration_date }}">
+                                                    {{ penguin.username }}
+                                                  </span>
+                                            </td>
+                                            <td>
+                                                <a class="secondary btn" href="/manager/manage/{{ penguin.id }}">View player</a>
+                                            </td>
+                                        </tr>
+                    {% endfor %}
+                                    </tbody></table>
+                            </div>
+                    {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="/manager/static/js/checks.js"></script>
+    </div>
+{% endblock %}

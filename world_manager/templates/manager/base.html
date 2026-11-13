@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Manager{% endblock %} · Wand</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="/manager/world-static/world.css">{% block head %}{% endblock %}</head>
+<body class="manager-body">
+{% if manager_section|default('') != 'login' %}{% include 'manager/_navigation.html' %}{% endif %}
+<main class="manager-main {% if manager_section|default('') == 'login' %}login-main{% endif %}">{% block content %}{% endblock %}</main>
+{% block scripts %}{% endblock %}</body></html>

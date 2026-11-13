@@ -1,10 +1,76 @@
 server {
-    server_name  {{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }};
+    server_name  {{ (parseUrl .Env.WEB_VANILLA_PLAY).Hostname }};
+    resolver 127.0.0.11 valid=10s;
 
-    location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
-        root   /usr/share/nginx/vanilla/play/;
-        index  index.html index.htm;
+    location ^~ /__wand/ruffle/ {
+        alias /opt/wand/ruffle/;
+        add_header X-Content-Type-Options nosniff always;
     }
+
+    location ~ ^/__wand/ws/(login|blizzard|glaciar|avalanche|yeti|snow)$ {
+        # Compare the full public origin, including scheme and optional port.
+        if ($http_origin != "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}") {
+            return 403;
+        }
+        resolver 127.0.0.11 valid=10s;
+        set $socket_backend websocket:8080;
+        proxy_pass http://$socket_backend/?token=$1;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Origin $http_origin;
+        proxy_buffering off;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
+
+    root /usr/share/nginx/vanilla/play;
+
+    location = /__wand/world/revision {
+        proxy_pass http://dash:3000/world/revision;
+        proxy_hide_header Cache-Control;
+        add_header Cache-Control "no-store" always;
+    }
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
+    location / { index index.html index.htm; }
+    {{ if (parseUrl .Env.WEB_VANILLA_PLAY).Path }}
+    location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
+        alias /usr/share/nginx/vanilla/play/;
+        index index.html index.htm;
+    }
+    {{ end }}
+    {{ if eq (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/local/(en|es|pt|fr|ru|de)/((?:catalogues|close_ups|scavenger_hunt|membership|party|telescope)/[A-Za-z0-9_./-]+\.swf|cfc\.swf|poster\.swf|quest_interface\.swf)$ {
+        proxy_pass http://dash:3000/world/event-resource/local/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/((?:telescope|binoculars|content|scavenger_hunt|prompts|membership)/[A-Za-z0-9_./-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/event-resource/global/en/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/en$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/en/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/rooms/([A-Za-z0-9_-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/room-file/$1$is_args$args;
+    }
+    location {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/ {
+        alias /usr/share/nginx/vanilla/media/;
+    }
+    {{ end }}
+
+    # Historic Disney analytics is not a game service.
+    location = /datatech/serverlog/v1/json { return 204; }
 
     location ~ ^/(.*)/penguin/create {
         proxy_pass http://dash:3000/create/vanilla/$1;
@@ -114,13 +180,48 @@ server {
 
 }
 
+{{ if ne (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
 server {
-    server_name  {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Host }};
+    server_name  {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Hostname }};
+    resolver 127.0.0.11 valid=10s;
+
+    add_header Access-Control-Allow-Origin "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}" always;
+    add_header Vary Origin always;
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/local/(en|es|pt|fr|ru|de)/((?:catalogues|close_ups|scavenger_hunt|membership|party|telescope)/[A-Za-z0-9_./-]+\.swf|cfc\.swf|poster\.swf|quest_interface\.swf)$ {
+        proxy_pass http://dash:3000/world/event-resource/local/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/((?:telescope|binoculars|content|scavenger_hunt|prompts|membership)/[A-Za-z0-9_./-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/event-resource/global/en/$1$is_args$args;
+    }
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/en$is_args$args;
+    }
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/en/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/rooms/([A-Za-z0-9_-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/room-file/$1$is_args$args;
+    }
 
     location / {
         root   /usr/share/nginx/vanilla/media;
         index  index.html index.htm;
     }
+
+    {{ if (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}
+    location {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/ {
+        alias /usr/share/nginx/vanilla/media/;
+    }
+    {{ end }}
 
     location /social/autocomplete/v2/search/suggestions {
         proxy_pass http://dash:3000/autocomplete;
@@ -130,3 +231,5 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
+
+{{ end }}

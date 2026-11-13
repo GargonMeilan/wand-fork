@@ -2,6 +2,30 @@
 
 Wand makes it easy to configure dash, houdini and a media server utilizing docker & docker-compose.
 
+Legacy now uses a locally hosted, pinned Ruffle runtime and a WebSocket/TCP
+bridge. Vanilla also uses Ruffle through its original page and FlashVars; see
+[Vanilla integration](docs/vanilla.md). See [Ruffle and Dokploy deployment](docs/ruffle.md)
+for HTTPS domains, configuration, validation, limitations and rollback.
+
+Vanilla room decorations and music can be managed at `/manager/world`; see
+[Runtime rooms and event inventory](docs/events.md) for setup, uploads,
+decoration packages, client reloads and the limits of the bundled event assets.
+The [preinstalled event library and room previews](docs/event-catalogue.md)
+include 16 historical resource packages, with 303 room designs and archived
+companion files. The manager uses one English interface across all menus.
+The moderator panel also includes [Online players](docs/online.md), with live
+server and room snapshots for Legacy and Vanilla.
+
+For Dokploy, select **`docker-compose.dokploy.yml`**, enable Git submodules and
+configure HTTPS domains on `web:80`. PostgreSQL and Redis use stable Docker
+volumes outside the Git checkout. Keep the project name unchanged. Existing
+bind-mount data is not migrated automatically; read the deployment guide before
+switching an installation whose accounts must be preserved.
+
+The base Compose publishes no host ports. For direct access without Dokploy,
+add `-f docker-compose.direct.yml` after `-f docker-compose.yml` to publish the
+original ports. Do not enable that optional file behind Dokploy's proxy.
+
 > [!NOTE]
 > This can also be ran on Windows using WSL.
 
@@ -17,7 +41,7 @@ bash <(curl -s https://raw.githubusercontent.com/solero/wand/master/install.sh)
 **Step 3** Run and enjoy.
 Run this command:
 ```bash
-$ cd wand && sudo docker-compose up
+$ cd wand && sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up
 ```
 ## Manual setup
 
@@ -76,7 +100,7 @@ $ nano .env
 
 **Step 4** Start the services
 ```bash
-$ sudo docker-compose up
+$ sudo docker-compose -f docker-compose.yml -f docker-compose.direct.yml up
 ```
 
 **Step 5** You're done!

@@ -1,0 +1,5 @@
+html, body { min-height: 100%; }
+#wand-game { width: 100%; height: calc(100vh - 120px); min-height: 300px; position: relative; }
+#wand-game #game { display: block; width: 100%; height: 100%; }
+#wand-game.wand-small { width: min(760px, 100%); height: auto; aspect-ratio: 760 / 480; margin: 0 auto; min-height: 0; }
+#wand-status { padding: 1rem; background: #fff; color: #15395c; text-align: center; }

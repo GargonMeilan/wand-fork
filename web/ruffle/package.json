@@ -1,0 +1,8 @@
+{
+  "name": "wand-ruffle-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@ruffle-rs/ruffle": "0.7.1"
+  }
+}

@@ -1,0 +1,33 @@
+# Optional host port publishing for direct access and external Flash clients.
+# Do not use this file with Dokploy HTTPS routing.
+services:
+  db:
+    ports:
+      - 5432:5432
+  redis:
+    ports:
+      - 127.0.0.1:6379:6379
+  web:
+    ports:
+      - ${WEB_PORT}:80
+  houdini_login:
+    ports:
+      - ${GAME_LOGIN_PORT}:${GAME_LOGIN_PORT}
+  houdini_blizzard:
+    ports:
+      - 9875:9875
+  houdini_glaciar:
+    ports:
+      - 9876:9876
+  houdini_avalanche:
+    ports:
+      - 9877:9877
+  houdini_yeti:
+    ports:
+      - 9878:9878
+  dash:
+    ports:
+      - 3000
+  snowflake:
+    ports:
+      - ${SNOWFLAKE_PORT}:${SNOWFLAKE_PORT}

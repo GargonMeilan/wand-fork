@@ -10,7 +10,16 @@
     <link id="stylesheet" type="text/css" href="/css/affiliate/0.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="/scripts/cookies.js"></script>
+    {{ if eq .Env.LEGACY_PLAYER "flash" }}
     <script type="text/javascript" src="/scripts/0.js"></script>
+    {{ end }}
+
+    {{ if ne .Env.LEGACY_PLAYER "flash" }}
+    <link rel="stylesheet" href="/__wand/ruffle/legacy.css"/>
+    <script>window.RufflePlayer = { config: { polyfills: false } };</script>
+    <script defer src="/__wand/ruffle/ruffle.js"></script>
+    <script defer src="/__wand/ruffle/legacy.js"></script>
+    {{ end }}
 
     {{ if .Env.WEB_RECAPTCHA_SITE }}
     <style type="text/css">
@@ -53,6 +62,7 @@
         </div>
       </div>
     </div>
+    {{ if eq .Env.LEGACY_PLAYER "flash" }}
     <object type="application/x-shockwave-flash" id="game" name="game" data="{{ .Env.WEB_LEGACY_MEDIA }}/boots.swf"
       width="100%" 
       height="98%">
@@ -63,6 +73,14 @@
         <img id="noflash" src="/images/need-flash-player.gif" alt="Get Adobe Flash player" title="Get Adobe Flash player" />
       </a>
     </object>
+    {{ else }}
+    <div id="wand-game" data-play="{{ .Env.WEB_LEGACY_PLAY | html }}" data-media="{{ .Env.WEB_LEGACY_MEDIA | html }}"
+         data-address="{{ .Env.GAME_ADDRESS | html }}" data-login-port="{{ .Env.GAME_LOGIN_PORT | html }}"
+         data-language="en">
+      <p id="wand-status" role="status">Cargando el juego...</p>
+      <noscript>Activa JavaScript para jugar con Ruffle.</noscript>
+    </div>
+    {{ end }}
     <div id="affiliatefooter">
       <div id="ftrWrap">
         <div id="ftrBg">

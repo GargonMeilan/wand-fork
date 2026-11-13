@@ -1,0 +1,41 @@
+name: Ruffle validation
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: docker compose config --quiet
+      - run: docker compose -f docker-compose.yml -f docker-compose.direct.yml config --quiet
+      - run: docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
+      - run: node --test tests/legacy-player.test.cjs tests/vanilla-player.test.cjs tests/world-notice.test.cjs tests/online-panel.test.cjs
+      - run: pip install -r websocket/requirements.txt websocket-client==1.9.0
+      - run: pip install PyYAML==6.0.3
+      - run: python scripts/generate-dokploy-compose.py --check
+      - name: Validate Dokploy Compose without starting containers
+        run: docker compose -f docker-compose.dokploy.yml config --quiet
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: docker build -t wand-websocket-test websocket
+      - run: sh tests/check-nginx.sh
+      - run: python tests/check-proxy-chain.py
+      - run: python tests/check-redis-health.py
+      - run: python tests/check-data-persistence.py
+      - run: python tests/check-bind-sources.py
+  backend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch backend sources without downloading media histories
+        run: git submodule update --init --recursive houdini dash snowflake
+      - name: Build all existing backend images
+        run: docker compose build houdini_login dash snowflake
+      - name: Verify cold start and automatic recovery after database recreation
+        run: python tests/check-backend-startup.py
