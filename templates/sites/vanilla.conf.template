@@ -1,5 +1,6 @@
 server {
     server_name  {{ (parseUrl .Env.WEB_VANILLA_PLAY).Hostname }};
+    resolver 127.0.0.11 valid=10s;
 
     location ^~ /__wand/ruffle/ {
         alias /opt/wand/ruffle/;
@@ -24,6 +25,16 @@ server {
     }
 
     root /usr/share/nginx/vanilla/play;
+
+    location = /__wand/world/revision {
+        proxy_pass http://dash:3000/world/revision;
+        proxy_hide_header Cache-Control;
+        add_header Cache-Control "no-store" always;
+    }
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
     location / { index index.html index.htm; }
     {{ if (parseUrl .Env.WEB_VANILLA_PLAY).Path }}
     location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
@@ -32,6 +43,21 @@ server {
     }
     {{ end }}
     {{ if eq (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/en$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/en/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/rooms/([A-Za-z0-9_-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/room-file/$1$is_args$args;
+    }
     location {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/ {
         alias /usr/share/nginx/vanilla/media/;
     }
@@ -151,9 +177,27 @@ server {
 {{ if ne (parseUrl .Env.WEB_VANILLA_PLAY).Host (parseUrl .Env.WEB_VANILLA_MEDIA).Host }}
 server {
     server_name  {{ (parseUrl .Env.WEB_VANILLA_MEDIA).Hostname }};
+    resolver 127.0.0.11 valid=10s;
 
     add_header Access-Control-Allow-Origin "{{ (parseUrl .Env.WEB_VANILLA_PLAY).Scheme }}://{{ (parseUrl .Env.WEB_VANILLA_PLAY).Host }}" always;
     add_header Vary Origin always;
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs\.bin$ {
+        proxy_pass http://dash:3000/world/config-bundle/en$is_args$args;
+    }
+
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/(en|es|pt|fr|ru|de)/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/$1/$2$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/web_service/game_configs/rooms\.(json|jsonp)$ {
+        proxy_pass http://dash:3000/world/rooms/en/$1$is_args$args;
+    }
+    location ~ ^{{ (parseUrl .Env.WEB_VANILLA_MEDIA).Path }}/play/v2/content/global/rooms/([A-Za-z0-9_-]+\.swf)$ {
+        proxy_pass http://dash:3000/world/room-file/$1$is_args$args;
+    }
 
     location / {
         root   /usr/share/nginx/vanilla/media;

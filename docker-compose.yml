@@ -53,7 +53,7 @@ services:
         condition: service_started
         restart: true
       dash:
-        condition: service_started
+        condition: service_healthy
         restart: true
     volumes:
       - type: bind
@@ -238,6 +238,12 @@ services:
       - wand
     volumes:
       - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
         source: ./houdini
         target: /usr/src/houdini
         bind:
@@ -269,7 +275,7 @@ services:
       retries: 6
       start_period: 30s
       start_interval: 5s
-    entrypoint: ["python", "bootstrap.py", "world"]
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3100", "--name", "blizzard", "--port", "9875", "--lang", "en",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -284,6 +290,12 @@ services:
     networks:
       - wand
     volumes:
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
       - type: bind
         source: ./houdini
         target: /usr/src/houdini
@@ -316,7 +328,7 @@ services:
       retries: 6
       start_period: 30s
       start_interval: 5s
-    entrypoint: ["python", "bootstrap.py", "world"]
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3101", "--name", "glaciar", "--port", "9876", "--lang", "es",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -331,6 +343,12 @@ services:
     networks:
       - wand
     volumes:
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
       - type: bind
         source: ./houdini
         target: /usr/src/houdini
@@ -363,7 +381,7 @@ services:
       retries: 6
       start_period: 30s
       start_interval: 5s
-    entrypoint: ["python", "bootstrap.py", "world"]
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3102", "--name", "avalanche", "--port", "9877", "--lang", "pt",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -378,6 +396,12 @@ services:
     networks:
       - wand
     volumes:
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
       - type: bind
         source: ./houdini
         target: /usr/src/houdini
@@ -410,7 +434,7 @@ services:
       retries: 6
       start_period: 30s
       start_interval: 5s
-    entrypoint: ["python", "bootstrap.py", "world"]
+    entrypoint: ["python", "/opt/wand/world_manager/houdini_boot.py", "world"]
     command: ["-id", "3103", "--name", "yeti", "--port", "9878", "--lang", "fr",
               "--redis-address", "redis",
               "--database-address", "db",
@@ -422,11 +446,31 @@ services:
   dash:
     build: ./dash
     restart: always
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:3000/world/revision', timeout=2).read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+      start_interval: 5s
     networks:
       - wand
     env_file:
       - .env
     volumes:
+      - type: bind
+        source: ./world_manager
+        target: /opt/wand/world_manager
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./vanilla-media
+        target: /opt/wand/vanilla
+        read_only: true
+        bind:
+          create_host_path: false
+      - world_data:/var/lib/wand-world
       - type: bind
         source: ./dash
         target: /usr/src/dash
@@ -459,7 +503,7 @@ services:
       - houdini_login:login
     entrypoint: ["dockerize",
                 "-template", "/usr/src/dash/config.py.template:/usr/src/dash/config.py",
-                "python", "bootstrap.py"]
+                "python", "/opt/wand/world_manager/boot.py"]
     command: ["-c", "config.py"]
     labels:
       net.unraid.docker.icon: https://raw.githubusercontent.com/solero/wand/refs/heads/master/icons/dash.png
@@ -519,3 +563,5 @@ volumes:
     name: ${COMPOSE_PROJECT_NAME:-wand}_postgres_data
   redis_data:
     name: ${COMPOSE_PROJECT_NAME:-wand}_redis_data
+  world_data:
+    name: ${COMPOSE_PROJECT_NAME:-wand}_world_data

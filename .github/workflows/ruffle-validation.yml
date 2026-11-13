@@ -16,7 +16,7 @@ jobs:
       - run: docker compose config --quiet
       - run: docker compose -f docker-compose.yml -f docker-compose.direct.yml config --quiet
       - run: docker compose -f docker-compose.yml -f docker-compose.ruffle-only.yml config --quiet
-      - run: node --test tests/legacy-player.test.cjs tests/vanilla-player.test.cjs
+      - run: node --test tests/legacy-player.test.cjs tests/vanilla-player.test.cjs tests/world-notice.test.cjs tests/online-panel.test.cjs
       - run: pip install -r websocket/requirements.txt websocket-client==1.9.0
       - run: pip install PyYAML==6.0.3
       - run: python scripts/generate-dokploy-compose.py --check

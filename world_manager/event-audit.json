@@ -1,0 +1,955 @@
+{
+  "method": "Dated aliases in paths.json and static namespace extraction from Vanilla room/client SWFs; item labels for Marvel. No gameplay certification or visual identification of all SWFs.",
+  "swfs_scanned": 169,
+  "events": [
+    {
+      "id": "2012-halloween",
+      "name": "Halloween · 2012",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/client/shell.swf :: Halloween"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/client/shell.swf"
+      ],
+      "classes": [
+        "Halloween",
+        "OpcodeJournal",
+        "scavengerhunts.GhostHauntScavengerHunt",
+        "scavengerhunts.IScavengerHunt",
+        "scavengerhunts.KeyScavengerHunt",
+        "scavengerhunts.ScavengerHuntMain"
+      ]
+    },
+    {
+      "id": "2012-superhero",
+      "name": "Superhéroes / Marvel · 2012",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Identificar y reunir el conjunto de salas de esa edición, sus catálogos reales, módulo de fiesta, poderes, objetivos y validación de recompensas del servidor.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/book.swf :: OpcodeJournal"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/book.swf"
+      ],
+      "classes": [
+        "OpcodeJournal"
+      ]
+    },
+    {
+      "id": "2013-cfc",
+      "name": "Navidad / Coins for Change · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/beach.swf :: CFCParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/beach.swf"
+      ],
+      "classes": [
+        "CFCParty",
+        "CFCPartyConstants",
+        "CFCParty_EngineOverrides",
+        "CFCParty_EngineOverrides_TrainRoom",
+        "CFCParty_InterfaceOverrides",
+        "CFCParty_ShellOverrides",
+        "trainroom.CFCSnowballManager",
+        "trains.TrainController",
+        "trains.TrainLoader",
+        "trains.TrainManager",
+        "trains.TrainService",
+        "trains.TrainVO",
+        "trains.movement.TrainGameMovement",
+        "trains.movement.TrainMovement",
+        "trains.movement.TrainNormalMovement",
+        "trains.states.BaseTrainState",
+        "trains.states.BoardingState",
+        "trains.states.DrivingGameState",
+        "trains.states.DrivingNormalState",
+        "trains.states.TrainStateEnum",
+        "vo.CFCPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2013-epfhotsauce",
+      "name": "Operación Salsa Picante · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 3 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/client/interface.swf :: EPFHotSauce",
+        "vanilla-media/media/play/v2/client/shell.swf :: EPFHotSauce",
+        "vanilla-media/media/play/v2/client/stampbook.swf :: EPFHotSauce"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/client/interface.swf",
+        "vanilla-media/media/play/v2/client/shell.swf",
+        "vanilla-media/media/play/v2/client/stampbook.swf"
+      ],
+      "classes": [
+        "EPFHotSauce",
+        "OpcodeJournal"
+      ]
+    },
+    {
+      "id": "2013-epfparty",
+      "name": "Operación EPF · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar la edición exacta, salas solitarias, objetivos, navegación, servicio de fiesta y recompensas EPF.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/party10solo.swf :: EPFParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/party10solo.swf"
+      ],
+      "classes": [
+        "EPFParty",
+        "EPFPartyConstants",
+        "EPFParty_EngineOverrides",
+        "HerbLair",
+        "boat.BoatController",
+        "boat.CurrentController",
+        "vo.EPFPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2013-medieval",
+      "name": "Fiesta medieval · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/schoolsolo.swf :: MedievalParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/schoolsolo.swf"
+      ],
+      "classes": [
+        "MedievalParty",
+        "MedievalParty_EngineOverrides",
+        "MedievalParty_InterfaceOverrides",
+        "School",
+        "vo.MedievalPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2013-prehistoric",
+      "name": "Viaje a la prehistoria · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 7 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar transformaciones de dinosaurio, excavaciones, huevos, dependencias y recompensas; resolver IDs de salas no presentes en rooms.json.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/party14.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party16.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party17.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party18.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party21.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party24.swf :: Prehistoric",
+        "vanilla-media/media/play/v2/content/global/rooms/party25.swf :: Prehistoric"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/party14.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party16.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party17.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party18.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party21.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party24.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party25.swf"
+      ],
+      "classes": [
+        "Prehistoric",
+        "scavengerhunt.RoarScavengerHunt",
+        "snowball.DinoHitCheck"
+      ]
+    },
+    {
+      "id": "2013-superhero",
+      "name": "Superhéroes / Marvel · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 2 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Identificar y reunir el conjunto de salas de esa edición, sus catálogos reales, módulo de fiesta, poderes, objetivos y validación de recompensas del servidor.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/eco.swf :: TrailingSnowball",
+        "vanilla-media/media/play/v2/client/rooms_common.swf :: OpcodeJournal"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/eco.swf",
+        "vanilla-media/media/play/v2/client/rooms_common.swf"
+      ],
+      "classes": [
+        "OpcodeJournal",
+        "SuperHeroParty",
+        "TrailingSnowball",
+        "vo.SuperHeroCookieVO"
+      ]
+    },
+    {
+      "id": "2013-teenbeach",
+      "name": "Teen Beach Movie · 2013",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/party10.swf :: SurfRoom"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/party10.swf"
+      ],
+      "classes": [
+        "SurfRoom",
+        "Surfboard",
+        "TeenBeachParty",
+        "TeenBeachParty_EngineOverrides",
+        "concert.ConcertCountdownTimer",
+        "vo.TeenBeachPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2014-frozen",
+      "name": "Frozen · 2014",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 8 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar transformación/congelación, bolas de nieve, dependencias, cookie y tareas de Frozen, salas y catálogo de la misma edición.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/agentlobbymulti.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/book.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/cavemine.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/coffee.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/lounge.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/mtn.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/pet.swf :: party.FrozenParty",
+        "vanilla-media/media/play/v2/content/global/rooms/pizza.swf :: party.FrozenParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/agentlobbymulti.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/book.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/cavemine.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/coffee.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/lounge.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/mtn.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/pet.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/pizza.swf"
+      ],
+      "classes": [
+        "party.FrozenParty",
+        "party.FrozenPartyConstants",
+        "party.FrozenPartySnowballManager",
+        "party.FrozenPartySounds",
+        "party.FrozenParty_InterfaceOverrides",
+        "vo.FrozenPartyCookieVO",
+        "vo.FrozenQuestRoomVO"
+      ]
+    },
+    {
+      "id": "2014-muppets",
+      "name": "Los Muppets · 2014",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 3 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/cove.swf :: MuppetsParty",
+        "vanilla-media/media/play/v2/content/global/rooms/dock.swf :: MuppetsParty",
+        "vanilla-media/media/play/v2/content/global/rooms/pizza.swf :: Pizza"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/cove.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/dock.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/pizza.swf"
+      ],
+      "classes": [
+        "MuppetsParty",
+        "MuppetsPartyConstants",
+        "MuppetsParty_EngineOverrides",
+        "MuppetsSounds",
+        "Pizza",
+        "performance.PerformanceAnimation",
+        "performance.PerformanceController",
+        "performance.PerformanceManager",
+        "performance.PerformanceService",
+        "performance.PerformanceVO",
+        "performance.states.BasePerformanceState",
+        "performance.states.BoardingState",
+        "performance.states.PerformNormalState",
+        "performance.states.PerformanceStateEnum",
+        "vo.MuppetQuestInfoVO",
+        "vo.MuppetsPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2014-music",
+      "name": "Music Jam · 2014",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 7 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar conciertos y dependencias, servicios de actuaciones, horarios, cookie específica y recompensas; las salas encontradas no acreditan el evento completo.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/dance.swf :: soundStudio.logo.SoundStudioLogo",
+        "vanilla-media/media/play/v2/content/global/rooms/party1.swf :: DayNightCycle",
+        "vanilla-media/media/play/v2/content/global/rooms/party2.swf :: DayNightCycle",
+        "vanilla-media/media/play/v2/content/global/rooms/party3.swf :: DayNightCycle",
+        "vanilla-media/media/play/v2/content/global/rooms/party4.swf :: Bridge",
+        "vanilla-media/media/play/v2/content/global/rooms/party5.swf :: DayNightCycle",
+        "vanilla-media/media/play/v2/content/global/rooms/party6.swf :: EngineRoom"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/dance.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party1.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party2.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party3.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party4.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party5.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/party6.swf"
+      ],
+      "classes": [
+        "Bridge",
+        "DayNightCycle",
+        "DeckPool",
+        "EngineRoom",
+        "FeedingBowl",
+        "Lobby",
+        "MusicJamPerformances",
+        "party.MusicParty",
+        "party.MusicPartyConstants",
+        "party.MusicParty_InterfaceOverrides",
+        "soundStudio.logo.SoundStudioLogo",
+        "vo.MusicPartyCookieVO",
+        "vo.MusicPartyRewardVO"
+      ]
+    },
+    {
+      "id": "2014-school",
+      "name": "Escuela y skate · 2014",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/mall.swf :: SchoolParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/mall.swf"
+      ],
+      "classes": [
+        "SchoolParty",
+        "SchoolPartyConstants",
+        "vo.SchoolPartyCookieVO",
+        "vo.SchoolQuestRoomVO"
+      ]
+    },
+    {
+      "id": "2015-automated",
+      "name": "Fiestas automatizadas · 2015",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar los ajustes y servicio esperados por AutomatedParty, fechas, tareas y recursos de una misma edición.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/party13.swf :: ui.cfcui.DonationStation"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/party13.swf"
+      ],
+      "classes": [
+        "ui.cfcui.DonationStation"
+      ]
+    },
+    {
+      "id": "2015-february",
+      "name": "SoundStudio (módulo February) · 2015",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 3 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/content/global/rooms/party9.swf :: LimoInterior",
+        "vanilla-media/media/play/v2/content/global/rooms/partysolo3.swf :: MusicTaskRoom",
+        "vanilla-media/media/play/v2/content/global/rooms/partysolo4.swf :: MusicTaskRoom"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/content/global/rooms/party9.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/partysolo3.swf",
+        "vanilla-media/media/play/v2/content/global/rooms/partysolo4.swf"
+      ],
+      "classes": [
+        "LimoInterior",
+        "MusicTaskRoom",
+        "Party8",
+        "Party9",
+        "party.FebruaryParty",
+        "party.FebruaryPartySounds",
+        "vo.FebruaryPartyCookieVO"
+      ]
+    },
+    {
+      "id": "2016-automated",
+      "name": "Fiestas automatizadas · 2016",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Verificar los ajustes y servicio esperados por AutomatedParty, fechas, tareas y recursos de una misma edición.",
+      "evidence": [
+        "vanilla-media/media/play/v2/client/party.swf :: party.AutomatedParty"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/client/party.swf"
+      ],
+      "classes": [
+        "party.AutomatedParty"
+      ]
+    },
+    {
+      "id": "2016-march",
+      "name": "Módulo March (edición por verificar) · 2016",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 0 referencias de configuración y 1 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "vanilla-media/media/play/v2/client/party.swf :: party.TemplatedPartyConstants"
+      ],
+      "references": [],
+      "files": [
+        "vanilla-media/media/play/v2/client/party.swf"
+      ],
+      "classes": [
+        "party.TemplatedPartyConstants"
+      ]
+    },
+    {
+      "id": "p0212-rockhopperquest",
+      "name": "La búsqueda de Rockhopper · p0212",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 10 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0212.rockhopperquest.leadup.poster.url → close_ups/poster.swf [archivo presente]",
+        "w.p0212.rockhopperquest.poster.url → close_ups/poster.swf [archivo presente]",
+        "w.p0212.rockhopperquest.note01.url → close_ups/party_note01.swf [archivo presente]",
+        "w.p0212.rockhopperquest.note02.url → close_ups/party_note02.swf [archivo presente]",
+        "w.p0212.rockhopperquest.catalog.url → catalogues/party.swf [archivo presente]",
+        "w.p0212.rockhopperquest.note03.url → close_ups/party_note03.swf [archivo presente]",
+        "w.p0212.rockhopperquest.catalog2.url → catalogues/party2.swf [archivo presente]",
+        "w.p0212.rockhopperquest.note04.url → close_ups/party_note04.swf [archivo presente]",
+        "w.p0212.rockhopperquest.map.url → close_ups/party_note05.swf [archivo presente]",
+        "w.p0212.rockhopperquest.note06.url → close_ups/party_note06.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0212.rockhopperquest.leadup.poster.url",
+          "target": "close_ups/poster.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.poster.url",
+          "target": "close_ups/poster.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.note01.url",
+          "target": "close_ups/party_note01.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.note02.url",
+          "target": "close_ups/party_note02.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.catalog.url",
+          "target": "catalogues/party.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.note03.url",
+          "target": "close_ups/party_note03.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.catalog2.url",
+          "target": "catalogues/party2.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.note04.url",
+          "target": "close_ups/party_note04.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.map.url",
+          "target": "close_ups/party_note05.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0212.rockhopperquest.note06.url",
+          "target": "close_ups/party_note06.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p0312-puffle",
+      "name": "Fiesta de puffles · p0312",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 5 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0312.puffle.leadup.poster → close_ups/leadup_poster.swf [sin archivo exacto verificado]",
+        "w.p0312.puffle.poster → close_ups/poster.swf [archivo presente]",
+        "w.p0312.puffle.note01 → close_ups/choose_puffle.swf [archivo presente]",
+        "w.p0312.puffle.note02 → close_ups/adoptpuffle_prompt.swf [archivo presente]",
+        "w.p0312.puffle.catalog → catalogues/party.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0312.puffle.leadup.poster",
+          "target": "close_ups/leadup_poster.swf",
+          "exists": false
+        },
+        {
+          "alias": "w.p0312.puffle.poster",
+          "target": "close_ups/poster.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0312.puffle.note01",
+          "target": "close_ups/choose_puffle.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0312.puffle.note02",
+          "target": "close_ups/adoptpuffle_prompt.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0312.puffle.catalog",
+          "target": "catalogues/party.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p0412-aprilfools",
+      "name": "Día de las bromas · p0412",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 1 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0412.aprilfools.catalog → catalogues/party.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0412.aprilfools.catalog",
+          "target": "catalogues/party.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p0418-earthday",
+      "name": "Día de la Tierra · p0418",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 1 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0418.earthday.catalog.url → catalogues/earth_day_catalog.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0418.earthday.catalog.url",
+          "target": "catalogues/earth_day_catalog.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p0512-medieval",
+      "name": "Fiesta medieval · p0512",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 4 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0512.medieval.skygate.note → close_ups/poster4.swf [sin archivo exacto verificado]",
+        "w.p0512.medieval.catalog → catalogues/party.swf [archivo presente]",
+        "w.p0512.medieval.mountain.needitems → close_ups/party_note1.swf [archivo presente]",
+        "w.p0512.medieval.skykingdom.needstaff → close_ups/party_note2.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0512.medieval.skygate.note",
+          "target": "close_ups/poster4.swf",
+          "exists": false
+        },
+        {
+          "alias": "w.p0512.medieval.catalog",
+          "target": "catalogues/party.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0512.medieval.mountain.needitems",
+          "target": "close_ups/party_note1.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0512.medieval.skykingdom.needstaff",
+          "target": "close_ups/party_note2.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p0612-superhero",
+      "name": "Superhéroes / Marvel · p0612",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 5 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Identificar y reunir el conjunto de salas de esa edición, sus catálogos reales, módulo de fiesta, poderes, objetivos y validación de recompensas del servidor.",
+      "evidence": [
+        "w.p0612.superhero.alert → close_ups/hero_alert.swf [archivo presente]",
+        "w.p0612.superhero.dialog.chooseside → close_ups/login.swf [archivo presente]",
+        "w.p0612.superhero.clothing.catalogue → catalogues/party.swf [archivo presente]",
+        "w.p0612.superhero.civilian.catalogue → catalogues/party2.swf [archivo presente]",
+        "w.p0612.superhero.treasure.catalogue → (vacío) [sin archivo exacto verificado]",
+        "paper_items.json: 1412 Iron Man Cowl, 1415 Loki Horns, 1416 Captain America Cowl, 1418 Thor Helmet, 4621 Iron Man Bodysuit, 4625 Loki Armor"
+      ],
+      "references": [
+        {
+          "alias": "w.p0612.superhero.alert",
+          "target": "close_ups/hero_alert.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0612.superhero.dialog.chooseside",
+          "target": "close_ups/login.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0612.superhero.clothing.catalogue",
+          "target": "catalogues/party.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0612.superhero.civilian.catalogue",
+          "target": "catalogues/party2.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0612.superhero.treasure.catalogue",
+          "target": "",
+          "exists": false
+        }
+      ],
+      "files": [],
+      "classes": [],
+      "items": [
+        {
+          "id": 1412,
+          "label": "Iron Man Cowl"
+        },
+        {
+          "id": 1415,
+          "label": "Loki Horns"
+        },
+        {
+          "id": 1416,
+          "label": "Captain America Cowl"
+        },
+        {
+          "id": 1418,
+          "label": "Thor Helmet"
+        },
+        {
+          "id": 4621,
+          "label": "Iron Man Bodysuit"
+        },
+        {
+          "id": 4625,
+          "label": "Loki Armor"
+        },
+        {
+          "id": 4626,
+          "label": "Spider-Man Bodysuit"
+        },
+        {
+          "id": 4628,
+          "label": "Captain America Bodysuit"
+        },
+        {
+          "id": 4632,
+          "label": "HULK BODYSUIT"
+        },
+        {
+          "id": 4852,
+          "label": "Red Hulk Bodysuit"
+        },
+        {
+          "id": 4853,
+          "label": "She-Hulk Bodysuit"
+        },
+        {
+          "id": 5154,
+          "label": "Captain America Shield"
+        }
+      ]
+    },
+    {
+      "id": "p0712-musicjam",
+      "name": "Music Jam · p0712",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 3 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p0712.musicjam.scavengerhunt → scavenger_hunt/scavenger_hunt.swf [archivo presente]",
+        "w.p0712.musicjam.clothing.catalogue → catalogues/party.swf [archivo presente]",
+        "w.p0712.musicjam.cadence.track → music/tpsn.mp3 [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p0712.musicjam.scavengerhunt",
+          "target": "scavenger_hunt/scavenger_hunt.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0712.musicjam.clothing.catalogue",
+          "target": "catalogues/party.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p0712.musicjam.cadence.track",
+          "target": "music/tpsn.mp3",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p1012-halloween",
+      "name": "Halloween · p1012",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 19 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p1012.halloween.penguin.ghost0 → penguin/penguin_ghost_0.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost1 → penguin/penguin_ghost_1.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost2 → penguin/penguin_ghost_2.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost3 → penguin/penguin_ghost_3.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost4 → penguin/penguin_ghost_4.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost6 → penguin/penguin_ghost_6.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost7 → penguin/penguin_ghost_7.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost8 → penguin/penguin_ghost_8.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost9 → penguin/penguin_ghost_9.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost10 → penguin/penguin_ghost_10.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost11 → penguin/penguin_ghost_11.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost12 → penguin/penguin_ghost_12.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost13 → penguin/penguin_ghost_13.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost14 → penguin/penguin_ghost_14.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost15 → penguin/penguin_ghost_15.swf [archivo presente]",
+        "w.p1012.halloween.penguin.ghost16 → penguin/penguin_ghost_16.swf [sin archivo exacto verificado]",
+        "w.p1012.halloween.note.gariwald → close_ups/party_note1.swf [archivo presente]",
+        "w.p1012.halloween.note.goggles → close_ups/party_note2.swf [archivo presente]",
+        "w.p1012.halloween.clothing.catalogue → catalogues/party.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p1012.halloween.penguin.ghost0",
+          "target": "penguin/penguin_ghost_0.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost1",
+          "target": "penguin/penguin_ghost_1.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost2",
+          "target": "penguin/penguin_ghost_2.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost3",
+          "target": "penguin/penguin_ghost_3.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost4",
+          "target": "penguin/penguin_ghost_4.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost6",
+          "target": "penguin/penguin_ghost_6.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost7",
+          "target": "penguin/penguin_ghost_7.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost8",
+          "target": "penguin/penguin_ghost_8.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost9",
+          "target": "penguin/penguin_ghost_9.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost10",
+          "target": "penguin/penguin_ghost_10.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost11",
+          "target": "penguin/penguin_ghost_11.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost12",
+          "target": "penguin/penguin_ghost_12.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost13",
+          "target": "penguin/penguin_ghost_13.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost14",
+          "target": "penguin/penguin_ghost_14.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost15",
+          "target": "penguin/penguin_ghost_15.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.penguin.ghost16",
+          "target": "penguin/penguin_ghost_16.swf",
+          "exists": false
+        },
+        {
+          "alias": "w.p1012.halloween.note.gariwald",
+          "target": "close_ups/party_note1.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.note.goggles",
+          "target": "close_ups/party_note2.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1012.halloween.clothing.catalogue",
+          "target": "catalogues/party.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p1212-holiday",
+      "name": "Navidad · p1212",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 3 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p1212.holiday.penguin.reinDeer → penguin/penguin_reindeer.swf [archivo presente]",
+        "w.p1212.holiday.penguin.toyCar → penguin/penguin_car_%color%.swf [sin archivo exacto verificado]",
+        "w.p1212.holiday.penguin.frostBite → penguin/penguin_frostbite.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p1212.holiday.penguin.reinDeer",
+          "target": "penguin/penguin_reindeer.swf",
+          "exists": true
+        },
+        {
+          "alias": "w.p1212.holiday.penguin.toyCar",
+          "target": "penguin/penguin_car_%color%.swf",
+          "exists": false
+        },
+        {
+          "alias": "w.p1212.holiday.penguin.frostBite",
+          "target": "penguin/penguin_frostbite.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    },
+    {
+      "id": "p2015-june",
+      "name": "Misiones PSA (módulo June) · p2015",
+      "status": "Recursos parciales; evento completo sin verificar",
+      "full_activation_verified": false,
+      "notes": "Se encontraron 1 referencias de configuración y 0 SWF con clases del módulo. Los nombres genéricos como party.swf se reutilizan entre eventos: su alias no garantiza que el contenido corresponda a esta edición.",
+      "missing": "Reunir y verificar salas, música, módulo de fiesta, dependencias, catálogos y protocolo del servidor de una misma edición; probar navegación, tareas y recompensas con el cliente real.",
+      "evidence": [
+        "w.p2015.june.missions.interface → close_ups/psa_missions_interface.swf [archivo presente]"
+      ],
+      "references": [
+        {
+          "alias": "w.p2015.june.missions.interface",
+          "target": "close_ups/psa_missions_interface.swf",
+          "exists": true
+        }
+      ],
+      "files": [],
+      "classes": []
+    }
+  ]
+}

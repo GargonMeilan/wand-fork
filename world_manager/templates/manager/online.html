@@ -1,0 +1,17 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Usuarios conectados · Wand</title>
+<link rel="stylesheet" href="/manager/world-static/world.css">
+<script defer src="/manager/world-static/online.js"></script></head><body><main>
+<nav><a href="/manager">← Panel</a><a href="/manager/world">Salas y eventos</a></nav>
+<h1>Usuarios conectados</h1>
+<p>Ubicación y servidor de los jugadores de Legacy y Vanilla. Actualización automática cada cinco segundos.</p>
+<p id="online-status" role="status">Consultando servidores…</p>
+<section><h2>Servidores</h2><div id="online-servers" class="actions"></div>
+<p>«Sin datos recientes» indica que no hay una publicación vigente del servidor; no significa que tenga cero jugadores.</p></section>
+<section><h2>Jugadores <span id="online-count"></span></h2>
+<label>Buscar usuario o sala<input id="online-search" type="search" placeholder="Nombre, ID, ciudad, iglú…"></label>
+<label>Servidor<select id="online-server"><option value="">Todos los servidores</option></select></label>
+<button id="online-refresh" type="button">Actualizar ahora</button>
+<div class="table-wrap"><table><thead><tr><th>Usuario</th><th>Servidor</th><th>Localización</th><th>Cliente</th><th>Tiempo conectado</th></tr></thead><tbody id="online-players"><tr><td colspan="5">Cargando…</td></tr></tbody></table></div>
+<p>Los datos caducan en veinte segundos si se interrumpe la publicación. Card-Jitsu Nieve usa otro servicio y no informa aquí de la posición dentro de sus partidas.</p>
+</section></main></body></html>

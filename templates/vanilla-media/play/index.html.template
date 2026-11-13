@@ -46,6 +46,7 @@
 <script defer src="/__wand/ruffle/vanilla.js"></script>
 {{ if .Env.WEB_RECAPTCHA_SITE }}<script defer src="https://www.google.com/recaptcha/api.js?render={{ .Env.WEB_RECAPTCHA_SITE }}"></script>{{ end }}
 {{ end }}
+<script defer src="/__wand/ruffle/world-notice.js"></script>
 </head>
 <body class="html not-front not-logged-in page-play full-page-flow i18n-en context-play snowball">
   <div class="region region-page-top" id="region-page-top">

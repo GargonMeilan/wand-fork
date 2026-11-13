@@ -7,6 +7,12 @@ bridge. Vanilla also uses Ruffle through its original page and FlashVars; see
 [Vanilla integration](docs/vanilla.md). See [Ruffle and Dokploy deployment](docs/ruffle.md)
 for HTTPS domains, configuration, validation, limitations and rollback.
 
+Vanilla room decorations and music can be managed at `/manager/world`; see
+[Runtime rooms and event inventory](docs/events.md) for setup, uploads,
+decoration packages, client reloads and the limits of the bundled event assets.
+The moderator panel also includes [Online players](docs/online.md), with live
+server and room snapshots for Legacy and Vanilla.
+
 For Dokploy, select **`docker-compose.dokploy.yml`**, enable Git submodules and
 configure HTTPS domains on `web:80`. PostgreSQL and Redis use stable Docker
 volumes outside the Git checkout. Keep the project name unchanged. Existing

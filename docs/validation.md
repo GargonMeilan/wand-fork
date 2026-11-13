@@ -1,5 +1,10 @@
 # Validación de Ruffle — 11 de noviembre de 2026
 
+Actualización: la [validación local del 13 de noviembre](local-validation.md)
+añade el stack completo con Docker, sesiones reales, los nuevos paneles y los
+límites encontrados. Los pendientes de esta página corresponden a la ejecución
+histórica descrita a continuación.
+
 ## Clonación de submódulos y montajes de fuentes
 
 Los 31 bind mounts de fuentes, medios, plantillas y configuración especifican

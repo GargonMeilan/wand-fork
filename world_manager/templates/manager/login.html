@@ -1,0 +1,28 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Acceso al manager · Wand</title>
+<link rel="stylesheet" href="/manager/world-static/world.css"></head><body><main>
+<h1>Acceso al manager</h1><section>
+{% if success_message %}<p class="success" role="status">{{ success_message }}</p>{% endif %}
+{% if error_message %}<p class="notice" role="alert">{{ error_message }}</p>{% endif %}
+<form action="/manager/login" method="post">
+<label>Usuario<input type="text" name="username" required minlength="4" maxlength="12" autocomplete="username"></label>
+<label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label>
+<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+<button type="submit" {% if site_key %}disabled id="manager-login-submit"{% endif %}>Entrar</button>
+</form><p>Se requiere una cuenta moderadora.</p></section>
+{% if site_key %}
+<script src="https://www.google.com/recaptcha/api.js?render={{ site_key|urlencode }}"></script>
+<script>
+grecaptcha.ready(async function () {
+    try {
+        document.getElementById('recaptchaResponse').value = await grecaptcha.execute({{ site_key|tojson }}, {action: 'login'});
+        document.getElementById('manager-login-submit').disabled = false;
+    } catch (_) {
+        const error = document.createElement('p');
+        error.textContent = 'No se pudo validar reCAPTCHA. Recarga la página.';
+        error.setAttribute('role', 'alert');
+        document.querySelector('form').append(error);
+    }
+});
+</script>
+{% endif %}</main></body></html>
