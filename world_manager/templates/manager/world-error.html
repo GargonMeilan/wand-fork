@@ -1,3 +1,1 @@
-<!doctype html><html lang="es"><meta charset="utf-8"><title>No se ha aplicado el cambio</title>
-<link rel="stylesheet" href="/manager/world-static/world.css">
-<main><h1>No se ha aplicado el cambio</h1><p role="alert">{{ error }}</p><a href="/manager/world">Volver a salas y eventos</a></main></html>
+{% extends 'manager/base.html' %}{% set manager_section = 'world' %}{% block title %}Change not applied{% endblock %}{% block content %}<h1>Change not applied</h1><p class="notice" role="alert">{{ error }}</p><a href="/manager/world">Return to rooms & events</a>{% endblock %}

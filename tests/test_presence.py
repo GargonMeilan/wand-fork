@@ -43,7 +43,7 @@ class SnapshotTests(unittest.TestCase):
         player.room = types.SimpleNamespace(id=916, name="Aqua", game=True)
         self.assertEqual(snapshot(source)["players"][0]["room_kind"], "game")
         player.room = None
-        self.assertEqual(snapshot(source)["players"][0]["room_name"], "Cambiando de sala")
+        self.assertEqual(snapshot(source)["players"][0]["room_name"], "Changing rooms")
         source.penguins_by_id.clear()
         self.assertEqual(snapshot(source)["players"], [])
 

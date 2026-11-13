@@ -6,7 +6,38 @@ Dash, Nginx, Websockify y Snowflake. Se usaron credenciales de prueba, un puerto
 publicado solo en `127.0.0.1` y volúmenes con un nombre aleatorio exclusivo.
 No se accedió a Dokploy ni a los datos de ninguna instalación existente.
 
-## Integración comprobada
+## Ampliación posterior: catálogo y panel unificado
+
+Las comprobaciones por CLI de esta ampliación pasaron **34 pruebas Python y
+12 JavaScript**, la verificación de integridad de los 377 archivos del catálogo
+y una prueba de navegador headless con 16 eventos, 13 diseños de Town y cero
+publicaciones al usar la vista previa. Se inspeccionaron las vistas reales de
+Marvel y Halloween y el diseño adaptable a 390 px.
+
+Tras un reinicio de Docker Desktop por CLI autorizado por el usuario, se
+reconstruyeron y arrancaron los once servicios del stack aislado. La nueva
+integración comprobó:
+
+- Activación de los 16 paquetes y entrega de las 303 variantes y 76 referencias
+  complementarias por Nginx, con hashes coincidentes.
+- Persistencia al recrear Dash, restauración de JSON y ZIP, protección CSRF y
+  acceso restringido al manager.
+- Dos jugadores autenticados en mundos distintos, movimientos, desconexión y
+  caducidad/recuperación del estado de un mundo.
+- Vista previa autenticada, páginas de jugadores, ficha de jugador, revisión
+  de nombres, contraseña y correo con navegación común y `lang="en"`.
+- Partida real con Ruffle: login, entrada en Blizzard, Town decorado de Marvel
+  y carga de la música 325. Sin errores JavaScript ni recursos inesperados
+  fallidos; se mantienen los errores heredados enumerados más abajo.
+- Cinco configuraciones de Nginx: dominios separados, subrutas, dominio
+  compartido, Flash y CAPTCHA.
+
+Esto valida los recursos de los paquetes y la partida descrita. No certifica
+compras de catálogos históricos, recorridos por todas las salas ni poderes,
+transformaciones, misiones o recompensas de cada evento. No se ha desplegado
+en Dokploy.
+
+## Integración comprobada anteriormente
 
 La regresión terminó con **28 pruebas Python y 12 JavaScript correctas**,
 además de las comprobaciones Docker y de navegador enumeradas a continuación.

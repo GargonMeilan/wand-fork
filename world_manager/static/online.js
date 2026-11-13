@@ -8,9 +8,9 @@
     const refresh = document.getElementById("online-refresh");
     let current, loading = false, receivedAt;
     function locationName(player) {
-        if (player.room_kind === "igloo") return `Iglú de #${player.owner_id} (sala ${player.room_id})`;
-        if (player.room_kind === "backyard") return `Patio de #${player.owner_id}`;
-        return `${player.room_name}${player.room_id === null ? "" : ` (#${player.room_id})`}${player.room_kind === "game" ? " · Minijuego" : ""}`;
+        if (player.room_kind === "igloo") return `Igloo owned by #${player.owner_id} (room ${player.room_id})`;
+        if (player.room_kind === "backyard") return `Backyard owned by #${player.owner_id}`;
+        return `${player.room_name}${player.room_id === null ? "" : ` (#${player.room_id})`}${player.room_kind === "game" ? " · Minigame" : ""}`;
     }
     function draw() {
         if (!current) return;
@@ -30,30 +30,30 @@
         }
         if (!players.length) {
             const row = document.createElement("tr"), cell = document.createElement("td"); cell.colSpan = 5;
-            cell.textContent = "No hay jugadores para estos filtros en los servidores con datos recientes.";
+            cell.textContent = "No players match these filters in worlds with recent data.";
             row.append(cell); body.append(row);
         }
-        document.getElementById("online-count").textContent = `(${players.length} de ${current.players.length})`;
+        document.getElementById("online-count").textContent = `(${players.length} of ${current.players.length})`;
     }
     async function update() {
         if (loading) return;
         loading = true; refresh.disabled = true;
         try {
             const result = await fetch("/manager/online/data", {cache: "no-store", credentials: "same-origin", signal: AbortSignal.timeout(8000)});
-            if (result.redirected || result.status === 403) throw new Error("Tu sesión ha caducado o ya no tiene permisos. Vuelve al panel para iniciar sesión.");
-            if (!result.ok) throw new Error("No se pudo consultar la presencia. Reintentando automáticamente.");
+            if (result.redirected || result.status === 403) throw new Error("Your session expired or no longer has permission. Return to the manager to sign in.");
+            if (!result.ok) throw new Error("Presence could not be loaded. Retrying automatically.");
             current = await result.json(); receivedAt = Date.now();
             const selected = serverFilter.value;
-            serverFilter.replaceChildren(new Option("Todos los servidores", ""));
+            serverFilter.replaceChildren(new Option("All worlds", ""));
             serverList.replaceChildren();
             for (const server of current.servers) {
                 serverFilter.append(new Option(server.name, String(server.id)));
                 const label = document.createElement("span");
-                label.textContent = `${server.name}: ${server.available ? `${server.count} conectados` : "Sin datos recientes"}`;
+                label.textContent = `${server.name}: ${server.available ? `${server.count} online` : "No recent data"}`;
                 serverList.append(label);
             }
             serverFilter.value = selected;
-            status.textContent = `Última consulta: ${new Date(receivedAt).toLocaleTimeString()}.`;
+            status.textContent = `Last updated: ${new Date(receivedAt).toLocaleTimeString()}.`;
             draw();
         } catch (error) {
             // Do not keep presenting a stale roster as live during an outage.

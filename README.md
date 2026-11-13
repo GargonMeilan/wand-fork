@@ -10,6 +10,9 @@ for HTTPS domains, configuration, validation, limitations and rollback.
 Vanilla room decorations and music can be managed at `/manager/world`; see
 [Runtime rooms and event inventory](docs/events.md) for setup, uploads,
 decoration packages, client reloads and the limits of the bundled event assets.
+The [preinstalled event library and room previews](docs/event-catalogue.md)
+include 16 historical resource packages, with 303 room designs and archived
+companion files. The manager uses one English interface across all menus.
 The moderator panel also includes [Online players](docs/online.md), with live
 server and room snapshots for Legacy and Vanilla.
 

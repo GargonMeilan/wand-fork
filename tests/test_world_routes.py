@@ -117,6 +117,21 @@ class RouteTests(unittest.IsolatedAsyncioTestCase):
         self.app.ctx.redis.mget.side_effect = RuntimeError("offline")
         self.assertEqual((await self.routes.online_data(request)).status, 503)
 
+    async def test_preview_is_authorized_read_only_and_resolves_installed_design(self):
+        request = self.request(); request.method = "GET"
+        request.args = {"room": "100", "asset": "catalog/2012-06-14-marvel-super-hero-takeover/100"}
+        before = self.store.snapshot()
+        result = await self.routes.preview_file(request)
+        self.assertEqual(result.status, 200)
+        self.assertIn(result.body[:3], (b"CWS", b"FWS"))
+        self.assertEqual(self.store.snapshot(), before)
+        self.assertIsNone(self.store.active_event())
+        request.ctx.session["logged_in"] = False
+        self.assertEqual((await self.routes.preview_file(request)).status, 302)
+        request.ctx.session["logged_in"] = True
+        request.args["asset"] = "catalog/../../secret"
+        self.assertEqual((await self.routes.preview_file(request)).status, 400)
+
 
 if __name__ == "__main__":
     unittest.main()

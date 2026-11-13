@@ -1,0 +1,3941 @@
+{
+  "format": 1,
+  "upstream_commit": "02a9df8be1f33d570690d8a59a726a9bcc9d34df",
+  "events": [
+    {
+      "id": "2012-01-26-underwater-expedition",
+      "name": "Underwater Expedition 2012",
+      "date": "2012-01-26",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "b4211841833db2025ce45f39cdb240aee64a1a5a3b3eeb18038bdb974d4484b3",
+          "size": 200477,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionBeach.swf",
+          "git_blob": "697f7bcce80879c41099a9a4d9915ea242fb8317"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "ff1a2e7ea8bbf3dc08c29524eef4baca9248d1d028100855dc8a15d11522d985",
+          "size": 128019,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionBeacon.swf",
+          "git_blob": "d9bd670659a2cad19c567384aac5c7fc5c35c9f2"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1017d74e755debe955c7518c0c8e26512f6453643eb61f71f5e7fd05aa659625",
+          "size": 174369,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionCove.swf",
+          "git_blob": "ba926b27ca7442cd71affc41485e4c35a301aa79"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 316,
+          "music_documented": true,
+          "sha256": "16fed305fbaa37fac94634a1c6eafb786ede310b8df9358279615c610a079133",
+          "size": 230070,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty7.swf",
+          "git_blob": "7c8860dbfc163eefe8bd0715a9b0812f748eec49"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "0bcd81f0591c3aff58bcf1ba30de8ad5266ed87972dbf728eb76d784aed8cda6",
+          "size": 222009,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionDock.swf",
+          "git_blob": "b14ec7873ad05b28eb8699216841da295e38318c"
+        },
+        {
+          "room": "321",
+          "room_key": "dojoext",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "46eb35e42830050c3f08274b0c34f6c9b7cbdfbd3f68989694fa720c6c8d1305",
+          "size": 209502,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionDojoExt.swf",
+          "git_blob": "3ab24daab56a90de611da0c6484a58a66a14a0ec"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "181326da454adc75e318f0b02ed13f83e2c4173bb260b608794ba13e4feec45f",
+          "size": 184217,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionForest.swf",
+          "git_blob": "cd8bd6307ecc384fcdbf6b719f7afb93ed202dad"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "fa1565148f98465246e77476b9f1f7086a93ea8613f5771e35ea59e728f1944f",
+          "size": 108130,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionBerg.swf",
+          "git_blob": "ae8cc508eca488f6db938aad736c08572814e44d"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "9171bb2c3a8633d1ed9515326c3f0e16a6c355e10e3093455ade13471e22f92b",
+          "size": 949827,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionLight.swf",
+          "git_blob": "956b923eb8cdb36bc1900fa4b6ac69a52792a620"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "b62235992ecc65a8307d79d56aee43c52f27b2aff04b09f2a2b310adbebcea3f",
+          "size": 107952,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty1.swf",
+          "git_blob": "4e673c194e21b12083e3cecb196c2e6641fa99c1"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "d3debe66dd19c1df0f7fd6c94aaa33f434006d5336d3ff22226c69ae8880c04d",
+          "size": 97522,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty2.swf",
+          "git_blob": "b3265202e897acb8bac3e8384051257656db1a79"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "2a536aca779c7f1f5d1e0af973caf4b903fbcdb0b2461701545678bd76071aa7",
+          "size": 76557,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty3.swf",
+          "git_blob": "eca6d1b696e43682035eda27d600f08e174e9de9"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "da57ac8dd14ece102e41a3e946ac564cd38b57e16248e0fb48968c70cd007e6f",
+          "size": 70485,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty4.swf",
+          "git_blob": "53593c2c75db66489a553841ca783dde02221a19"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "1d08e23b4ea9e2e870476bb63113580b310a9ff58e98017974ac3e0067bfb67b",
+          "size": 87453,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty5.swf",
+          "git_blob": "c5b839130c4002a1e9e775f9e4422424ed1e2e68"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 317,
+          "music_documented": true,
+          "sha256": "a53d2b716ded8120495755251824409e0e5b03a6309d603fc9bc1761930ee4cf",
+          "size": 72755,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionParty6.swf",
+          "git_blob": "e0e387a9fd3fb1fbbcab9edf8cb66b8f92891323"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "deabcb1ff8b4678edda5c1034d13671379794684b9b5557274ee70ca9013b4b3",
+          "size": 393931,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionShack.swf",
+          "git_blob": "5f95557cf2a740a463843f2c9de317b046e6f5ae"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "3f1157c18d90b0d925eca7cb1fe364f8cc8277546de868687fa7747b445ebc31",
+          "size": 168597,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionPlaza.swf",
+          "git_blob": "7966928867b72553fedd79309447faee4c4abcae"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "3796ae7595b9a5dd4d05ea84e236fe1968eba32b7d381aa941631aa668d66ca8",
+          "size": 128327,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionMtn.swf",
+          "git_blob": "6236d37fa630cffbe2aa505da47287ff7a70920a"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "d3d4d42230f8c9080edd433e2872507454eda06c4852e25d9ce9008c1639285a",
+          "size": 226632,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionVillage.swf",
+          "git_blob": "e52ee1c37290cb1a6e1ed3b60dd6a1fd4017efa0"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "cc49b56d0a69cd4b24a6f5a45e2a6e5be713d9444ac78f5c8b50be2f93391495",
+          "size": 195850,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionForts.swf",
+          "git_blob": "247b738e6d690c59b443dea560c2d914a079c8b5"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "517c6b96e36586b1dc6bb47b6c2c719dd11701e367fea6e9931eef423aa54fd2",
+          "size": 212315,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionRink.swf",
+          "git_blob": "1f7c47a254ecde95a957a7742e72b12c5bf96bfc"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "23edb0838e01a5dffd2c839fafdfd65ea5ce2fe82313eaa778d103aa06dd2a14",
+          "size": 171840,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-UnderwaterExpedition.swf",
+          "git_blob": "3abb313b7f3b722d99100c6dc8535535d66ac51f"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "poster.swf",
+          "language": "en",
+          "sha256": "04a154159d4fdca98c59b10926c04e62b9bf8b85888fd58513de47dfbb14ddd2",
+          "size": 67596,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionPoster.swf",
+          "git_blob": "0b04b7f032e4c3e73d4e1f1b3f1ab30c003bf7d9"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/maze_map.swf",
+          "language": "en",
+          "sha256": "3397638f1226328816a4402ff63b26e8cafc18eeaf65d1bed5b2b09011c283af",
+          "size": 59605,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionMaze_map.swf",
+          "git_blob": "432fa971a84fecacf2b70a91922225fe23980ff0"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party5.swf",
+          "language": "en",
+          "sha256": "c1ebe0f8050af89ca00a9647f97a6305b39d36feca424bf1f358fb31c65d0e1c",
+          "size": 116091,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UnderwaterExpeditionMembership.swf",
+          "git_blob": "3184a3dbeb6f22be6167ce2cef1c7b9dd4897524"
+        }
+      ],
+      "missing": [
+        "Room not included: dojohide (archives:UnderwaterExpeditionDojoHide.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-02-01-fashion-show",
+      "name": "Fashion Show 2012",
+      "date": "2012-02-01",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 321,
+          "music_documented": true,
+          "sha256": "ae7d17260a11856d2784b3f15117567ce80d381d376497a36ec5aba5902f1ebc",
+          "size": 126283,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/FashionShowShop.swf",
+          "git_blob": "7bc5f35a62dec2082023817beb5b0f845289bdab"
+        }
+      ],
+      "resources": [],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-02-24-rockhopper-s-quest",
+      "name": "Rockhopper's Quest 2012",
+      "date": "2012-02-24",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "4d476b3b324fa7d8a400486c0399c1fa11804e368cacd10d09cd12e7fefac283",
+          "size": 211962,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestBeach.swf",
+          "git_blob": "fe197ab010a515e228253daaade9178095ae2167"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "278778c9bb8a48473aeb67cc669dfeb3613e917c5ab10b22fb77d0f147338b7b",
+          "size": 150689,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestDock.swf",
+          "git_blob": "f4d9df28610f339419f7c524671025ceb67ea1ee"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "893301b885181953724ce4d75501a5f0949ac9a8b704aa2609e0bf14fc46f046",
+          "size": 165377,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestPlaza.swf",
+          "git_blob": "1aaccedcb2a33f340f4af642c5641c6268e2bfce"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "34ecb4ec7aa8acaf363d1edc0a3e31e4dac23df33ffc015e586e87bc9cc79723",
+          "size": 198799,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestForts.swf",
+          "git_blob": "464d9836976583ae361bd9096c75e7a21bb774fd"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "6080a7393fceec35d5ec3e76549c05520e3fa6a774ef907dd8b00233e1d5e6ee",
+          "size": 161967,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-RockhoppersQuest.swf",
+          "git_blob": "b4810d52a1980f94e7e80bb9f8bcc3ea0442cd2f"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 318,
+          "music_documented": true,
+          "sha256": "b5ebc073b00265e9536d08326c8548d23cd5812d635b5c8466451f0b9ecdf43b",
+          "size": 262151,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty1.swf",
+          "git_blob": "7fbeee6a3309a4df4d34453e3346ad740074e226"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 290,
+          "music_documented": true,
+          "sha256": "2ac7f53b2429b3506631e4374d23a835e040605584a25595711979d64f3d9ac8",
+          "size": 172905,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty2.swf",
+          "git_blob": "a8a445685e6389c001bf299cc6c35cff99c1ebac"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 318,
+          "music_documented": true,
+          "sha256": "794f8a2af7654c1f95e9543cd6767dd46f5b14fae04ddf16ab7f0e4071d275cf",
+          "size": 262151,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty3.swf",
+          "git_blob": "aea2b7f68868e77db9e41c147dab9e861876623e"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 269,
+          "music_documented": true,
+          "sha256": "842a698473ef7a64280dcfb55a05ffb22283131edde18d3bde746daf912bf0a5",
+          "size": 113995,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty4.swf",
+          "git_blob": "fe72d0778e6865cbdc217f0950b7e0bc42e783b2"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 318,
+          "music_documented": true,
+          "sha256": "4ec46cc5c56fb4e28b389685b9d8d57f4e9de0851fe8cc64501e47f655754617",
+          "size": 262150,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty5.swf",
+          "git_blob": "40b59ed33e22ee13eb79f03d614964244a43dee9"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 320,
+          "music_documented": true,
+          "sha256": "b3c433bc9860d4eac30db4aca03cc872c4c9c2185a42211d0995e9e6490c7b75",
+          "size": 86489,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty7.swf",
+          "git_blob": "dfd235b712b86d106580b44349811dd82c5cbcf6"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 319,
+          "music_documented": true,
+          "sha256": "73ad8244b316486c47460564ab01ef26e2e4de54bf54828879af16d15ed5b28c",
+          "size": 147462,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty6.swf",
+          "git_blob": "0ee99820ad6b660b206d832eb93962272aa75297"
+        },
+        {
+          "room": "858",
+          "room_key": "party8",
+          "music_id": 318,
+          "music_documented": true,
+          "sha256": "7d8785a5f5f0b1ece3cb08a19b178ac353dbd69e8c1a5dbf0b2d25e6962d08b4",
+          "size": 262151,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestParty8.swf",
+          "git_blob": "dad62aeaa31f5b01844bdcc6b5635e1f39872a31"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "d0b242387819ff7fc9f6dd8ded8bdcf7a9c8d4d68e3f5cbed03a0473e7718f9e",
+          "size": 35793,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestPoster.swf",
+          "git_blob": "8d6f8a647ab902e7abb26bc9da28e936d173420a"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note01.swf",
+          "language": "en",
+          "sha256": "c68444f46b6110f789d3f5e86129d01d55a57e7d0bf1a637105194725afb8d97",
+          "size": 35853,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestCPnote.swf",
+          "git_blob": "cdb918a8edd610f495f23f77a8e5f3f3862a2d54"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note02.swf",
+          "language": "en",
+          "sha256": "c93491139a2d0ee08c3d277cdba422683743e11613363191457f74c2b8e795fc",
+          "size": 35235,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestTradingnote.swf",
+          "git_blob": "29143c15146249e301d85c7bbe8dd802c79c45f2"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note03.swf",
+          "language": "en",
+          "sha256": "e993b73e63e208d0d9748ea5873eedcb0e59718faca152f0e6bc3a1335dc34c2",
+          "size": 35757,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestDinosaurnote.swf",
+          "git_blob": "d42154dc4bb65a55c2ea3ca3e76619cca69010bd"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note04.swf",
+          "language": "en",
+          "sha256": "c903dd243bbaaf797bf526fdccb7ebc48f705600eede446b69fbb8301a3418cf",
+          "size": 37105,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestShipwrecknote.swf",
+          "git_blob": "36b2dc0aa896513313eacd980ac23e58c9c766d1"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note05.swf",
+          "language": "en",
+          "sha256": "da69513e3064200a0e43d6921f4bd5fe3cecb4126dab0ec8a84e41bbb606b9cc",
+          "size": 48138,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestRotenote.swf",
+          "git_blob": "f5bc1796adee12acf4e3da0e4a5b9cb59c23f294"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note06.swf",
+          "language": "en",
+          "sha256": "1a9cdddbbd24286709adc6fd60ffa03ac6b9d1ebeffec9844ccb1f84ee347f4a",
+          "size": 39869,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestCargonote.swf",
+          "git_blob": "9f12d039b67f51c2d31b6455287fe5632b46bfe6"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "8c8fa894a4e5b677daa85f4bcdc8a943d381c6a235a534a89b6f190ab78f6d6b",
+          "size": 64378,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestTraddingCatalog.swf",
+          "git_blob": "8723d260b6520105bce31a442c02de9910132cc0"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party2.swf",
+          "language": "en",
+          "sha256": "b9b8029f7437a232947f6d622ce5ecd7e01875f23bb496555dbc6ebe68e7823b",
+          "size": 41141,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestDinoCatalog.swf",
+          "git_blob": "44f4ded06a7eb4ece6b9acd5c3049cc72264f2d3"
+        },
+        {
+          "scope": "global",
+          "path": "membership/party7.swf",
+          "sha256": "73b45affb47a7de8469688e5651dbb457671c781f3436c5d97b10f9fa4e2e609",
+          "size": 68255,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RockhoppersQuestMembership.swf",
+          "git_blob": "84258f7ae501fb17b0fafaa758307650093eb3ec"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-03-15-puffle-party",
+      "name": "Puffle Party 2012",
+      "date": "2012-03-15",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "49deb8f2e9d5b02b2fb618b1c3f0ec14b4f1e3e0b8932b51a44d19772c47e281",
+          "size": 229320,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Beach.swf",
+          "git_blob": "30b6a127cbed344f8ed740c4b8090b847728e73a"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "be428f39738ea63f3edb0a1250021cf93c996bfb1496e83ce7654a6b946e0fe3",
+          "size": 198799,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Beacon.swf",
+          "git_blob": "9b98f48395661fe9990a56c55c6217e529a03db7"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 213,
+          "music_documented": true,
+          "sha256": "e4ed46b0aa3b029563a1c4b9ebd1a60ad4e1c2748e339c688fcd25c6087f8639",
+          "size": 165230,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Berg.swf",
+          "git_blob": "ffb078b1d6cfe1530fa9d51af0074a0cf22bcf1f"
+        },
+        {
+          "room": "811",
+          "room_key": "boxdimension",
+          "music_id": 264,
+          "music_documented": true,
+          "sha256": "15a92f5d55a18667f1958d9615b0348f302e44e4d34b0e680d49aeedd6b89fee",
+          "size": 94819,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Box.swf",
+          "git_blob": "4337a3e47e5cc74d44ccf586c8d14882905b6283"
+        },
+        {
+          "room": "806",
+          "room_key": "cave",
+          "music_id": 36,
+          "music_documented": true,
+          "sha256": "d7a76ee22b53917e74968d68b638640f558c5caefe68b8cebc4df3075063d151",
+          "size": 175175,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Cave.swf",
+          "git_blob": "0b4e4ac10c05f9ed38a5aa88a412d515620a80f8"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "ff6f83840129e11db7402a02434f39551bc71cb6d66e9407b5237ecc360921ff",
+          "size": 262647,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Cove.swf",
+          "git_blob": "12d0a7f4d45a5063d6031e4ad8e8be6b7becb837"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 260,
+          "music_documented": true,
+          "sha256": "a2430b8367470213d1bc09ae12d8d6c5015e7262a57cdf1c322daa1f011d4b41",
+          "size": 156268,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Dance.swf",
+          "git_blob": "799f4a38cb739025ebb8d571bc7df9d4e997f74d"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "d8dbc92937064beacc764d9149feace9aacbba86af69fa12df2bf05345acaf51",
+          "size": 186395,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Dock.swf",
+          "git_blob": "4ff7a70b5bde1cfa73c791f1c800e64725f7025a"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "dceda20d1643730c4b027b187eec3d8872efbe6ce8c8d11671b54c44acb3f431",
+          "size": 221345,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Forest.swf",
+          "git_blob": "a176eda0babbc4c30ae4a5c6b9b76a32dea06f63"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "b414434efbb165cd8fd7a8841e16918d7b091b3fd07577328e4ead579ede3e2b",
+          "size": 263825,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Forts.swf",
+          "git_blob": "d871798a7cd7f5aaa756103b3a30f653450b58c0"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 31,
+          "music_documented": true,
+          "sha256": "4ef843570e9e38688672a9d691be07d67366fb402dc2c17692729e082915e468",
+          "size": 266529,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Light.swf",
+          "git_blob": "0f1068d8307f92ef74921d42eab74ca407535c47"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 216,
+          "music_documented": true,
+          "sha256": "3118628aab49f5ac6d4f6fec975e6a31bcc4134abce3459eea576ea087c86799",
+          "size": 237182,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Lodge.swf",
+          "git_blob": "c8d62a4d3ce26a6122dcba9ae9fd0f289964fe47"
+        },
+        {
+          "room": "121",
+          "room_key": "lounge",
+          "music_id": 260,
+          "music_documented": true,
+          "sha256": "49878cd90a86c6335cccf079f54904ee36d9544b4facd8062f0e7d99b187ce75",
+          "size": 398248,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Lounge.swf",
+          "git_blob": "0337bcf280653834b787f6a88f35e15b704274f5"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "df6d9b158084278dc43762d39e30975d77756d22928f846e448619adc15eea1f",
+          "size": 334645,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Mtn.swf",
+          "git_blob": "5b301db95a610e41fa27ff1cb81fb5814ea82a5b"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "76989cee679fc28e184cf620a37bbe6403fe482de6e5775c1c565814ec36056d",
+          "size": 260545,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Plaza.swf",
+          "git_blob": "ff78364afa592aa2df599409df189f67c00bdca3"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 208,
+          "music_documented": true,
+          "sha256": "d38b1586c1f65d18dc5b91597bf6b81b5314d1a980bbd926e2c41fffcc64761c",
+          "size": 302701,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Shack.swf",
+          "git_blob": "369d56563b50d906545c12ef09898a7224580a72"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "7e9eb72c088f84dbcb763547a69506d61ee5dd73a1c0ebf579506b36e233a12b",
+          "size": 205644,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Village.swf",
+          "git_blob": "22c8ba7f984202995b229b8b55d1297ce98ac91d"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "6f8ef8c920f9e9538b9680f90981a4c6adf4966b0e173bc676d9d2b72f4ff672",
+          "size": 198711,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-PuffleParty2012.swf",
+          "git_blob": "737c3eb7416f67a57dc3f0e1c9c3d758b910dcb7"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 261,
+          "music_documented": true,
+          "sha256": "363c1a1f1088ec118182d2e8a82ec44b8702d471b11809ab06d34b51599d31a2",
+          "size": 112636,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Party1.swf",
+          "git_blob": "a0984bcd5dd7579eadffecd31d1c8d6869dc2010"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 282,
+          "music_documented": true,
+          "sha256": "b6d13b50542fd86a3d70608e97b4cb888c75baee6c261047e635373c0d98639f",
+          "size": 222565,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Party2.swf",
+          "git_blob": "c9a418771aff98e3c6e31493c16c68df715686d5"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "405f7d7a75c5251f46b160b2b71d2747f74883f5b39a6a2e38fbbd17d5f89279",
+          "size": 88543,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Party3.swf",
+          "git_blob": "6aa78eec6f646efd0c73cbd5881d436ce2dbbb22"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 216,
+          "music_documented": true,
+          "sha256": "20b9cac3da4f1ed41d226b294c11567cff2040cd87130463b55c4f1157c24fe1",
+          "size": 237032,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Party4.swf",
+          "git_blob": "a1268b10f23a1a9cd1099e384a93c2604d093754"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "c309acf14eb907c6694c03667df88428b1bfe33eb2570b8e0f0005ae334b395c",
+          "size": 58388,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Catalog.swf",
+          "git_blob": "fed1df84b626a2561352432f6566863118ecd476"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party3.swf",
+          "language": "en",
+          "sha256": "53008e141e4762bf6badb9f7d320c6dd8a3ed3b203511352ca0de748a932852a",
+          "size": 13902,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty20121Membership.swf",
+          "git_blob": "bbaf02d7d4a9f177455bf81bab1265f56cf580cd"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party4.swf",
+          "language": "en",
+          "sha256": "db83a54d794d6e8e62502c36bfdebd67eb599c1146d747d45758f4edf149a02e",
+          "size": 69708,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty20122Membership.swf",
+          "git_blob": "7e1bac913be7c1c1bb51dae3fc8dac7c08a691b2"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "769b8ed39d32e4de6e6d9e7feae364e6207c2477f08b94129319c25f0a9e7f6e",
+          "size": 45396,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/PuffleParty2012Poster.swf",
+          "git_blob": "478f0b5cd212d7c578fc6eaa6a8c5110f7ea3723"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-03-29-april-fools-party",
+      "name": "April Fools' Party 2012",
+      "date": "2012-03-29",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 232,
+          "music_documented": true,
+          "sha256": "af56ed0100b302d6ec8f7f423bd037390372290e3cb36ffc5f72fac3530be305",
+          "size": 186871,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-AprilFoolsParty2012.swf",
+          "git_blob": "d9e8d4df3e2e779f2b2c72c47405a32ffc4e9c7f"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 232,
+          "music_documented": true,
+          "sha256": "5b929f5e448338579b734e259c487afb497fa606265e9ab7cc6b5410f0775231",
+          "size": 188880,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Plaza.swf",
+          "git_blob": "8ca77cdefd4ede2c7f931ca9c8570f6501893643"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 232,
+          "music_documented": true,
+          "sha256": "a89787c92f0cf9169f69fc8361f1d174f91db9d87afc4f1000b821623b015989",
+          "size": 253943,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Forts.swf",
+          "git_blob": "dfed77b88250067e7b86eae71b1d41d923457f1e"
+        },
+        {
+          "room": "811",
+          "room_key": "boxdimension",
+          "music_id": 264,
+          "music_documented": true,
+          "sha256": "6e7dd1a11c1066b30b9609eb0ad594cb89546269835231c1e76881c05aa51360",
+          "size": 44909,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Box.swf",
+          "git_blob": "22e98c4671a2b5d94a049104b3cf86db52fc204c"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 229,
+          "music_documented": true,
+          "sha256": "0ad1b56e5285fa0d07f396b5ee2da09e396ec8d9674722aa0c4d7ab0d848bd9a",
+          "size": 67090,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party1.swf",
+          "git_blob": "7d3be004a122691dc7af2170cd6346cee1a62714"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 307,
+          "music_documented": true,
+          "sha256": "9db71c36d04cabfde8ef72f76fdc345a5dac179396b065bdf926f466087d1016",
+          "size": 24805,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party2.swf",
+          "git_blob": "6e9a8cae00d4d52038f91c4019ec3f39d7315471"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 265,
+          "music_documented": true,
+          "sha256": "8267c5d8f4729c907befabd5fe935f1d5f8ff52cf67d3f333ab385105e817405",
+          "size": 191771,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party3.swf",
+          "git_blob": "60d5785059cfa9b837894457899c16c8c863afea"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 215,
+          "music_documented": true,
+          "sha256": "d23c925ef8ceae492ef10b4a551393fb8d7c960c3af473a053ed67852ab6ab56",
+          "size": 142883,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party4.swf",
+          "git_blob": "205c05d6953fd523f7002aa6c02892904f831317"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 208,
+          "music_documented": true,
+          "sha256": "58d78216792fb626ae1bce13bdecc9b83aad93eb60fbbb07ceede98307cf402f",
+          "size": 140512,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party5.swf",
+          "git_blob": "aa09db2d940fd0eedee5e53aff53176e7124d317"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 209,
+          "music_documented": true,
+          "sha256": "d50e83bcad9ee1696374e7fc04ebeaa985758de69c3e05706dd18f3edf5b2e24",
+          "size": 148517,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party6.swf",
+          "git_blob": "c99bee33e5bdc2a75be6c464fbffbefc01a1ae34"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 220,
+          "music_documented": true,
+          "sha256": "4f16e5bda154c885f4264a95e480a4f536daf5c3d843a02201edc3aaae832461",
+          "size": 39874,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party7.swf",
+          "git_blob": "787e943b9b313bc726523d2530167292c3f03f28"
+        },
+        {
+          "room": "858",
+          "room_key": "party8",
+          "music_id": 11,
+          "music_documented": true,
+          "sha256": "c4f301f77271236f500d24b990b13cc7fa074e2c708a4e4653c9360a55a0ed81",
+          "size": 180905,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party8.swf",
+          "git_blob": "e0de6ac14704e5ba25b9bde0a8166bc359f71c3b"
+        },
+        {
+          "room": "859",
+          "room_key": "party9",
+          "music_id": 264,
+          "music_documented": true,
+          "sha256": "7da6a061853070e8cefe11fb3a3139c88a72b41c80f756e73573596e4cc3bfa0",
+          "size": 155799,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party9.swf",
+          "git_blob": "98365de14a14ed147819dd000cd732ad8a13dd5d"
+        },
+        {
+          "room": "860",
+          "room_key": "party10",
+          "music_id": 264,
+          "music_documented": true,
+          "sha256": "68043af0383e9fc518a12408dab1c64f44f7f3c1fa27d303248ce8f0d20d053c",
+          "size": 161804,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Party10.swf",
+          "git_blob": "2485114c2b6fe8abc2325555b901fb066a28a9be"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "cceb4f55910d973c7e6beed9c96362dcba8f31ce75d7f88fb69e565a08329916",
+          "size": 114445,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012PartyCatalog.swf",
+          "git_blob": "dea686c63196f85c0af7ee246e8b260778572678"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party9.swf",
+          "language": "en",
+          "sha256": "56caaf9235243620cdbacb4786f97c80b2d63f9f9b365624a9f14217b30cc185",
+          "size": 58353,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/AprilFools2012Membership.swf",
+          "git_blob": "7f24b956a9a1886d589ad12db68978825c35257e"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-04-05-easter-egg-hunt",
+      "name": "Easter Egg Hunt 2012",
+      "date": "2012-04-05",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "2853375e600550218215794cdb9e1210d45c28873bbadaed45671b1a5838f0ee",
+          "size": 179435,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Beach.swf",
+          "git_blob": "8601170aacfbdea73ff5f790489f2285c46bd0ae"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "e8232993c128605d6a3ee2386acf5209041c0fec1de5830b337951e0c1c5abff",
+          "size": 127214,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Beacon.swf",
+          "git_blob": "b326b0fe28cdad4617e37250175b17df6ccd7097"
+        },
+        {
+          "room": "111",
+          "room_key": "book",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "f239e5530d3ac12af7b678a8acbc731ca6372269108a2f194c6f8991503247ea",
+          "size": 96668,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Book.swf",
+          "git_blob": "92a6e0bb6c70f5ee2aa9cb1d32b2353ea6ecc749"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "20cee848123257424bccdad31b598128ad95b1c7e948e3cfd2ef8fc983097d8c",
+          "size": 194949,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Cove.swf",
+          "git_blob": "0f4e4545884e73ca98175958eb82828873cf29ca"
+        },
+        {
+          "room": "814",
+          "room_key": "lake",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "63a2bb62fb147132fa79ec79cf4bbd8e037ddf3e39eef1f5100fad14fa4400a8",
+          "size": 124145,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Lake.swf",
+          "git_blob": "d38fb91a4c05bee1f74320dba93f8df3d79c54e3"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "7842e8273b5d232d56b416d14c9214e9f2a4d5f3e93059386010fcd2c91caa74",
+          "size": 393532,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Shack.swf",
+          "git_blob": "7b407f7f9196f5568cbb801f99996f6aec152439"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "70d64971d11f88a8b2ea7ec7f7e7af693f41c5a04bc030e3d84820d7a0da9ae9",
+          "size": 99696,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Shop.swf",
+          "git_blob": "2b31e580a38a88d1c1f5c5759832b822186c88dc"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "8b4905b5512f4758cc3a4f8d56b554f9b6856bccb6a39cc37cd2fdfe0b93716c",
+          "size": 157312,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Village.swf",
+          "git_blob": "c78b6610a57249b8d0b5bbf39325538f5cb7e0e8"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "global",
+          "path": "scavenger_hunt/scavenger_hunt.swf",
+          "sha256": "ecf26193da42f9ca8eeb6ee595e047de299dc0ad82ce7ef6764d242ec3bccbb4",
+          "size": 123559,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EasterEggHunt2012Scavenger_hunt.swf",
+          "git_blob": "f95a544a48ed6a8ce9b74199e3e968378055bdd9"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-04-19-earth-day",
+      "name": "Earth Day 2012",
+      "date": "2012-04-19",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "b1e63d9eaa4d6c7a3d1310ea906a612f7b1fec66493ea4e8513cdb623f5d2aa6",
+          "size": 183099,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EarthDay2012Plaza.swf",
+          "git_blob": "a854bf80fe3878da270b242d60818420a72ef4d6"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "0dcd5da463b7256b6f2a0eb6c99f33b2dfdef474779e1cc52fda676a9b43a341",
+          "size": 275812,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EarthDay2012SnowForts.swf",
+          "git_blob": "3f0dee1bb653520612c309b68292631df04db80d"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "7312966f911bb5453c94c5c7d5d40b9cd76b7994d657600891363e85f4796911",
+          "size": 186353,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-EarthDay2012.swf",
+          "git_blob": "f519d013fc665d91984d2a553986558123dea058"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/earth_day_catalog.swf",
+          "language": "en",
+          "sha256": "5e16b7be151f9aa069c450d6c3d1f50fc9f35a028873eb26a732f23834b37ecc",
+          "size": 271940,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/EarthDay2012Catalog.swf",
+          "git_blob": "5723613087ea71535250c04fd720574042f6e82c"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-05-17-medieval-party",
+      "name": "Medieval Party 2012",
+      "date": "2012-05-17",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "221",
+          "room_key": "attic",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "646928c5d26ecb53b41d9d9650e664e4f9fe25de601cd37d9de33d516f20e4fe",
+          "size": 48020,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012attic.swf",
+          "git_blob": "ebe74664bf5c9ba6440cd3d5487a9c3e780790df"
+        },
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 305,
+          "music_documented": true,
+          "sha256": "3e9f990a6c62245619281a672e62c87c53565b08ea2b64f549fb978c82d271c2",
+          "size": 200247,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012beach.swf",
+          "git_blob": "6c62faae6dd857642f0abca62ba51847746df4a3"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 305,
+          "music_documented": true,
+          "sha256": "6423c77c6f9834ae9afe449d5527d37a10d3570bca38b9d16f0aa8dd8b421255",
+          "size": 96305,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012beacon.swf",
+          "git_blob": "b235ba3c552fadf652ea4ac49c2ec01726216b3a"
+        },
+        {
+          "room": "804",
+          "room_key": "boiler",
+          "music_id": 236,
+          "music_documented": true,
+          "sha256": "3df7e5cf9694c0517120deedf0679faa5d99d9db8eb7aad576f0d02c78a5e123",
+          "size": 116040,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012boiler.swf",
+          "git_blob": "acda313b6e210f355693962c28936f8f269ea869"
+        },
+        {
+          "room": "111",
+          "room_key": "book",
+          "music_id": 234,
+          "music_documented": true,
+          "sha256": "5843bf0737e5301d61b56d0bfefcdbc76e37143b7428d4f76bd29d66d790a5ba",
+          "size": 94920,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012book.swf",
+          "git_blob": "52cb2e4534c87b882f25296255297e9481485d7e"
+        },
+        {
+          "room": "806",
+          "room_key": "cave",
+          "music_id": 236,
+          "music_documented": true,
+          "sha256": "d529eee580459d47b26a3a670a8104dd2375a98aac38688cd2f8aa134ddc4261",
+          "size": 185184,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012cave.swf",
+          "git_blob": "882bbf3d4861006ee0d586fdc33b6a20542f2ee5"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 234,
+          "music_documented": true,
+          "sha256": "95da64f05f97c86cb7803415d7e565f14307a603d7a494e4b956de7f2dab42b0",
+          "size": 96958,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012coffee.swf",
+          "git_blob": "37ddad3e1a6d0ab94d39e831946dc8db823d706e"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "e24a7018e24465be811b624befbca56d5866e465139f9a8840c5e92c89b7515e",
+          "size": 131202,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012cove.swf",
+          "git_blob": "7d1822e3796d56eb22bb7c250237f88945d5344b"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "4159c078eee223167cfeefc27761c147755330979c9f4b0917630e84edafa5ac",
+          "size": 113334,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012dance.swf",
+          "git_blob": "a32547c1c0bb4634c0764c1a145e368bc9706f06"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "b0be38cf38ee8a643040bdf77d90ccd36741b0d7439c381bc1644efc9bb6cede",
+          "size": 166074,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012dock.swf",
+          "git_blob": "5f3d4b732828c11ac1c01ca751e69df8c829cdfa"
+        },
+        {
+          "room": "122",
+          "room_key": "eco",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "57bc14f736b43efb7c58caba06f4367634e1a306d0df6d9e25cb9a6d1ecfe52c",
+          "size": 162532,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012eco.swf",
+          "git_blob": "4601f2e3fdf5c9eb0a9633e6cd43c7a7ad89b7d9"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "4adf4da69ff21d942e01d6c0534fe541f5d6c5cf94ab47cc2bfa80d1721b80dd",
+          "size": 130453,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012forest.swf",
+          "git_blob": "ccd146332a0b24d2c43fb86ea417c1422273cfb6"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 236,
+          "music_documented": true,
+          "sha256": "b65f96001de5cded640503a2cba9b9abc0922d56681368df0f86cffb7a63aec1",
+          "size": 116382,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012forts.swf",
+          "git_blob": "cec45ba1de1dad2fbfddc904db7e7af5dd08af23"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 305,
+          "music_documented": true,
+          "sha256": "702108dc04f0d31c3761c1c156205450dd94f6ad29ab0800063682d72163f7c2",
+          "size": 205321,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012light.swf",
+          "git_blob": "ea4d0751d7255d4dd095d271c8d150ebb080081a"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "168dcdff2d6ca8991743a4923e08fd445b47da8d836e93a0d6b73b8bafe057d9",
+          "size": 70664,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012lodge.swf",
+          "git_blob": "1339a46f2df4be543428e69351fbba8386766152"
+        },
+        {
+          "room": "121",
+          "room_key": "lounge",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "2c83a99f6661d25b65012e20f2bebc660bc7e99dd5d576e801d0b3cfff62130f",
+          "size": 135878,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012lounge.swf",
+          "git_blob": "48b2c4ca017ac094f3ff8916c7c2bf6caed86971"
+        },
+        {
+          "room": "808",
+          "room_key": "mine",
+          "music_id": 236,
+          "music_documented": true,
+          "sha256": "d45b78c9d6a3f91f1f0d659ef6049549dbab06a3ff58733a3197f5eafd8f1462",
+          "size": 275112,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012mine.swf",
+          "git_blob": "5085e185ec7dc6f54bff300342c726eb56d108fc"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "bdd3b41ed81413e301689498330ad60f00f62e1dbd4d622be85bb21640167777",
+          "size": 179520,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012mtn.swf",
+          "git_blob": "e5b9c895ce07da76e05d2aa64686220186eabda8"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 234,
+          "music_documented": true,
+          "sha256": "636e9faea8f04c00fe3fc8ca29cee682d1952e29ce1d0a4ebba59d67d77eedef",
+          "size": 65716,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012pizza.swf",
+          "git_blob": "9305dfd4ed13774d9d5b4b0975962f1b37914d45"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 233,
+          "music_documented": true,
+          "sha256": "5e2a00b69c2e9dac2aa1944dd5c1a1d27ace5e008953e4777ae06a7c0eaddab7",
+          "size": 107581,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012plaza.swf",
+          "git_blob": "84dac27cc5b45ab459f94c1c3aba7310c2d010a6"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 236,
+          "music_documented": true,
+          "sha256": "9907beb651756bf547a7090083efea370827e09b20265a85acf2dc42506a0577",
+          "size": 67585,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012rink.swf",
+          "git_blob": "c84eba6e2eabc05f0fc683439b533234fef1f42c"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 233,
+          "music_documented": true,
+          "sha256": "6616d59287cea1e9f78e3333e123f4fcc487cbb24cd8ff39e581511e1f669cba",
+          "size": 181357,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012shack.swf",
+          "git_blob": "686c30467dd62d92dea7187e78e6de5342760666"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 234,
+          "music_documented": true,
+          "sha256": "35bf734b6745882853313d19a0eed4509569a3774ed3f291cf60e49dca36b2cc",
+          "size": 126169,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012shop.swf",
+          "git_blob": "8eafec2d0db062d4f64ba8285693bb5f6fcce070"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 295,
+          "music_documented": true,
+          "sha256": "a82edec3b56b0e8531846491a6231067a5ed1edea2f78ae326d5697edb149cfa",
+          "size": 161762,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012village.swf",
+          "git_blob": "1bafafeb9f5d10c92b5b468fd355eb6743dadb44"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 233,
+          "music_documented": true,
+          "sha256": "dbb887a5f1555307e45131aa99fce7d1b3ec72523f8e8e7b988d8437c3bfbad6",
+          "size": 212161,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-MedievalParty2012.swf",
+          "git_blob": "048c0796627c68260c2ea21268e1103c904eaa93"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 235,
+          "music_documented": true,
+          "sha256": "0606625fc978402a1e52b037bd7188af44ce3e2bd6be2ce20c764277dd0064c5",
+          "size": 77659,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012party1.swf",
+          "git_blob": "5b93b2e6528219b400dbb559f3ad33f6ef793dd1"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "d6a0f67fb790000b7c4ad838ab8fd179f76826eeb1e6d6e97bdc8e7ecbcb60c5",
+          "size": 126605,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012arty2.swf",
+          "git_blob": "05d4a8730d7e1fac4af834184f1806515224f191"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "8a4d17a414359e4144deb441f90b786c6314bd29816a8f003445e699669ea02c",
+          "size": 126973,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party3.swf",
+          "git_blob": "7526b9ef41353ec7a9600c9fe816b1cc9c5f45d3"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "c5e79264af36b8c38ad04e7f2e9eae101949bec49a009b02f37efec562d4a251",
+          "size": 103036,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party4.swf",
+          "git_blob": "8750fca1a6de75b5581fe20d06a390cda69c7d84"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "95e08f7fb517ff98f591808960967c7b66cbf87b9af922cc2ec1ab6bef419e94",
+          "size": 71228,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party5.swf",
+          "git_blob": "33ef3d62ccd3d142a7eafb61f3933d2a67596476"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "564284a5a7fe5fedb32bdddf75eaeee85e930a47584f58f09dcd8affc8a0c0eb",
+          "size": 71289,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party6.swf",
+          "git_blob": "c260f8dd927eb9ebcfe18cef25efaab726a0bb20"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "94c23bf4aef63212870cedd970173917582015ff70be3968f169f8a784219ef1",
+          "size": 139960,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party7.swf",
+          "git_blob": "1366214efe7bac7db8213df2c836b7698a5069ee"
+        },
+        {
+          "room": "858",
+          "room_key": "party8",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "8395706300950943e6190279c0c9d705c072387fc756568d7051fcf25ebe8c67",
+          "size": 71600,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party8.swf",
+          "git_blob": "c9a76457ec65bde0542de9732d84de4ed452cdfb"
+        },
+        {
+          "room": "859",
+          "room_key": "party9",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "bb05214b5f7feac6f6d49e94b8b8eb03b92bf4e0f7d59f1b6f3907e52e1b9a66",
+          "size": 71588,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party9.swf",
+          "git_blob": "f257874b43601848485ae2b1898a705f29c99cd9"
+        },
+        {
+          "room": "860",
+          "room_key": "party10",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "0773a67d90bdd9401d216ce0e82587ab746a27212024277d6e7658f98cad9247",
+          "size": 71636,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party10.swf",
+          "git_blob": "7de484536976067ef3a8f768acd80cc06c582b91"
+        },
+        {
+          "room": "861",
+          "room_key": "party11",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "dd6f30fdb249f976340528454bce3abd8caf1566db3b7c698a59378fa5db129c",
+          "size": 71596,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party11.swf",
+          "git_blob": "1c6101e3d3e4b1af6bec5441221fc13813f845eb"
+        },
+        {
+          "room": "862",
+          "room_key": "party12",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "bb4a918e4c61e29295e7b661418f9af570f44196f17d8bc7ed6056ea54ccc72d",
+          "size": 71695,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party12.swf",
+          "git_blob": "269fe369bbddc69fbfdbea2625e77e492b66f6e6"
+        },
+        {
+          "room": "863",
+          "room_key": "party13",
+          "music_id": 265,
+          "music_documented": true,
+          "sha256": "b5c49fede16fb01c8e8ac8a778855ead4e1ac8b8d0b09978ee907cd00b86eec7",
+          "size": 103246,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party13.swf",
+          "git_blob": "58bd35c67a3df9c2ee90274eff3e950e385b6a99"
+        },
+        {
+          "room": "864",
+          "room_key": "party14",
+          "music_id": 286,
+          "music_documented": true,
+          "sha256": "9500fcd04665c95ca7febecae8856aae8799b9096abde81ecb8f59bf13467cc3",
+          "size": 134477,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party14.swf",
+          "git_blob": "b0ec4ab98b38efe3a653f945e7cdd4fe0fa6b164"
+        },
+        {
+          "room": "865",
+          "room_key": "party15",
+          "music_id": 286,
+          "music_documented": true,
+          "sha256": "5e94de5f52342fdab8986f19ab5ee0e4c4625103c0a8de33d85dd56c1ea15e8e",
+          "size": 110297,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party15.swf",
+          "git_blob": "db1ebc433adf1c837a80f15dcac154a2b43546bd"
+        },
+        {
+          "room": "866",
+          "room_key": "party16",
+          "music_id": 287,
+          "music_documented": true,
+          "sha256": "40420d66aac89b9831bd2a5836c773c892c73fdaf594b321fb829f5fe9248a73",
+          "size": 139634,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party16.swf",
+          "git_blob": "b647c86f0fb1a6f61b1c74427f5cf3ed8701b1bb"
+        },
+        {
+          "room": "867",
+          "room_key": "party17",
+          "music_id": 288,
+          "music_documented": true,
+          "sha256": "16151ee6a3fd004a2987d274d6804837bcb8a13aaab7c616968119253bab0c4c",
+          "size": 303251,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party17.swf",
+          "git_blob": "fd97985e7d0f25382177a8968726db4b70d2f107"
+        },
+        {
+          "room": "868",
+          "room_key": "party18",
+          "music_id": 265,
+          "music_documented": true,
+          "sha256": "a2f299859aeb914ea4ad4a1883db142a056d54d9ff46448641cc8d516f074424",
+          "size": 126003,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party18.swf",
+          "git_blob": "1873bc299a495d262c33d16f63e1a6570090eef7"
+        },
+        {
+          "room": "869",
+          "room_key": "party19",
+          "music_id": 310,
+          "music_documented": true,
+          "sha256": "d4a0991eb58599e0c406af4d94b71ccd3ab0491fde579ca627138d3622c27f78",
+          "size": 114244,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Party19.swf",
+          "git_blob": "7b41002e168dee56bc0b2bc4d3b6ff33e19ee99e"
+        },
+        {
+          "room": "874",
+          "room_key": "party24",
+          "music_id": 266,
+          "music_documented": true,
+          "sha256": "54fd4850175a07f702f4ba28038cce62dc2b51b5ca7321b3f7765cd464b11476",
+          "size": 79309,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012party24.swf",
+          "git_blob": "33ff820d0b9c5d4425e53bcfb93ba894367b1f8c"
+        },
+        {
+          "room": "875",
+          "room_key": "party25",
+          "music_id": 322,
+          "music_documented": true,
+          "sha256": "fe39e4fae456b71c9840320e7c13c9a8649dc22cabace146b6cc61be66e6e0c8",
+          "size": 304201,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012party25.swf",
+          "git_blob": "bf4c5019953db79d8ca0ca2ab9cad36103131e8e"
+        },
+        {
+          "room": "876",
+          "room_key": "party26",
+          "music_id": 323,
+          "music_documented": true,
+          "sha256": "1fd381a2bc873ee1f9444454b5a576f17fc3161a15698d86734a72b2a1679c6d",
+          "size": 158460,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012party26.swf",
+          "git_blob": "ef5d9914a71dd053bfd3d58e34fc41a04edac837"
+        },
+        {
+          "room": "877",
+          "room_key": "party27",
+          "music_id": 265,
+          "music_documented": true,
+          "sha256": "4259696e988f66783b0867801ed3a98d34b420ce668ab41f9c8ebf8ad8aa238f",
+          "size": 182015,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012party27.swf",
+          "git_blob": "6527f3d0fde0ddda6c41caaab1accdb2f8e9d076"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "c2fa3f5bdb5052893886278bac2d1a3750152f80b110969a2d20b5bb67ec6b87",
+          "size": 71440,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Quest.swf",
+          "git_blob": "afac789bf8245fb487ebf07a717596d4449886ea"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note1.swf",
+          "language": "en",
+          "sha256": "a06fd6b28fc03614c992405edb3d3c44037c4d9179fe69d15732a401299cb992",
+          "size": 15678,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Item.swf",
+          "git_blob": "2e9804149599c10eff766d47ace71ce01559525b"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/instructions.swf",
+          "language": "en",
+          "sha256": "0b98c1f092ad15ea409c6a27ac8beecd3a9ae3b16560d1ee8fe1593a44231996",
+          "size": 15901,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENCloseUpsInstructionsScroll.swf",
+          "git_blob": "eec1987be3d161d7d91612b4b9f84e711dfcdce8"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/InstructionsScroll2.swf",
+          "language": "en",
+          "sha256": "8e1dc05dd6b0d81f9ee1d82db99b2af8c63afcd43d89ee11b558b3a959396fe1",
+          "size": 22155,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENCloseUpsInstructionsScroll2.swf",
+          "git_blob": "0cdf3b6b17bd4949d27d10d3b37f0a407ac0635e"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_catalogue.swf",
+          "language": "en",
+          "sha256": "fa62241308ae4ae4e2bb1b76ab63c58f30ba32d3dfdb0a38d0b4eeb3d755d9a5",
+          "size": 195265,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Catalog.swf",
+          "git_blob": "0bd184e0c06b8f7d808dcd347382f9b9d66c4063"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party1.swf",
+          "language": "en",
+          "sha256": "819db706866ce61b3209121c33faee39002a4ec7a7a6f02a1b0c1e2d051367f0",
+          "size": 117265,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Member1.swf",
+          "git_blob": "c284fe24e55482bd6e34829325bf7675b10b2a96"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party2.swf",
+          "language": "en",
+          "sha256": "b43fcee6ff2a6130d18c95693c2677e3efbaa8863d9bc3abfa140b2eeb350151",
+          "size": 89911,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Member2.swf",
+          "git_blob": "9309292a66ce9cc1420141332c37af12c38fc283"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note2.swf",
+          "language": "en",
+          "sha256": "ef2180cdef2367e10b5ce84ddce55372b8df023675a1c875ca6088859035b282",
+          "size": 28623,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012Sky.swf",
+          "git_blob": "560962c3d25f3a706438492e01f3cd6279ebac5a"
+        },
+        {
+          "scope": "global",
+          "path": "scavenger_hunt/scavenger_hunt.swf",
+          "sha256": "b2c30f05a73e685ac6a32bc4d2ecb320f60023710de7857abedcaee24897aff6",
+          "size": 165063,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MedievalParty2012MedievalHunt.swf",
+          "git_blob": "0efe9175fc8359ded78ac54ed51577f015959fef"
+        }
+      ],
+      "missing": [
+        "Room not included: party20 (archives:MedievalParty2012Party20.swf)",
+        "Room not included: party21 (archives:MedievalParty2012Party21.swf)",
+        "Room not included: party22 (archives:MedievalParty2012Party22.swf)",
+        "Room not included: party23 (archives:MedievalParty2012Party23.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-06-14-marvel-super-hero-takeover",
+      "name": "Marvel Super Hero Takeover 2012",
+      "date": "2012-06-14",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 325,
+          "music_documented": true,
+          "sha256": "37062db8d9bb3462214575a021e4e6691fff0b73433c1af40ae14c13fcdf75e8",
+          "size": 216366,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-Marvel2012.swf",
+          "git_blob": "65ca25f382e94b733e0ee2118311433d5425a0d0"
+        },
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "d8672e52ab61fbe68a17a07e6e3958048dbcb69b01a37bad66f2b8723c2add4e",
+          "size": 183859,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverBeach.swf",
+          "git_blob": "b37bb7962b88021d99c4ba3598993c0e4a5eeacb"
+        },
+        {
+          "room": "111",
+          "room_key": "book",
+          "music_id": 0,
+          "music_documented": true,
+          "sha256": "f3ee3752aa79e6ca087e6789db96c42c98a541ffc978ef8519ac9b6a41054da5",
+          "size": 103453,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverBook.swf",
+          "git_blob": "f933a4237bcfaf090621e7d677d3a26d735a7f6f"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 0,
+          "music_documented": true,
+          "sha256": "04076937eaf92110a3b1ae9e332514105cc88efe6da7350b92616da90825c4e9",
+          "size": 132221,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverCoffee.swf",
+          "git_blob": "605cd01741fcb9204434574350ed950132f41c6c"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 325,
+          "music_documented": true,
+          "sha256": "7df05c46a22cbcda7645f140d10836d345284d9646f172c14ef700e091d72828",
+          "size": 191848,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverDock.swf",
+          "git_blob": "9c8b974cfbd0fda8532c135c7741e4889ee25693"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "6683733bc34b5669e0b80fdeaa54d281d39356c81eba6e9a39e8edd73aa7db64",
+          "size": 178670,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverForest.swf",
+          "git_blob": "b2ec5f3ce9f565f8b2d07178e3c40d5f43b25434"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "79b43c8859c988b28fa4bd1696919a4e477acc377b1220bf1d1fd797d26099ae",
+          "size": 189668,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverShop.swf",
+          "git_blob": "a29eaf9b22cae7ac17b98b7856d6ae25508926ed"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "a730d06f3597c942f0e6f96d881583bb2eac229647c3fbe93be0a23a309837bf",
+          "size": 173750,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverBerg.swf",
+          "git_blob": "120d88136b32bb378601763d6935a1b88deeb676"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 0,
+          "music_documented": true,
+          "sha256": "9b6c60b5e10fa49d40a0aaa3f12b002d5cceda16514d72f6645afc72d3a5c36e",
+          "size": 155337,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverPizza.swf",
+          "git_blob": "fc425322a96db14014a5a06d44ba4f359978ef49"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "12e208eed531427665c602f5fd36170a158a6bf38d5f1160a10600ee01617843",
+          "size": 399553,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverShack.swf",
+          "git_blob": "ec56a25649fa374b0fadb1819e8789198f20dd7c"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "c1ab02c7d7f5d7760b8fee8f18de7b22fe6efa6b03c2c982e187f4ee0055f831",
+          "size": 161741,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverVillag.swf",
+          "git_blob": "40d921a5eb4a4f91a89eb46237462cba93fa296f"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 325,
+          "music_documented": true,
+          "sha256": "98d7bd4d9b2d4cd84947c6ca111960b1a770640c359901d2a21cf190517057ab",
+          "size": 215964,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverPlaza.swf",
+          "git_blob": "9575440575ac1c00a26c3572ccd7e4bf6cecd1e2"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 325,
+          "music_documented": true,
+          "sha256": "a35263d62fd6638b418159f5847a77de1ee883f4def9c1edcfb96b7285867dc8",
+          "size": 312836,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverForts.swf",
+          "git_blob": "ee9eb1437a3e803c394356a193234b82b16e2fef"
+        },
+        {
+          "room": "340",
+          "room_key": "stage",
+          "music_id": 0,
+          "music_documented": true,
+          "sha256": "112ed1acbd556095568c763ce08d229ccc95db644a04a3161748a11428dce846",
+          "size": 115434,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverStage.swf",
+          "git_blob": "dd103452c67c98c55fd9e30bf5d012321d92d956"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 326,
+          "music_documented": true,
+          "sha256": "d605bce801d41cd37564b41d3ddc53a7268f20d09a3442310da6fc37aaf98f4d",
+          "size": 649182,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverParty1.swf",
+          "git_blob": "a6a9c95692bb9db29fb4d7db58dd965572afea5c"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 330,
+          "music_documented": true,
+          "sha256": "3c3abd90c75236229346a123137a72c565815190b39723efb5930b965f84b54a",
+          "size": 156994,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverParty2.swf",
+          "git_blob": "e3b1225bfec1ff69a5141991097d57dda56e367e"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 325,
+          "music_documented": true,
+          "sha256": "f75ceeadc1cc3973b6a35432b42aabc7a689c8a23ebb7ae4fa6b3f3494380769",
+          "size": 119500,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverParty3.swf",
+          "git_blob": "47d34d7035f70b7739458a5fca97e13a34508dc8"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "membership/party1.swf",
+          "language": "en",
+          "sha256": "a2c777e72806226725505abf89a6e8fea1308d5c0d79947f36486cdb0597bff8",
+          "size": 178223,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverMember1.swf",
+          "git_blob": "28d3cfb764b68b9eb73e639f7b0a083bb627b1a6"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "31020605f17e2cb5047ea07262ea58b011664ca1a6a51d0a6672b778750d7439",
+          "size": 558421,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverCatalogParty.swf",
+          "git_blob": "8d0462142738125b130e7a6edb7dc733e57db2b3"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party2.swf",
+          "language": "en",
+          "sha256": "5a59e2957161b33858edaee4cc31ba94bd5407ca144cdfc77b6eab262111e708",
+          "size": 109812,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverCatalogParty2.swf",
+          "git_blob": "e05e3393d38573d0e11d76becb642bbdd55eede5"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/poster.swf",
+          "language": "en",
+          "sha256": "425786caeff2161be7707055c549f29651369f3809f7cfe5085319a14110ac73",
+          "size": 22686,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverPoster.swf",
+          "git_blob": "ac0cdfda76277fcd73c14172d66c43f4cca62319"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/splashscreen.swf",
+          "language": "en",
+          "sha256": "aa115d3d50dc773b39d30e3649611f4eae540ea993be8f7505e54be19d92db68",
+          "size": 255936,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/MarvelSuperheroTakeoverCloseupsLogin.swf",
+          "git_blob": "f3de4620f1c8aa5e38e9124339599ab5c53814af"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-07-19-make-your-mark-ultimate-jam",
+      "name": "Make Your Mark: Ultimate Jam 2012",
+      "date": "2012-07-19",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 336,
+          "music_documented": true,
+          "sha256": "76b550eff6082b7946743dc33058dee721a41a5756fb126249ebfcb650a614d4",
+          "size": 140232,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-UltimateJam.swf",
+          "git_blob": "625a128c910d511982c43a9afc005a8e39b4dd9c"
+        },
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "31d57a24754c11f95c0c808c016b202b8419f1c2dfa8503cbe936663fe531273",
+          "size": 255280,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamBeach.swf",
+          "git_blob": "6365773e0441dfa43b5edebb3e63d503b9b954bc"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "3e9ae928a099313834cbabd1a3d208dbf9020396ca806b5193dbdb4be75664d0",
+          "size": 512771,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamLight.swf",
+          "git_blob": "6127a4bcc92b2e2d98612bb9e00df172024d50df"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 334,
+          "music_documented": true,
+          "sha256": "0822b338a25987a955d9c610f42b773fcee8f1ed289fee8fc30271a045d75d32",
+          "size": 103473,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamBeacon.swf",
+          "git_blob": "5becd2ee0f00456e62807b76b3c5a20d5e9c12db"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 292,
+          "music_documented": true,
+          "sha256": "6e6cd226e6419932d20023e8dbcdc7f73198c57625f97630375676f262069e5e",
+          "size": 134790,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamVillage.swf",
+          "git_blob": "823eb67aa73d4cab03e19db8643d0fa0f943ebcd"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 336,
+          "music_documented": true,
+          "sha256": "39ac7c3250a01f2a9a03ebb859dbb656f581faeb8229834b5498068171a5f1c8",
+          "size": 111709,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamLodge.swf",
+          "git_blob": "17c326c13fc6da866f360498c495a485c0794177"
+        },
+        {
+          "room": "221",
+          "room_key": "attic",
+          "music_id": 336,
+          "music_documented": true,
+          "sha256": "86420a6a3fb6da25d196c559495dd4552eca3c83d1490ddb294e72e0bb944929",
+          "size": 83759,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamAttic.swf",
+          "git_blob": "e2b9842f23a096eef44323142004afc5b85b1ce7"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "369e84a2ce73b008f43c7754f0e0f5fbe4db783d349fd6faedb82c1232bc9061",
+          "size": 578857,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamDock.swf",
+          "git_blob": "e61091655f13314e9985460e7666fe41a5f8f0f5"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 0,
+          "music_documented": true,
+          "sha256": "ee408e595f2b123b5dd062c781d2c0f77ab23288f26e5cf980f77cd116397ba4",
+          "size": 263082,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamCoffee.swf",
+          "git_blob": "b47c20c8ad0902e8cbf97eae1c976dff070dd291"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 332,
+          "music_documented": true,
+          "sha256": "4c8cb0817de23c3839a8d77daec5610d7ceca7449ddaf93fbbd8a2ab692f3c79",
+          "size": 165369,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamDance.swf",
+          "git_blob": "ada0e8d6107759295baf84fc203c8442d21dc98f"
+        },
+        {
+          "room": "121",
+          "room_key": "lounge",
+          "music_id": 271,
+          "music_documented": true,
+          "sha256": "7abdc9af1c596c7f3860d10eb5e792a5b173cd5b7d0df2af301dd963e64765a6",
+          "size": 111547,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamLounge.swf",
+          "git_blob": "eab53a062aac74ede2752a2e3e1a865d84485e20"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 336,
+          "music_documented": true,
+          "sha256": "821d0ea290ed568bd32b9243559685aee355c6a02cbae637967515315d9bae0a",
+          "size": 163290,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamForts.swf",
+          "git_blob": "96235bbfbd5ef4f6b97c92ad29d0e75f9891cbba"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 250,
+          "music_documented": true,
+          "sha256": "2498e8694e86a735e25052c74a61b31289c11e77d1c19d04499d9057952baf7a",
+          "size": 206522,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamRink.swf",
+          "git_blob": "20cd41f41296b892f44044a19559bb14cead19cf"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 336,
+          "music_documented": true,
+          "sha256": "b7cf8e2173ea83beb5a1a104e98d345d8c6746da01bfa1c4ba7bf9292462cd80",
+          "size": 133149,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamPlaza.swf",
+          "git_blob": "0a07e7843efdd8cb4e563ada260f4fb4a527a965"
+        },
+        {
+          "room": "340",
+          "room_key": "stage",
+          "music_id": 321,
+          "music_documented": true,
+          "sha256": "460a70f1000bb3aaa05bc07f8a797b4722351566b575e3b720a9b24d9bc5586e",
+          "size": 69238,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamStage.swf",
+          "git_blob": "a721e601fd30ec36ff4cad6f2451d93edac62d18"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 271,
+          "music_documented": true,
+          "sha256": "42ad9ff1861eb886679d3dda70bebb9f260f2dd30eb042325cdfb16f130665f0",
+          "size": 115981,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamPizza.swf",
+          "git_blob": "e491658ef3b3f0c9bc4413f2adf5ca3629c20efa"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 333,
+          "music_documented": true,
+          "sha256": "0b137dd5e109225dc00d29f074d267424113554b8baf35c05534c420f646bff1",
+          "size": 241403,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamForest.swf",
+          "git_blob": "0626b86610bd959ff6fd206c67c536febe757b27"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 239,
+          "music_documented": true,
+          "sha256": "362c8d31d8de66ef6a4ae7aa51258c6a1ffa965381894b6328f8398a9cf614b1",
+          "size": 220236,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamCove.swf",
+          "git_blob": "a8eb05f95cba9fd447fc234341c30ba1ef8d789c"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 334,
+          "music_documented": true,
+          "sha256": "4c915ab17a2bed95c8aa729b0dc12afb2a761925dfe30ef0c883d60d16a5a1cd",
+          "size": 96779,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamBerg.swf",
+          "git_blob": "0b46062b983f9f422e3737da3facd62e0da81b45"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 321,
+          "music_documented": true,
+          "sha256": "cbe7915e97ba3452db0c90acd5bf00487bb46d18af84ed883f118d0f9040e4c5",
+          "size": 176521,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamShack.swf",
+          "git_blob": "63b9a95c98d6328ea373c57d68b8f2adc5617167"
+        },
+        {
+          "room": "321",
+          "room_key": "dojoext",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "377f1f0766e82601f9eb9bcccd7d99a611e7f9fd5a3fdddfa87945e29c4dae21",
+          "size": 151478,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamDojoExt.swf",
+          "git_blob": "b161389f9b771d3113da7f70eaac9783145bb935"
+        },
+        {
+          "room": "812",
+          "room_key": "dojofire",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "6c61afc0619e71b903cc36b6c8f76d9a184ad941b8b9a0b3ff9597300a680042",
+          "size": 169794,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamDojoFire.swf",
+          "git_blob": "4214f2c511fcc2ce5648fda25ae2b1f8d757797a"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 334,
+          "music_documented": true,
+          "sha256": "83ac2f9593dc8256ddc5b26af544a4d0fc29bf4150e5ab7b2fac64de6b43ca31",
+          "size": 116008,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamMtn.swf",
+          "git_blob": "4d74a6fed53113aac4b8e7556322206841c934b9"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1ce9233050bce065a23c996547e8ce50ad2da8aaeac12b3e9e5029a690fcafbf",
+          "size": 654407,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamParty1.swf",
+          "git_blob": "6316e8beebd6814c09514d8d4c9ade06c222c707"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "f81f7650e90b0146dbfe9eef9dbe60dd3baba5d888859dcd1bac4e7a2fa36c4b",
+          "size": 575438,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamParty2.swf",
+          "git_blob": "b3c58d9fe882d12505a57932ad66c5b119b7c9a5"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 337,
+          "music_documented": true,
+          "sha256": "7bc2411c7ef1b0f4d625f070608fd0a58c6e7dfed749efcdc6539af0142c55f3",
+          "size": 257643,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamParty3.swf",
+          "git_blob": "c690d921ed87944b63835d6b0194ee1bcbd255a7"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 335,
+          "music_documented": true,
+          "sha256": "2dd5fbe3b1753efe367e7b2b3b095a336322f65119661a818686ca73ced09ec1",
+          "size": 87444,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamParty4.swf",
+          "git_blob": "698b1ab32d99e13b2ee7824323852a82d4e5dee3"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "c7964c76b0b5dafcda074a60b0e462f484de50e79ab4c4420e6bc75890aacbe6",
+          "size": 168117,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamCatalog.swf",
+          "git_blob": "d9220598602eb06c54b83e5c31d1cfa6eb64f005"
+        },
+        {
+          "scope": "local",
+          "path": "scavenger_hunt/scavenger_hunt.swf",
+          "language": "en",
+          "sha256": "4691bde0142b6000d3f9760828dc3a743ad6f0815bcc710f1bbcccbca89c4f06",
+          "size": 138480,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/UltimateJamScavengerHunt.swf",
+          "git_blob": "ea92ff6709d2909517b5a4c479560589c5d9b965"
+        },
+        {
+          "scope": "global",
+          "path": "telescope/telescope.swf",
+          "sha256": "e60238b8900b068e2582673e423735f99e76f8727edbee0ef250612c643e31b0",
+          "size": 4656,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Telescope-MusicJam2016.swf",
+          "git_blob": "1a5d711ad34e2ce12eda10f348b09d488b290712"
+        },
+        {
+          "scope": "global",
+          "path": "binoculars/empty.swf",
+          "sha256": "792ac109b2dfbfb96b4adac6b204e6e71d74a7e409ca2e924ffd9c4604db2709",
+          "size": 22031,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Binoculars-MusicJam2016.swf",
+          "git_blob": "7ce8af6781de9e1f1469a336cc90d33b8479921d"
+        }
+      ],
+      "missing": [
+        "Room not included: dojohide (archives:UltimateJamDojoHide.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-08-23-adventure-party-temple-of-fruit",
+      "name": "Adventure Party: Temple of Fruit 2012",
+      "date": "2012-08-23",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "981f7721aa48a7e215d6fa978084b3a707c31290da9c070cfcbbc232acdbd21d",
+          "size": 239802,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-TempleofFruit.swf",
+          "git_blob": "2c50910e4af5380cbe8ed0744ed8605d3642e48c"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "1c24ee4153b618313e7387bac9ce2f8708e2f521910411c6416f1a93a8b13cfb",
+          "size": 154581,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFPlaza.swf",
+          "git_blob": "0bb97ea179f6b7219e7cd3c54a2d4c46bcbb6954"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "252b764886b8d88fcc6166c45eef1c0a18562fef8d5bd1af3d672c0e2c4844a2",
+          "size": 204696,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFForts.swf",
+          "git_blob": "2e63b716263ae6c6d0995b70a315587fce322c6c"
+        },
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "dc15b76884f73c104e28ad216964088fef9f36340aa3dfe9149080b7e6ece7e6",
+          "size": 122086,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFBeach.swf",
+          "git_blob": "f9ccfc121ae1ce9e45ea78f44fb508a6d4c66d8d"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "5fe3bb2786657077f15edddb9a8dcd0c386e619f752973d43841bbd465d5e54b",
+          "size": 216890,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFForest.swf",
+          "git_blob": "9e6a1a90e307143b138b6fb6b03c0670986b1d59"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "d20771ee84f90dbb4fd50d4506880af43b91068bd0edc9f6b5abae4ed521a276",
+          "size": 313662,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFCove.swf",
+          "git_blob": "84010aaadee29ac5e2fc2a34800b7830bd158c9d"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "a246b2c63de9e6e8ff37767144ccb78e108a6703fd0ae1038f7887a942214fa4",
+          "size": 265215,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFDock.swf",
+          "git_blob": "4e0ab995e70eb1392345fcf34db477f967866774"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "0584ed86be2b4ed319c66d987d707ca2c84472e70c5c8724096b229fdbc977cd",
+          "size": 132018,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFPizza.swf",
+          "git_blob": "df07c2ffa4d9e356af4f8c0c4fe6a9d506c48283"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 267,
+          "music_documented": true,
+          "sha256": "44e23e75d238bbbe77bdc988f9d0a698213c4ae1f68e1e83bf7be8bb7e433872",
+          "size": 225571,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFDance.swf",
+          "git_blob": "c9ce92a760afe355b3b8160b386ec7060cb208e7"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "d18db01293dbe5078c390eb2a625c72fe80173100f752b5406d690679bf0f5b4",
+          "size": 105890,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFShop.swf",
+          "git_blob": "7fa03ae71edf3d4252f5d2e0600adde137626309"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "697cf4707cef26f59a046b7245a7768abc5c35bd7e5d5f673228f1f9b16cb4ee",
+          "size": 149944,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFParty2.swf",
+          "git_blob": "f27c035673ef72911b77564cd408b93cfe05e6b0"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 268,
+          "music_documented": true,
+          "sha256": "566a25b65e6b238de3ae702da809d6597d1a828870a6be9e548d6f3ea10b32b8",
+          "size": 100057,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFParty3.swf",
+          "git_blob": "280753371bbe94a558ac7a4454522362615fddda"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/party_catalogue.swf",
+          "language": "en",
+          "sha256": "efc2ff4bc6c4f2b3dc9af05d13c6c9828fb3d01d2ed6460ed4c818187f344e2d",
+          "size": 243832,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFCatalogParty.swf",
+          "git_blob": "7da33551e8a4b245f7bce107bc60978eaeff5d3f"
+        },
+        {
+          "scope": "global",
+          "path": "scavenger_hunt/scavenger_hunt.swf",
+          "sha256": "8bc6943b61f5101736b22903341ccfbf5162a02f13eaa8c0343715971e7c5a38",
+          "size": 59369,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/APToFPartyScavengerHunt.swf",
+          "git_blob": "dfa199fe21b1a2a00eabdc486d5fdfca059c524d"
+        }
+      ],
+      "missing": [
+        "Room not included: party1 (approximation:temple_of_fruit/party1.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-09-20-fair",
+      "name": "Fair 2012",
+      "date": "2012-09-20",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "7837b842788f436c119102735f9f4672db4cdb7cf311fad7eebb1789de3125d0",
+          "size": 126255,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Beach.swf",
+          "git_blob": "6f0c07b3e0645c03ace5e76050c3b9b323b85472"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "e3f893119f2543e187fc69dc967a5ca4ca3126abbc627be2d699fcc0d47db091",
+          "size": 68144,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Beacon.swf",
+          "git_blob": "becec79c81f65de6b13db21219f46ec0f617dbed"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "dbbf19491fadd6ee592bd227e0d1eec8575abca637bfc5ad9d5f757d0941365b",
+          "size": 77026,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Berg.swf",
+          "git_blob": "f206c4a658abfbeac6b5b6371188629dca00ca9e"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "a806ab043f220c888678c36f3836d62a4dcbf8f9f334efabca94d43235f5503a",
+          "size": 168076,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Cove.swf",
+          "git_blob": "3d2efeb56c05f8be0933be0c76ec54ffb6090178"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 242,
+          "music_documented": true,
+          "sha256": "51e227fa6047985aafe35db3f7da455c6a62bff44a2a2eeefe49440b09ce083b",
+          "size": 121459,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Dance.swf",
+          "git_blob": "7d2975c304779ff91f2805a4196f18d8a224d4ae"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "5eb0a85ec874bfb47c1d82be7b151392c77dac5666d95badba3a8286b8474689",
+          "size": 204197,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Dock.swf",
+          "git_blob": "0c85401e6f1585c7e6f6879b50d405d0fd80d8f1"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "dc07f97f54f940e5e7ee89e0752dfcb784f8ff6528c6b01d61acb8d3449cb983",
+          "size": 204922,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Forest.swf",
+          "git_blob": "8b64da52be2c8d543fc2316b8d166323fe748e2c"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "69dff7cd6d63ff9e4bf96c207f7e77bb68efc0bf2aa9729ab7a03e250b52ea76",
+          "size": 158379,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Forts.swf",
+          "git_blob": "980f9bbefe9b04514ffd26b9fbe40d995c04b750"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "4cbce78cb53bc547abbdd563d44a7c4fe5caa30b62511b8e2e2ff339e0d5112f",
+          "size": 144587,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Mtn.swf",
+          "git_blob": "82848b5143b4cdee43782abf65debf5f2c3dcc17"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 221,
+          "music_documented": true,
+          "sha256": "c641fe09c94145711e2ac603be2369cfc90034b72534ad2934f03a9165892139",
+          "size": 113106,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Pizza.swf",
+          "git_blob": "683aa8299909be5570159e335db8ca488cfe6a7d"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "8a694e00084f4f7f65571aabc7521aed844e23aa5a0dfe69730a6bf984fea1a2",
+          "size": 111008,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Plaza.swf",
+          "git_blob": "16714e47af87e959ca29cc546ddf06eb85ac48c7"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 311,
+          "music_documented": true,
+          "sha256": "ad497502cb3a74dc5150ee1a8967167c4d47575518914d1d27cbbae3974acc45",
+          "size": 170097,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Rink.swf",
+          "git_blob": "35f999a3981a1ceeea698225af9a8900999e67b7"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "4ab00f97b9e07de7b5951bfcfc3a261c98a095c09afab84cce143c9c154c5c25",
+          "size": 171965,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Village.swf",
+          "git_blob": "74844c1beed58527df146a82583b0c7f0e61608a"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 297,
+          "music_documented": true,
+          "sha256": "9be90f365531868b51a3948c976b8a5222cd739c3202653b7ecdc3394486e04b",
+          "size": 179159,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-TheFair2012.swf",
+          "git_blob": "f0b1f27d18a20ef9dddfdac1796a0b456f2d6c40"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 221,
+          "music_documented": true,
+          "sha256": "561d7b18dae60a41db11622669b4d5f5a462775c557c2c9b02e84180868c5b23",
+          "size": 149765,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Party1.swf",
+          "git_blob": "02b229c7bb121991a0652f06b62c7de07ac57dc9"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 221,
+          "music_documented": true,
+          "sha256": "47d4eb20124f4afc411e95d4b65c7a4a5e314cf2eb213b3d5729eecc5c4221e4",
+          "size": 170749,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Party2.swf",
+          "git_blob": "37b086f8e54fc7bce9bb7f5d7ed19a54e17b1f3e"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 221,
+          "music_documented": true,
+          "sha256": "7383a905165478961bfdd8c1ecda869d2448e25c3a7111abfa2683605675a0b8",
+          "size": 584849,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012Party3.swf",
+          "git_blob": "3c27f55c93ac7b4ba1d929bf4a6d9ad5b38235cb"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/prizebooth.swf",
+          "language": "en",
+          "sha256": "d73530e8783477ab8b08c511e1e03354cb45a9613f90647c5319bc9cee3a46f6",
+          "size": 39494,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012PrizeboothS1.swf",
+          "git_blob": "6b2015e5531dfe7be9e87dd714a0daa5484d85b0"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/prizeboothmember.swf",
+          "language": "en",
+          "sha256": "947d086734a2f908b75d3ae06f78a5ad26ebf4cf45828357957a3851878d068c",
+          "size": 47961,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Fair2012MemberprizeboothS1.swf",
+          "git_blob": "df3afa49e9e6d0017dcc8f0bbdc4dc88515604d6"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "3d6ab3958e597d6920c9e4d4e76ea8d504de8e61ad113c193ddeb9a8388392a8",
+          "size": 19472,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/TheFair2012Poster.swf",
+          "git_blob": "b4bf93eca6cc0a8efe989103f906de59648d2d80"
+        }
+      ],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-10-17-halloween-party",
+      "name": "Halloween Party 2012",
+      "date": "2012-10-17",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "221",
+          "room_key": "attic",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "e70611c37ec60a93c87ea9af50a61470d8cbd222aa5747602a8dab534326938c",
+          "size": 93695,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Attic.swf",
+          "git_blob": "d8024a1f7c633784f4ce12872e2bfdf3be31253f"
+        },
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "f86d3a138f2d5fabb858b67c4be75ed7852b4fa8e744eeda6fdf568a619e1480",
+          "size": 276455,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Beach.swf",
+          "git_blob": "b939f43f9cc11e615287ceeb32e5c0dcba115e92"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "8bc57c00e1f4a724ef43139ce19226c2f93b167527417fcf350efa88bd4bb455",
+          "size": 66337,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Beacon.swf",
+          "git_blob": "595d7c630f4e3b432fdedcc7b4a9a2534390aab4"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "9262cb626b3d280174ccba46644dcaf15b9b8a89ee6ae129a82ac94ae3f651ed",
+          "size": 79400,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Berg.swf",
+          "git_blob": "a4c9f5e3a51e17a660fe4c75f274526d28050805"
+        },
+        {
+          "room": "111",
+          "room_key": "book",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "c693b166426f37ccf00730966cadf634f98c3cf0eac1a79f62e84f5791db5126",
+          "size": 108342,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Book.swf",
+          "git_blob": "605a21ae018cae4e955c4106d8afbc87662732c3"
+        },
+        {
+          "room": "806",
+          "room_key": "cave",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "9b9eb252760e1df50a38c821af70916cced4002db9a9377b3ea79ce202f65027",
+          "size": 229181,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Cave.swf",
+          "git_blob": "3d4e1b21e57b4b02ce36f8f66a9794be6d61688b"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "15847693a27c39174fc0d2c49bd4086c2673568dcb06ee5cb8e0048c92b98bd6",
+          "size": 321877,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Coffee.swf",
+          "git_blob": "e1771f4f5e811d569c015fd72d1b9e971889d953"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "4c1e89cc6399dbf79a99941f9b5c1f66cedc918fdaf6215dc0b4a5bf27b21125",
+          "size": 288765,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Cove.swf",
+          "git_blob": "98e58bbaefb5556c47fd053ab85d2580dca1f20b"
+        },
+        {
+          "room": "120",
+          "room_key": "dance",
+          "music_id": 223,
+          "music_documented": true,
+          "sha256": "d2da6ea5c598efab40b23314f35ad388dc58f1fe6459f888afa6f9a94c2c3bc7",
+          "size": 220516,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Dance.swf",
+          "git_blob": "4a37ce6cf4d8acd3dadaee37e3a839fdc1d7a574"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "ff81876a2d11344b22d1c097f78946c352adccc3585f98c008bbaf4a8e816b4d",
+          "size": 128065,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Dock.swf",
+          "git_blob": "91ead9498c3f19fc327fa5ea1f0f0fb61d67848d"
+        },
+        {
+          "room": "320",
+          "room_key": "dojo",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "7ba4a601ef7f96d3cb1f80ceda328b49b8386034bf18eb7ecbaad47bbf13d7b4",
+          "size": 103665,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Dojo.swf",
+          "git_blob": "f68b9379c64d90b8f393b668c3c24c66048c8a1b"
+        },
+        {
+          "room": "321",
+          "room_key": "dojoext",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "50378d660f545cfea902e7ccd1c746d2d7f9ec1d600e997ce1949be0e1ad5b83",
+          "size": 202322,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Dojoext.swf",
+          "git_blob": "73fa0fc8915a1dc54516969b1301e0cc7c7549ad"
+        },
+        {
+          "room": "812",
+          "room_key": "dojofire",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "2ea8c20bd4d2319059d46afde52548986d4f01e3c4e1c12df73360ca009c7b7d",
+          "size": 187174,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Dojofire.swf",
+          "git_blob": "a4d45ea1d27323b933c5f07a917ae0aa8a83a3d9"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "bb1d3611d4a1d91afaa372e123bfe80cc39633efba7b2e5b0100d6b1a457bc70",
+          "size": 228325,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Forest.swf",
+          "git_blob": "31314f4415624b00295873db50c53700435325a3"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "e9f17a368c231df0f81199b69d9b135d50e17319b381195fc0025cad5f547a23",
+          "size": 315466,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Forts.swf",
+          "git_blob": "d62e686be4dc6fa46d885f1ee12616b355e1adc5"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "52c2a0fb9217a25930d915da4233b21e5428f818d8afbd9a075bf8306bd6d3b0",
+          "size": 136754,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Lighthouse.swf",
+          "git_blob": "322b7d6bf94c52a2fe2696e86ec48f0c273681f1"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "fed792a985db07f77e1c149f6a72244c3d543c82eba45b5a67077285f185f92a",
+          "size": 162891,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Lodge.swf",
+          "git_blob": "391d4321659b65363900b88864d4cb399c0ac543"
+        },
+        {
+          "room": "121",
+          "room_key": "lounge",
+          "music_id": 223,
+          "music_documented": true,
+          "sha256": "b1715d6d59ebf6250d8e3dcb6e45115a7b445ea31e916fe9c7383ca904ceaf50",
+          "size": 320261,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Lounge.swf",
+          "git_blob": "8dffd2e7fc9f7d2362e0d5ef6cce37d6e3438893"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "81153b78ea021d88d25727b3039cc97c4f309394b1bf666b87418346407e9554",
+          "size": 69048,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Mtn.swf",
+          "git_blob": "dc4ce1fb6abc5574bd102661e4eb757cdb8891ff"
+        },
+        {
+          "room": "310",
+          "room_key": "pet",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "0052eecda9407a00a07495113043b76d8ca70284ccd311d16d6f40f088f8a742",
+          "size": 239738,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Pet.swf",
+          "git_blob": "1b31f42fb742b35de7e58bb57de44d653b41afb0"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 253,
+          "music_documented": true,
+          "sha256": "647d40b145be246542d19e90f7aeed2676c6206db4aa2f4518cc4958c7b371c6",
+          "size": 145268,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Pizza.swf",
+          "git_blob": "4744c6141c86ca70c864cb1b9398547940042512"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "57e3a695814e682928ed7bb815d1b2930fc160dfa083d52d226bb33052cfb4f1",
+          "size": 169319,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Plaza.swf",
+          "git_blob": "9421ed03ca65301c8b41a5e43a81aa41aff91576"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "da9edf3bc9cc09a9e577ad8e6820840c333ccaac30845aa6000963919674d1c7",
+          "size": 156791,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Rink.swf",
+          "git_blob": "82a3f01a96e6b65ed38252d475e7f1aa87490c82"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "00f60d1cb2f85ccdc3a77cf1fe21806c55c01575e63fcc0cbb9b7fd008c41c56",
+          "size": 311708,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Shack.swf",
+          "git_blob": "06dbf37fa600c2f94f7a7681ce74dd89d75fb5cb"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "7a60935cc9d28096bae858394141956d50ee82cfbbfc2192482170f7fb8381e3",
+          "size": 102762,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Shop.swf",
+          "git_blob": "1eb3bd3078f29bf6b18f8df29ca3ff5b42ce5e9e"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "6466171d328cfe8c2f24e8c773989eaa5925288fd27178a5eb456545e2c5fe88",
+          "size": 164494,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Village.swf",
+          "git_blob": "c822256869de572b49b5f6003b1fbf4e4be71519"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 251,
+          "music_documented": true,
+          "sha256": "20cc2ce0bfa99eac6162c686719f9c435a967815eeff45077a759deeb0116d4a",
+          "size": 161912,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-HalloweenParty2012.swf",
+          "git_blob": "b745cd220e5c03e4d60419994bbe47c3fabeeb92"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "ed4aeddb1969d012d23572ef2cb562c6bba92273a1765440ba48372d83dbeb85",
+          "size": 260122,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party1.swf",
+          "git_blob": "e888b61ae6413e9a0aebc4ffc3509d95c3d62775"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "d407d775c787cd6407d1dcbb0a6ce7b4269f7e6649c3d4bac95a85fb44bd4f4c",
+          "size": 388694,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party2.swf",
+          "git_blob": "eec6b4405ad3f1867450bbfd00058c61d1fa4222"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "62b70c404d12b333be26e40f74b73dc4c86da3bc9657aae2f45fa59b7423f959",
+          "size": 283407,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party3.swf",
+          "git_blob": "194cba663238b2b33ba38043a978bd1928c3e67b"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "acbcfd0aeca91a19ba50ae978305cc7298db2efb08f9cc6235cff51828d741cd",
+          "size": 262601,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party4.swf",
+          "git_blob": "205e39ba84f1b5efac4ae2754746a46ec11b199d"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "36bdb7ad1fdabebbdf19b493a7605c51dbb6c0656ea2a68023e829b21b9e8677",
+          "size": 450002,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party5.swf",
+          "git_blob": "57f61521cc6f56b31655ffd882ce415948e944cc"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 340,
+          "music_documented": true,
+          "sha256": "632c0e41040b69a566b98f4fc103faeeb3361a1774331749c344087e02ef72ea",
+          "size": 312340,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party6.swf",
+          "git_blob": "8ca9eb87f0fc00bf8b1fe303b7a23207c62a5620"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 340,
+          "music_documented": true,
+          "sha256": "24cfda39b920d7b33c9bbc365501c70fcdbbf38c85f976c0d579c744e8b4bd07",
+          "size": 356187,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party7.swf",
+          "git_blob": "cc61df0f8d853b1483f69e0f3a164f1dc83a3cf2"
+        },
+        {
+          "room": "858",
+          "room_key": "party8",
+          "music_id": 339,
+          "music_documented": true,
+          "sha256": "b6c721d7b98b8321ccd2f80a83f6ee7baf563986b6a3dc3327af8a49d813688e",
+          "size": 232029,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party8.swf",
+          "git_blob": "7e7aa2b4cd37a75cf4024833163dfc275fbc73f0"
+        },
+        {
+          "room": "859",
+          "room_key": "party9",
+          "music_id": 338,
+          "music_documented": true,
+          "sha256": "d4442b873eb4c3a83d8e0003c971630142f0b7de448959e0a1edc5279f739e3c",
+          "size": 499220,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012Party9.swf",
+          "git_blob": "0f6c5e317e2febf5fd7af8a4e52431b2438632d7"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "telescope/party_telescope.swf",
+          "language": "en",
+          "sha256": "e7b64e57a21294de5ee83e2cc5055568956b181f41301ebce602202e396726ef",
+          "size": 76041,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012TelescopeParty.swf",
+          "git_blob": "6a7f63a0b25a5ad07a8a49fcb09638251aad2b69"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party.swf",
+          "language": "en",
+          "sha256": "88508858dd06c938b5f054bf2b4da6d5565ac477030a5b8d601ca3f4d1303223",
+          "size": 503294,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012PartyCatalog.swf",
+          "git_blob": "76d85e9ee1e73074fa0b39dcf6d45d169b1f87c1"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note1.swf",
+          "language": "en",
+          "sha256": "182664c26df1df80800ee808fae69e4f44fcefa884ecdcf2e167694078d04b8a",
+          "size": 122286,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012CloseUpsePartyNote1.swf",
+          "git_blob": "2bdcb1407b585e0101fd6759606e9f337c8cbb49"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_note2.swf",
+          "language": "en",
+          "sha256": "09b5ce5e1a3064961b1ab617c283d4a7543f79a13b6f4dc5bab789cd96204574",
+          "size": 48667,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012CloseUpsePartyNote2.swf",
+          "git_blob": "66dc767600b8e56957113732bad1e6006c519a13"
+        },
+        {
+          "scope": "local",
+          "path": "membership/party9.swf",
+          "language": "en",
+          "sha256": "f3a4c6bcc87d4390db93a01852877fe6b19de06c3ebdc0f7538797b79f0b2d4a",
+          "size": 48535,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENMembershipPartyHalloween2012.swf",
+          "git_blob": "5fbb9edb520d82812b45cf6a7211c312e48c6d9c"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "6c944d60122d613f3084bdf47d0800808b9e6f342c6fe124531027dfa1d13ace",
+          "size": 70001,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012CloseUpsPoster.swf",
+          "git_blob": "cbcf477883e9e13127c1d7af3b0a3f7ade040f04"
+        },
+        {
+          "scope": "global",
+          "path": "telescope/telescope.swf",
+          "sha256": "6eacc3cff9afe89d28ff32d18cfa89c03925b517868e3390e217734b19ca4e91",
+          "size": 6400,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012TelescopeStormy.swf",
+          "git_blob": "8ae4f35db3fffe53b1e318c4afd893a6b7b4c664"
+        },
+        {
+          "scope": "global",
+          "path": "binoculars/empty.swf",
+          "sha256": "f2978e7a5bf99bec788c31088ed93cf8dff1cdfd40e6f2a287df3dad3792fa09",
+          "size": 8308,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012BinocularsStormy.swf",
+          "git_blob": "b95fcc7ad620218c9314bee12861cb791d76c891"
+        },
+        {
+          "scope": "global",
+          "path": "scavenger_hunt/scavenger_hunt.swf",
+          "sha256": "b11f1eb495d31d4b9c925b66cf9ce8fd8faf4bab43d8b19c163e06f7314c82a2",
+          "size": 141915,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012ScavengerHunt.swf",
+          "git_blob": "b8c2cacb9a3287a6bc4a81db18d232a22595bbfd"
+        },
+        {
+          "scope": "global",
+          "path": "scavenger_hunt/scavenger_hunt2.swf",
+          "sha256": "ffcc493a8bf2baa4d93fdd69b6f0aa993aeb5acb353c52474013c7de720c8977",
+          "size": 113423,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HalloweenParty2012ScavengerHunt2.swf",
+          "git_blob": "875794fa3db5113c413212b61dd931c7ec34e3fc"
+        }
+      ],
+      "missing": [
+        "Room not included: dojohide (archives:HalloweenParty2012Dojohide.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-10-23-7th-anniversary-party",
+      "name": "7th Anniversary Party 2012",
+      "date": "2012-10-23",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 252,
+          "music_documented": true,
+          "sha256": "08ccabe2938abe6587a0b974c5c30b5032520d1b40ea2addf61549129bc34046",
+          "size": 323731,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/7thAnniversaryPartyCoffee.swf",
+          "git_blob": "e0cdc3d10f443f508a187c09ed0d90f2145ed445"
+        }
+      ],
+      "resources": [],
+      "missing": [
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-11-14-operation-blackout",
+      "name": "Operation: Blackout 2012",
+      "date": "2012-11-14",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "529e740ea06e653b486ae338bbb72fea76420eecce0fca0be8ab00b9d378b9f0",
+          "size": 95421,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsBeach-OperationBlackout.swf",
+          "git_blob": "04bf744d8106b631dbaa38f1122e45ac773157d9"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "087464bedb6ee3ace2253e3f10c0fc138f0c686f639310c1a23aeda4320e4d1a",
+          "size": 150700,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsBeacon-OperationBlackout.swf",
+          "git_blob": "37476463cbb5c71219178175ffbcbef253fcf182"
+        },
+        {
+          "room": "111",
+          "room_key": "book",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1e5b057987aa65753dc410f8211c6bcb748f869e90b60c5c2d8eaeb29b91fe64",
+          "size": 101235,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsBook-OperationBlackout.swf",
+          "git_blob": "1789e07b64a1c3a387cea81dab95f8c8433c6d1c"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1aea18aaa421a7f87a6ada7a988d20a9afb1d9e2291d643dda086d8cb7f1ae01",
+          "size": 251537,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsCoffee-OperationBlackout.swf",
+          "git_blob": "0f0b73fc720103655eb1dd59436e334a2d5f3141"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "0d3858f0aafb19d2bf9ee1c50afad6965f13b48f0102628c88d6857c6f8b7e03",
+          "size": 177679,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsCove-OperationBlackout.swf",
+          "git_blob": "44c5e3db5c1ce692a9d7e4f5a9c237bad22ba545"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "7e80c3c12a1bc06a0cb25126a92515ea9113c343e74e5658f89cdefc57a3ae07",
+          "size": 159158,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsDock-OperationBlackout.swf",
+          "git_blob": "059e13d3796a3db8083901b89379f7cab1ba1837"
+        },
+        {
+          "room": "320",
+          "room_key": "dojo",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "548f4934005670ee9196a6c0c0f6feaeacfcdad1ff8665c4855da15df9ab0972",
+          "size": 78607,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsDojo-OperationBlackout.swf",
+          "git_blob": "99d95ef1306144a542691fc83edf4f78d7b751b9"
+        },
+        {
+          "room": "321",
+          "room_key": "dojoext",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "eef33b490abf28031f5a4cecf9c470660b4f31daae90a6b580d96b43d0bd57b3",
+          "size": 201491,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsDojoext-OperationBlackout.swf",
+          "git_blob": "9c2cbca45f1ac362faf1d0ccdc91e19039ea1583"
+        },
+        {
+          "room": "323",
+          "room_key": "agentcom",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "c7b995c6e7c7c366fbf9566b3f17de46be19fbeb5a635aa019c2c47fdf1a1e71",
+          "size": 376666,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsAgentcom-OperationBlackout.swf",
+          "git_blob": "3d7decb7729f6cb2d2babc42d3177ebeee2c87af"
+        },
+        {
+          "room": "212",
+          "room_key": "agentlobbymulti",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "68b36178bfe95f18c6c1d6341934eb2d1f017aef77b8ee92611dd5f91dac4f35",
+          "size": 340894,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsAgentlobbymulti-OperationBlackout.swf",
+          "git_blob": "ac764ac5b9ec68fd500600d9163d6021adf322f5"
+        },
+        {
+          "room": "812",
+          "room_key": "dojofire",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "0cca5b815df3aa91276b7809bebc6fbec6a52d0a7e07ec50a3237bcb7ba86e8a",
+          "size": 174796,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsDojofire-OperationBlackout.swf",
+          "git_blob": "4dbb0cdeed34d3b356e04860f1d5b1a0f2f50bbb"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "782f6beae5c5d3404339bacf946a4428d555ac70ae1123be429eedaa5da25a56",
+          "size": 215742,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsForest-OperationBlackout.swf",
+          "git_blob": "c78f136d87dcde6dfc2a3f6c905bd8fa6706fe1d"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 345,
+          "music_documented": true,
+          "sha256": "0c6551e925fae8f79f0797e6c35bbd804afaef6849071b316b4885685e8d9c53",
+          "size": 301576,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsShop-OperationBlackout.swf",
+          "git_blob": "87cca093130fe454f3a5b4c34c7b0a346dd4bb8d"
+        },
+        {
+          "room": "854",
+          "room_key": "party4",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "9fdc462c926ca216ef2e3839005487f62553c6b16e4ef80fde597e8692b818bd",
+          "size": 126981,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutParty4.swf",
+          "git_blob": "84a08d611d6dd4ce27c6c371c6416fc19f245d19"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1fd916e2f47e193428cd19765ef2c60e8c00074c08701d3bef8903c2540f2742",
+          "size": 125032,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutBerg.swf",
+          "git_blob": "81808cd300e9f861cb79a19c2c8b6ca1d978e3b4"
+        },
+        {
+          "room": "410",
+          "room_key": "light",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "da7f10368b0e304a9d40159293efe0d9d8af2c27ba6d19311f7bec1b7ab9baa7",
+          "size": 87176,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutLight.swf",
+          "git_blob": "865304f5c5789eb91dfe51df8035c065b5034bf8"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 343,
+          "music_documented": true,
+          "sha256": "5eccdf44155854db38708b7222cebacee5696ac92a81160e0895736f719ac8a9",
+          "size": 100224,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsParty2-OperationBlackout.swf",
+          "git_blob": "591ee2673637cddfdbea93c84dfbcbada5ae7414"
+        },
+        {
+          "room": "221",
+          "room_key": "attic",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "c52a72a2be9af592ce34ee36d84373cc6eedf255f4029550501955902591ec60",
+          "size": 83920,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutAttic.swf",
+          "git_blob": "31c9471876e5b4dcebe797c450f14f7ffe32e980"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "9a405b27738ec9db7d6277e7bf4f1bc7ec913147e1563bbdb64da0ecbd7f960c",
+          "size": 254807,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutShack.swf",
+          "git_blob": "76b1e75ef6198ac881c54177000ee215dce46368"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 11,
+          "music_documented": true,
+          "sha256": "4905ab27680c14f36bf61f55fd9d920fea9f5bcc3fe3de0d5d51cf34ae6ecf4e",
+          "size": 142245,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsParty1-OperationBlackout.swf",
+          "git_blob": "e307248ee3f584aa549594648929a220d78d6ae4"
+        },
+        {
+          "room": "310",
+          "room_key": "pet",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "0c5aaf1c0110bccbf05bef30a2683d1a33fc76b8b1ba9f662e8e46179c8468da",
+          "size": 237209,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutPet.swf",
+          "git_blob": "ba5b5ae1821b7944d8b722da3512f02113280039"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "8ef96756464b4203961ede5c2d9a45b73eebbc5ccb0b9ca05dbcb9b1fa975d4c",
+          "size": 135911,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutPizza.swf",
+          "git_blob": "f83899b6e2673958b5a26acb71b370b239985b49"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "cbb485b0b7793ac4f5b3b1951dfd7e3eb1cc4ae374df4e2ac7cf79c7201f71fb",
+          "size": 178507,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutPlaza.swf",
+          "git_blob": "33076093890fa59dc550735feb1ff2140d1ae1f1"
+        },
+        {
+          "room": "857",
+          "room_key": "party7",
+          "music_id": 343,
+          "music_documented": true,
+          "sha256": "a11e129f4c953fa14dad657cd7d834deeb1d8a426daefd3efe85b88eab6e8102",
+          "size": 250417,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutParty7.swf",
+          "git_blob": "425c0dc267baa87f9e0897524bcb3282d8a55dbd"
+        },
+        {
+          "room": "856",
+          "room_key": "party6",
+          "music_id": 343,
+          "music_documented": true,
+          "sha256": "4966c2390ac6be5e6e1606dac60ab798e2ebe7e1376c004b65d99c3e8c784b47",
+          "size": 133968,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutParty6.swf",
+          "git_blob": "73234cbf86d3a40841ef58c1a0feec9f2be55bac"
+        },
+        {
+          "room": "853",
+          "room_key": "party3",
+          "music_id": 343,
+          "music_documented": true,
+          "sha256": "3f5be50cd142e5e64d97d1a2019b7f776c362462f9e88bd778605028c2a4cfb5",
+          "size": 83922,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsParty3-OperationBlackout.swf",
+          "git_blob": "28354ff94a073dcdd31e55520124a451991738fb"
+        },
+        {
+          "room": "855",
+          "room_key": "party5",
+          "music_id": 343,
+          "music_documented": true,
+          "sha256": "26459c7f997bb5c366f11f0abe796a833f0e37c65adebb9a10caea75b03c3d19",
+          "size": 92697,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutParty5.swf",
+          "git_blob": "7d15c1bc7b8b860d7b21d8e593314417d5fd2afb"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "a05cf1d2578df1c62163182aaf7cb202691652f875076ef6a49549ae4d193842",
+          "size": 147843,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutHill.swf",
+          "git_blob": "0d4d3d5726bc8c6e023937b63f01aebd77e841d6"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "1856e2ce910e89501ce19ada0769672e4ce4cfc1702aa27312d90ffabf64beb5",
+          "size": 112015,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutLodge.swf",
+          "git_blob": "9189f55295674f3c044601e3c5035ec3700653fa"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "d97c6ad603928dd4e77cf2a7b08013282807802b7b7ca66b09fcc8809c0fac00",
+          "size": 256679,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutVillage.swf",
+          "git_blob": "4806c91cddc509b67c2500ea2af917132800a888"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "3416868017810b713ad6084a3a8ef2de63c51578f256e3303566113e351945d5",
+          "size": 166570,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutForts.swf",
+          "git_blob": "33656cf2a768f34f70827ed9ab1d228efa3646a4"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "5d853d6a06319cd20a4f3af0594df778bb4259fc13028ab19a4fca457d85433f",
+          "size": 223925,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutRink.swf",
+          "git_blob": "f37e5e55be859624f2db8a5fea8b99728cb2be8d"
+        },
+        {
+          "room": "340",
+          "room_key": "stage",
+          "music_id": 41,
+          "music_documented": true,
+          "sha256": "c4225d5753d46c4a1f1ec0db1bc275c514c822041ca8cf1ed8125d93d5eb42b5",
+          "size": 155375,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/BlackoutStage.swf",
+          "git_blob": "1c3ab8114978a9871aaf4cec2b7002125e569bcc"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 342,
+          "music_documented": true,
+          "sha256": "6bf31a4da1290b5b5e46ee3fb94eaf9552d6173d1073002a1aa28e9a4bbad989",
+          "size": 187793,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-OperationBlackout.swf",
+          "git_blob": "3d0f0ea52dde2304a940a96153f1a584ecd4859a"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "party/catalogue.swf",
+          "language": "en",
+          "sha256": "dff7b511fd7da1f12dda3fe66dddf19d3f932c773d0a53e7948e844a94e583c6",
+          "size": 98629,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/OperationBlackoutCatalogParty.swf",
+          "git_blob": "86d96e33bc9f2bb50a4759b05ea3e581717994cf"
+        },
+        {
+          "scope": "local",
+          "path": "quest_interface.swf",
+          "language": "en",
+          "sha256": "8b19d6d36c274372e2073024593d9dcfb08e7dd479d4bd56be2578ef5c529776",
+          "size": 899175,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENCloseUpsBlackoutQuestInterface.swf",
+          "git_blob": "acf72f3d4dfcb6d1a11b134cc87ac019a1e366e2"
+        },
+        {
+          "scope": "global",
+          "path": "binoculars/empty.swf",
+          "sha256": "f2978e7a5bf99bec788c31088ed93cf8dff1cdfd40e6f2a287df3dad3792fa09",
+          "size": 8308,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012BinocularsStormy.swf",
+          "git_blob": "b95fcc7ad620218c9314bee12861cb791d76c891"
+        },
+        {
+          "scope": "global",
+          "path": "telescope/telescope.swf",
+          "sha256": "6eacc3cff9afe89d28ff32d18cfa89c03925b517868e3390e217734b19ca4e91",
+          "size": 6400,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Halloween2012TelescopeStormy.swf",
+          "git_blob": "8ae4f35db3fffe53b1e318c4afd893a6b7b4c664"
+        }
+      ],
+      "missing": [
+        "Room not included: dojohide (archives:RoomsDojohide-OperationBlackout.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    },
+    {
+      "id": "2012-12-20-holiday-party",
+      "name": "Holiday Party 2012",
+      "date": "2012-12-20",
+      "source": "https://github.com/nhaar/Waddle-Forever/blob/02a9df8be1f33d570690d8a59a726a9bcc9d34df/src/server/updates/2012.ts",
+      "full_event": false,
+      "rooms": [
+        {
+          "room": "400",
+          "room_key": "beach",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "d75964bcda2e7af56d191dda482959d966a2281a9ef7017d770023b7c375ca85",
+          "size": 257890,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Beach.swf",
+          "git_blob": "5508999e7d0d38340b851038d5e19e580590c7a7"
+        },
+        {
+          "room": "411",
+          "room_key": "beacon",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "e0462fba628924fa27373cb11d159c45956e674cb80ab2616dff1f309c95d19c",
+          "size": 117513,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Beacon.swf",
+          "git_blob": "754c937b0b38d2c6b1179fce4ed450b3ad90c442"
+        },
+        {
+          "room": "805",
+          "room_key": "berg",
+          "music_id": 227,
+          "music_documented": true,
+          "sha256": "7dcd236f9f2b6b4555717f91e884d0d0f6bcc82f640c8e9bbeb9cb4c9535e771",
+          "size": 207019,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Berg.swf",
+          "git_blob": "9171d0a76fdd98981c92bcd55c4f83e9dd39c6fb"
+        },
+        {
+          "room": "110",
+          "room_key": "coffee",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "26d86b8fa66b049c570f21f13f62b0e04a88318864c4c8c659ee6ff3f205e077",
+          "size": 308334,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Coffee.swf",
+          "git_blob": "e880c07d0500e49a645a4fee1a3ba8085d9e045d"
+        },
+        {
+          "room": "810",
+          "room_key": "cove",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "aada0d2795aca636f5a0630b3f3376fc52db143286774d715229bc413a204c68",
+          "size": 235411,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Cove.swf",
+          "git_blob": "80488ed1652ffebca64c2ac9ebea02dee6f8e8c3"
+        },
+        {
+          "room": "800",
+          "room_key": "dock",
+          "music_id": 347,
+          "music_documented": true,
+          "sha256": "51363e7c5e2651797768918b0f856f323ff0ae532ae226af8c9765732b3ab532",
+          "size": 266622,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Dock.swf",
+          "git_blob": "40ecf2f7b1312a028091e3e9209c50bd39519dff"
+        },
+        {
+          "room": "320",
+          "room_key": "dojo",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "400a3bd1aff2313b8d81425403a411a66520d898300bead77ea56378fe12cc93",
+          "size": 75654,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Dojo.swf",
+          "git_blob": "fae9aae43a21d5500338d72d9ff6f9a974fa12eb"
+        },
+        {
+          "room": "321",
+          "room_key": "dojoext",
+          "music_id": 0,
+          "music_documented": false,
+          "sha256": "f3352cd86e620196079b828f1593268a25d39399883ec2c09fa75957bb26edc5",
+          "size": 161850,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012DojoExt.swf",
+          "git_blob": "22b861ae175c016bfc791357657aa5615a0f9636"
+        },
+        {
+          "room": "812",
+          "room_key": "dojofire",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "83032548aa3c5328c99c68b5c496921ce58b2c46e4350d336506645b511e451f",
+          "size": 188236,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012DojoFire.swf",
+          "git_blob": "2293fa17538be3370637d3f4f6b4a26ed319760b"
+        },
+        {
+          "room": "809",
+          "room_key": "forest",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "d0f723effabc5c68984b59c77c3cbca3287c8ceb29ec736165730dd7ef5d4614",
+          "size": 276650,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Forest.swf",
+          "git_blob": "51b3063e59d94176f5e4a5c243927246c2d3fe65"
+        },
+        {
+          "room": "801",
+          "room_key": "forts",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "84889d015503a2340a7aa9be4846c69f7c3b539a63595c0a6bec1ad16c5c40c7",
+          "size": 219528,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Forts.swf",
+          "git_blob": "6309018716f3b3d40ac8a94221f0a2300476839d"
+        },
+        {
+          "room": "220",
+          "room_key": "lodge",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "59ce15cb6957dfcb4596dccc27f1fc69183fef29087dbf674405fd924bddd97a",
+          "size": 278249,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Lodge.swf",
+          "git_blob": "a488c5b47b0aa5fd9082ef9a7d62857166aaa4ea"
+        },
+        {
+          "room": "230",
+          "room_key": "mtn",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "8254807aa2d8908bed638b0493a43a01f8f20e3ca81cb4048c36de0dd212095f",
+          "size": 150641,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Mtn.swf",
+          "git_blob": "cec4e036e7002b63b923e155d35d10a4445e7598"
+        },
+        {
+          "room": "310",
+          "room_key": "pet",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "9e58d5d3122b23cce6fc1943eea78372caa1ef389b7b63ef3ae3b4828d2df0cc",
+          "size": 238060,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Pet.swf",
+          "git_blob": "5096fd56e90de33ea1ce498cffeee9442f87f1ef"
+        },
+        {
+          "room": "330",
+          "room_key": "pizza",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "b8358fdc0f5d16fbd6d3110e2cb5cd032e2ef44353dc771c4c2e874f6f977ccf",
+          "size": 159648,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Pizza.swf",
+          "git_blob": "341c2ed269d8a0dc1aae7d223b211af07fd27384"
+        },
+        {
+          "room": "300",
+          "room_key": "plaza",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "ec1c4047f9d3ed366be792629c0a969fe378b4662f64babcfc4bf3277c1bef31",
+          "size": 209111,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Plaza.swf",
+          "git_blob": "dee854a27130c3897368cace3d78ffbfe46a2192"
+        },
+        {
+          "room": "802",
+          "room_key": "rink",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "71c393f70085f445b0ccb0a0752b6197b198ba165c0dd3e1dd03d1b0e04f9ea7",
+          "size": 163211,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Rink.swf",
+          "git_blob": "3d64dda0afa236c6ca54f8ce990426f473c8418d"
+        },
+        {
+          "room": "807",
+          "room_key": "shack",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "57fa39d1ff981fc81a012a7b4b96f103b5bad8c5c8ccdc26bdb4c01c5119dee4",
+          "size": 363166,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Shack.swf",
+          "git_blob": "02cf462bfb82fc858ee8966932f1421ed7303725"
+        },
+        {
+          "room": "130",
+          "room_key": "shop",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "be1b7ed1c1213a1a1ab2476838b487caf77f40779b3e01560d52f5f2735018da",
+          "size": 179624,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Shop.swf",
+          "git_blob": "a2b5169c58ca2d83b24ba2b4c3b44741394d6697"
+        },
+        {
+          "room": "200",
+          "room_key": "village",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "4316fb29e5dfdc898b8e6b2f569b8fa4d44a7e77c77a4afe1c50a37496122484",
+          "size": 434004,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Village.swf",
+          "git_blob": "08fa081807108c3320f8b73314dfbacbce13a076"
+        },
+        {
+          "room": "100",
+          "room_key": "town",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "427d16edb9635298a3cd711d36f3d782fe9421a73670c41928688d9cdb9b62d8",
+          "size": 244022,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/RoomsTown-HolidayParty2012.swf",
+          "git_blob": "4d591bd56b8d1feca25002c05a3c97f6fd34c5d8"
+        },
+        {
+          "room": "212",
+          "room_key": "agentlobbymulti",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "55a27316a5aadb045f5c7662238b95bcfb305a9a9326e8f76c26630e2a89f08a",
+          "size": 345427,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012EPFLobby.swf",
+          "git_blob": "da6ea851a7d18de6ca9bcc5c9b9c5f268a33b455"
+        },
+        {
+          "room": "420",
+          "room_key": "ship",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "fc49cb76afa0be47a248f21f9cf99ab6acca9ded59288f7e98b71dfff0332ab7",
+          "size": 133356,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Ship.swf",
+          "git_blob": "007eec548c1ec104f36106fc0f3b049a72630810"
+        },
+        {
+          "room": "421",
+          "room_key": "shiphold",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "bc0e05aa562deda755dcb201c0fb68d296de884943dc3a35b773dddcb2365fbc",
+          "size": 168935,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012ShipHold.swf",
+          "git_blob": "2f321c55886b9f6f05b5b3b108c7f4476d9b01a0"
+        },
+        {
+          "room": "423",
+          "room_key": "shipnest",
+          "music_id": 254,
+          "music_documented": true,
+          "sha256": "908f16e1aa1b6e5b1ed683ed27975209f00db4db68459c82635cc33eb1f5ef9a",
+          "size": 103974,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012ShipNest.swf",
+          "git_blob": "259f7ca2dd6f537ea0043403fa3b4c0e89aaf6be"
+        },
+        {
+          "room": "422",
+          "room_key": "shipquarters",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "95c1a4f0b3fa43ced11de22342ebb6acec8cd4395ae8bc7737b36e7cf1ec47ff",
+          "size": 161964,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012ShipQuarters.swf",
+          "git_blob": "48619f6f28bb071868864ecdd0b3b46234331bce"
+        },
+        {
+          "room": "851",
+          "room_key": "party1",
+          "music_id": 281,
+          "music_documented": true,
+          "sha256": "d88a63d416c4fee8a27b64defa3c451984c23c160b2effafd4bb892acb4de652",
+          "size": 242904,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Party1.swf",
+          "git_blob": "3939f7e09dc4414db65102f90a0e1950006aa650"
+        },
+        {
+          "room": "852",
+          "room_key": "party2",
+          "music_id": 255,
+          "music_documented": true,
+          "sha256": "34c1fad3ed01df0f254132eb4ad0da5c1358863e6c73f012ed6f6df06b378095",
+          "size": 395980,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Party2.swf",
+          "git_blob": "729ed08dca0d5e5d6863d40d36f29df1eb7e9089"
+        }
+      ],
+      "resources": [
+        {
+          "scope": "local",
+          "path": "catalogues/party_catalogue_1.swf",
+          "language": "en",
+          "sha256": "902e9e5c9d625889e8931236424c53396ce5a6fec6808c24f873dd07f561710f",
+          "size": 231036,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENHolidayParty2012Catalog1.swf",
+          "git_blob": "a43b727dfe6e0c0b4b0f018fa1a6b81287042bc5"
+        },
+        {
+          "scope": "local",
+          "path": "catalogues/party_catalogue_2.swf",
+          "language": "en",
+          "sha256": "ffe2f97bec0955bed61ef4b00440e654100666d997e0bd7b0cea5e1debfa30f7",
+          "size": 188111,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENHolidayParty2012Catalog2.swf",
+          "git_blob": "4d27276c3a2f378ab55016e9d0ca06f17bac612f"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/CFC_poster.swf",
+          "language": "en",
+          "sha256": "b3b3e0cb7a492261ee85fa470afd6396bf3dd8511389234e38a032abca2e2245",
+          "size": 32746,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012CFC.swf",
+          "git_blob": "3ebc5b152643d7ce3355c08a41c3b2d4e4644f60"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/party_poster.swf",
+          "language": "en",
+          "sha256": "ef8e5e2bc16210e9f84e533c4562ccc5572c3535f0b11d859fd5cbd57766e374",
+          "size": 26441,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Poster.swf",
+          "git_blob": "21143b333bb2be912752a4471701730172fa45da"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/cookie_bakery_poster.swf",
+          "language": "en",
+          "sha256": "596aeaeebea7e07ff395c7af55274db328f788acc4ae6b06a68622b544970b86",
+          "size": 185689,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Party_noteEN.swf",
+          "git_blob": "09cd1cde61f43e0bf8fe7bf34dbaab99c00b5fd6"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/buy_cookie_poster.swf",
+          "language": "en",
+          "sha256": "e3c46aa09b1a84a7c5505c9e7e2391a13851fcb9990ad61d955f604f0079ee6c",
+          "size": 228390,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Cookie_purchaseEN.swf",
+          "git_blob": "8b147fc5cd6efa47fd45c5c807159ea1a57a01d8"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member1.swf",
+          "language": "en",
+          "sha256": "534a2700df112b11f3ad4e261723cf3c877c8981bd60fb7ceec348b39d9516c6",
+          "size": 172768,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member1.swf",
+          "git_blob": "8cbde67ff5f6db275c0752d3229dc887cce09c0f"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member2.swf",
+          "language": "en",
+          "sha256": "609379bb8eb378b35a57f2c01c204f718df26efeec2602a27b8586efc64a221d",
+          "size": 67022,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member2.swf",
+          "git_blob": "c7d0f26d92c8e5bb54bf3896fe3bca173ff4d0d5"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member3.swf",
+          "language": "en",
+          "sha256": "084ded2918aead2e37f86ce1dbef506e9336da6d9803e2c443ef80133d18fd60",
+          "size": 28014,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member3.swf",
+          "git_blob": "d40ffc764ec78b72657969627b73de0a15038f35"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member4.swf",
+          "language": "en",
+          "sha256": "023f5b9930f661371a682d5264fa7624a1758d1e30f686354e81fca89fd14074",
+          "size": 29065,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member4.swf",
+          "git_blob": "f7705a9778289dc7f060a86e765d348d14b27dcb"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member5.swf",
+          "language": "en",
+          "sha256": "33eb4f15f5c61dc6a880dbd5825e1f46e1a269a89aa6e64d8f297e4f364fc65e",
+          "size": 26148,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member5.swf",
+          "git_blob": "4f8d73c9631f2bff7aadd73f7e05c52f140aa929"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member6.swf",
+          "language": "en",
+          "sha256": "47e497063eb948291756ca94e44c963ba8003142a88e1dd82f5b91bae17a57aa",
+          "size": 29430,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member6.swf",
+          "git_blob": "037cc6ca1389382c2ded5aea07c602f4a3ded1aa"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member7.swf",
+          "language": "en",
+          "sha256": "f6abbe07c8bf7e9abb04b693f58fdcf11c726393e4cf0f09f69b0a8a508a678d",
+          "size": 31958,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member7.swf",
+          "git_blob": "08a44680b378989d0739db6aa762ac15076c332f"
+        },
+        {
+          "scope": "local",
+          "path": "membership/member8.swf",
+          "language": "en",
+          "sha256": "550ce3e6f55b5b1716748449c3e202fd111b4c8e579e468fad29b9dc3f56bcec",
+          "size": 90102,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012Member8.swf",
+          "git_blob": "5ebcd29ef2896d367541e9bad3be4915d9e8575c"
+        },
+        {
+          "scope": "local",
+          "path": "cfc.swf",
+          "language": "en",
+          "sha256": "7e38ff4d1c6b2e887fa9b038c6370a58c97dbce7fccb0f839659f13a6da41a09",
+          "size": 19999,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/ENFormsCoinsforChange2012.swf",
+          "git_blob": "14755a92b1236242978e028cbef0325563fdb631"
+        },
+        {
+          "scope": "local",
+          "path": "close_ups/timer.swf",
+          "language": "en",
+          "sha256": "3f7fa7df2ea7da1095208ad6f50d92e33450790627c0372e512de9249a6c64c4",
+          "size": 142337,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/HolidayParty2012TimerEN.swf",
+          "git_blob": "0806fdf0e172a63a4ed916a6a232e6d666eff767"
+        },
+        {
+          "scope": "global",
+          "path": "telescope/telescope.swf",
+          "sha256": "a039631f8850d6ca55fab43f83a2a160c3db73c0d9b749276129df539bd9195a",
+          "size": 5237,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Telescope-HolidayParty2015.swf",
+          "git_blob": "1f0d076347fabfb6462d21e7c7d8df8be4c0372d"
+        },
+        {
+          "scope": "global",
+          "path": "binoculars/empty.swf",
+          "sha256": "50400ce5417a5896049b028d40297bb3de18f93d961f8ea71ef81ad49785691e",
+          "size": 38036,
+          "url": "https://raw.githubusercontent.com/nhaar/Waddle-Forever/02a9df8be1f33d570690d8a59a726a9bcc9d34df/media/default/archives/Binoculars-HolidayParty2015.swf",
+          "git_blob": "e9568d5351a914598ef9458696b9371c1adde03a"
+        }
+      ],
+      "missing": [
+        "Room not included: dojohide (archives:HolidayParty2012DojoHide.swf)",
+        "Room not included: agentlobbysolo (archives:HolidayParty2012EPFLobbySolo.swf)",
+        "Room not included: party3 (fix:HolidayParty2012Party3.swf)",
+        "Event-specific powers, transformations, missions and rewards are not enabled. They require separate server support and gameplay verification."
+      ]
+    }
+  ],
+  "asset_credits": "Original Club Penguin SWFs: Disney Canada Inc. Archived file mirror and timeline metadata: nhaar/Waddle-Forever and contributors. Metadata attribution and MIT notice: UPSTREAM-LICENSE.txt. Original asset rights are not transferred by that license."
+}

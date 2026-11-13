@@ -80,7 +80,7 @@ def login(client, name="testmod"):
     result = request(client, "/manager/login/", {"username": name, "password": PASSWORD})
     assert result.status == 200
     page = result.read().decode()
-    assert "Salas y eventos" in page, page[:300]
+    assert "Rooms &amp; events" in page, page[:300]
 
 
 def config(client):
@@ -212,6 +212,22 @@ def main():
     passed("Four live world snapshots visible through Nginx/Dash/Redis: OK")
     baseline = json.loads((ROOT / "vanilla-media/media/play/en/web_service/game_configs/rooms.json").read_text())
     post(client, "restore_all")
+    manifest = json.loads((ROOT / "world_manager/catalog/manifest.json").read_text())
+    for event in manifest["events"]:
+        post(client, "catalog", event=event["id"])
+        configured = config(client)
+        for item in event["rooms"]:
+            room = configured[item["room"]]
+            assert item["sha256"] in room["path"] and room["music_id"] == item["music_id"]
+            result = request(client, "/play/v2/content/global/rooms/" + room["path"], host="media")
+            assert result.status == 200 and hashlib.sha256(result.read()).hexdigest() == item["sha256"]
+        for item in event["resources"]:
+            prefix = "global/" if item["scope"] == "global" else "local/en/"
+            result = request(client, "/play/v2/content/" + prefix + item["path"], host="media")
+            assert result.status == 200, (event["id"], item["path"], result.status)
+            assert hashlib.sha256(result.read()).hexdigest() == item["sha256"]
+    post(client, "restore_all")
+    passed("All 16 installed packages activate; 303 room variants and 76 companion references are delivered through Nginx with matching hashes: OK")
     post(client, "save", asset="original", music="9")
     assert config(client)["100"]["music_id"] == 9
     before = page_state(client)["revision"]

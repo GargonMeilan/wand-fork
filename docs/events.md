@@ -1,8 +1,11 @@
 # Decoración y música desde /manager
 
+Actualización: la [biblioteca preinstalada](event-catalogue.md) incluye ahora
+decoraciones históricas reales, catálogos y vistas previas. La subida manual es
+opcional; los paquetes incluidos ya aparecen al instalar la ampliación.
+
 La ampliación está en `world_manager/`, fuera de los submódulos. Añade el enlace
-**Salas y eventos** al panel de Dash y la página `/manager/world`. Esta primera
-versión gestiona **Vanilla/AS3**. Legacy conserva sus recursos originales.
+**Rooms & events** al panel de Dash y la página `/manager/world`. Esta ampliación gestiona **Vanilla/AS3**. Legacy conserva sus recursos originales.
 
 ## Primer despliegue
 
@@ -22,13 +25,13 @@ modifican los SWF ni los JSON originales del checkout.
 
 ## Cambiar una sala
 
-1. Selecciona la sala y pulsa **Ver sala**.
+1. Selecciona la sala y pulsa **Open**.
 2. Elige una variante y un ID de música disponible, o `0` para silencio.
-3. Pulsa **Aplicar a esta sala**.
-4. Para volver al estado del repositorio, pulsa **Restaurar esta sala**.
+3. Pulsa **Apply room design**.
+4. Para volver al estado del repositorio, pulsa **Restore room**.
 
-El SWF de la variante se sube en la misma página. Asígnale un nombre, un paquete
-y su música. Se admiten SWF FWS/CWS de hasta 16 MiB, con un tamaño descomprimido
+Las variantes históricas ya están incluidas. Para diseños propios, abre
+**Upload custom designs** y asigna al SWF un nombre, un paquete y su música. Se admiten SWF FWS/CWS de hasta 16 MiB, con un tamaño descomprimido
 máximo de 64 MiB. La subida solo lo registra: no lo publica hasta pulsar aplicar.
 Las músicas se seleccionan entre los archivos numerados ya presentes en
 `vanilla-media/media/play/v2/content/global/music/`. Esta versión no importa
@@ -38,22 +41,23 @@ Una variante debe corresponder a esa sala y ser compatible con el cliente:
 salidas, coordenadas, símbolos y dependencias deben coincidir. Validar la
 cabecera del archivo no certifica sus gráficos ni su comportamiento. La
 decoración está integrada en el SWF; el panel no edita árboles o edificios
-individualmente. La pantalla no ofrece una previsualización del SWF.
+individualmente. El botón **Load preview** reproduce una vista visual con Ruffle sin publicar cambios.
 
 ## Paquetes de decoración
 
-Sube cada sala de un evento usando el mismo nombre de paquete y asignándole su
-música. El paquete se podrá aplicar si contiene exactamente una variante por
+Los 16 paquetes preinstalados se activan desde **Event library**. Para crear
+un paquete propio, sube cada sala usando el mismo nombre de paquete y su música. El paquete se podrá aplicar si contiene exactamente una variante por
 sala. Si hay duplicados, vuelve a subir una de esas variantes con un nombre de
 paquete distinto. Al aplicar se sustituye **todo** el conjunto de cambios de
 salas anterior mediante una única transacción; las salas no incluidas vuelven
-al original. **Restaurar todas las salas y músicas** vacía las selecciones.
+al original. **Restore all original rooms & resources** vacía las selecciones.
 
-Un paquete de decoración no activa por sí mismo objetivos, poderes,
-transformaciones, catálogos ni objetos exclusivos. Esas mecánicas dependen del
+Los paquetes históricos sirven también los catálogos y recursos complementarios
+listados en su ficha. No activan por sí mismos objetivos, poderes,
+transformaciones ni recompensas exclusivas. Esas mecánicas dependen del
 módulo Flash de la fiesta, de sus recursos auxiliares y del protocolo del
-servidor. No se cambia `party.swf`, las fechas de fiesta ni las opciones
-generales automáticamente. Un evento completo debe implementar y verificar
+servidor. Solo se sustituyen los recursos enumerados en el paquete; las fechas y opciones
+generales del cliente no se cambian automáticamente. Un evento completo debe implementar y verificar
 también esas partes antes de poder presentarse como tal.
 
 ## Cuándo ven el cambio los jugadores
@@ -99,7 +103,8 @@ el repositorio al `PYTHONPATH`, entra en `dash/` y arranca
 ## Investigación de eventos incluidos
 
 Ejecuta `python scripts/audit-events.py` para actualizar
-`world_manager/event-audit.json`, mostrado también en el panel. La auditoría
+`world_manager/event-audit.json`. Este inventario técnico es independiente de la
+biblioteca recuperada de 2012 que muestra el panel. La auditoría
 lee los alias históricos de `paths.json`, las clases incrustadas en los SWF de
 salas y cliente, y las definiciones de objetos de Marvel. No ejecuta los SWF.
 `python scripts/audit-events.py --check` detecta si el inventario quedó obsoleto.
@@ -113,16 +118,16 @@ Entre las evidencias encontradas:
 
 | Evento o módulo | Qué hay | Qué falta acreditar para activarlo completo |
 | --- | --- | --- |
-| Marvel / Superhéroes | Alias de 2012, clases de 2012/2013 y objetos como Iron Man, Spider-Man y Capitán América | Escenarios de una misma edición, módulo de fiesta, poderes, objetivos y catálogos reales |
+| Marvel / Superhéroes | Alias de 2012, clases de 2012/2013 y objetos como Iron Man, Spider-Man y Capitán América | Verificar módulo de fiesta, poderes, objetivos y compras; el paquete de 2012 ya incluye salas y catálogos |
 | Music Jam | Clases de 2014 en `party1` a `party6`, entre otros recursos, y alias de 2012 | Conciertos, horarios, servicios de actuaciones, cookie y recompensas |
 | Frozen | Clases en ocho SWF de salas/cliente | Conjunto de escenarios, transformaciones, congelación, tareas y recompensas |
 | Muppets | Clases en varios SWF, incluidos `cove` y `dock` | Actuaciones, dependencias, tareas y protocolo específico |
-| Medieval | Alias de 2012 y clases de 2013 en `schoolsolo.swf` | Salas y módulo coherentes, transformaciones/objetos, tareas y recompensas |
+| Medieval | Alias de 2012 y clases de 2013 en `schoolsolo.swf` | Verificar módulo, transformaciones/objetos, tareas y recompensas; salas de 2012 recuperadas |
 | Prehistoria | Clases en siete SWF | Identificación de salas, excavaciones, dinosaurios, huevos y recompensas |
 | Teen Beach Movie | Clases en `party10.swf` | Conciertos, dependencias y protocolo de esa edición |
 | EPF / Operación Salsa Picante | Módulos y clases EPF de 2013 | Confirmar cada edición, navegación y objetivos con el servidor |
 | Navidad / Coins for Change | Alias de transformaciones y clases CFC | Tren, donaciones y conjunto de recursos de una misma edición |
-| Halloween | Alias de fantasmas y clases históricas | Salas, transformaciones, objetivos y recursos de una misma edición |
+| Halloween | Alias de fantasmas y clases históricas | Verificar transformaciones y objetivos; salas y recursos de 2012 recuperados |
 | Escuela, SoundStudio y fiestas automatizadas | Módulos incrustados en determinados SWF | Ajustes, dependencias, servicios y flujo completo |
 | Rockhopper, puffles, bromas, Día de la Tierra y misiones PSA | Alias de configuración | Comprobar qué archivo real ocupa cada ruta y completar la edición |
 
@@ -147,5 +152,6 @@ Las pruebas cubren publicaciones, persistencia tras reabrir el almacén,
 restauración, paquetes atómicos, conflictos entre moderadores, recursos
 ausentes, aislamiento por sala, rutas y archivos inválidos y el aviso de
 recarga. La [validación local con Docker](local-validation.md) comprobó también
-la entrada de una cuenta real desde Ruffle y la carga de la variante y música
-seleccionadas. Persisten las limitaciones heredadas recogidas en ese informe.
+la entrada de una cuenta real desde Ruffle y la carga de una variante y música
+seleccionadas en la implementación anterior. El estado de validación del catálogo
+y panel nuevos se documenta por separado en ese informe. Persisten las limitaciones heredadas recogidas en ese informe.

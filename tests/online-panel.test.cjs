@@ -35,18 +35,18 @@ test('roster renders rooms, igloo owners and unavailable worlds with literal use
     const rows=state.get('online-players').children;
     assert.equal(rows.length,2);
     assert.match(rows[0].children[2].textContent,/Town.*100/);
-    assert.match(rows[1].children[2].textContent,/Iglú de #7/);
+    assert.match(rows[1].children[2].textContent,/Igloo owned by #7/);
     assert.match(rows[1].children[0].textContent,/<script>/);
-    assert.match(state.get('online-servers').children[1].textContent,/Sin datos recientes/);
+    assert.match(state.get('online-servers').children[1].textContent,/No recent data/);
 });
 
 test('search and server filters narrow the roster without another fetch', async () => {
     const state=fixture(); await state.ready();
-    const search=state.get('online-search'); search.value='iglú'; search.listeners.input();
+    const search=state.get('online-search'); search.value='igloo'; search.listeners.input();
     assert.equal(state.get('online-players').children.length,1);
-    assert.match(state.get('online-count').textContent,/1 de 2/);
+    assert.match(state.get('online-count').textContent,/1 of 2/);
     const server=state.get('online-server'); server.value='3101'; server.listeners.change();
-    assert.match(state.get('online-count').textContent,/0 de 2/);
+    assert.match(state.get('online-count').textContent,/0 of 2/);
 });
 
 test('outages remove stale player rows and expired sessions show a login message', async () => {
@@ -54,5 +54,5 @@ test('outages remove stale player rows and expired sessions show a login message
     state.offline=true; await state.poll();
     assert.equal(state.get('online-players').children.length,0);
     state.offline=false; state.redirected=true; await state.poll();
-    assert.match(state.get('online-status').textContent,/sesión ha caducado/);
+    assert.match(state.get('online-status').textContent,/session expired/);
 });

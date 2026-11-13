@@ -1,45 +1,31 @@
-<!doctype html>
-<html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Salas y eventos · Wand</title><link rel="stylesheet" href="/manager/world-static/world.css"></head>
-<body><main>
-<nav><a href="/manager">← Panel</a><a href="/manager/online">Usuarios conectados</a><span>Vanilla · Revisión {{ revision }}</span></nav>
-<h1>Salas y eventos</h1>
-<p>Elige una decoración y su música. Los cambios se publican sin recompilar ni reiniciar servicios.</p>
-<p class="notice">El cliente carga esta configuración al arrancar. Los jugadores recibirán un aviso para recargar el juego; volverán a pasar por el login. No se fuerza su desconexión.</p>
-{% if saved %}<p class="success" role="status">Guardado. Las subidas quedan disponibles para seleccionar; los cambios aplicados se sirven a los nuevos arranques del juego.</p>{% endif %}
-{% if error %}<p role="alert">{{ error }}</p>{% endif %}
-<section><h2>Decorar una sala</h2>
-<form method="get"><label>Sala<select name="room">{% for id, r in rooms.items() %}<option value="{{ id }}" {% if id == room %}selected{% endif %}>{{ id }} · {{ r.display_name or r.name }} ({{ r.room_key }})</option>{% endfor %}</select></label><button>Ver sala</button></form>
-<p>Original: <code>{{ selected.path }}</code> · Música {{ selected.music_id }}. {{ overrides|length }} salas con cambios.</p>
-<form method="post">
-<input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="room" value="{{ room }}">
-<label>Decoración<select name="asset"><option value="original" {% if current.asset == 'original' %}selected{% endif %}>Original del repositorio</option>
-{% for a in variants %}{% set token = 'upload/' ~ a.digest ~ '.swf' %}<option value="{{ token }}" {% if current.asset == token %}selected{% endif %}>{{ a.event }} · {{ a.label }}</option>{% endfor %}</select></label>
-<label>Música<select name="music"><option value="0" {% if current.music_id|int == 0 %}selected{% endif %}>0 · Sin música</option>{% for id in music %}<option value="{{ id }}" {% if current.music_id|int == id %}selected{% endif %}>{{ id }}{% if id == selected.music_id|int %} · Original{% endif %}</option>{% endfor %}</select></label>
-<div class="actions"><button name="action" value="save">Aplicar a esta sala</button><button class="secondary" name="action" value="restore">Restaurar esta sala</button></div>
-</form></section>
-<section><h2>Añadir una variante</h2>
-<p>Sube el SWF de <strong>{{ selected.display_name or selected.name }}</strong> correspondiente al evento. Conserva el ID, las salidas y las dependencias del cliente Vanilla. Un SWF de otra sala puede romper sus interacciones.</p>
-<form method="post" enctype="multipart/form-data">
-<input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="action" value="upload"><input type="hidden" name="room" value="{{ room }}">
-<label>Paquete o evento<input name="event" required maxlength="80" placeholder="Ej.: Marvel 2013"></label>
-<label>Nombre de la variante<input name="label" required maxlength="80" placeholder="Ej.: Ciudad decorada"></label>
-<label>Archivo de sala (.swf, hasta 16 MiB)<input type="file" name="swf" accept=".swf" required></label>
-<label>Música del paquete<select name="music"><option value="0">0 · Sin música</option>{% for id in music %}<option value="{{ id }}" {% if id == selected.music_id|int %}selected{% endif %}>{{ id }}</option>{% endfor %}</select></label>
-<button>Guardar variante sin activarla</button></form>
+{% extends 'manager/base.html' %}{% set manager_section = 'world' %}
+{% block title %}Rooms & events{% endblock %}{% block head %}<script defer src="/manager/world-static/world-controls.js"></script>{% endblock %}
+{% block content %}
+<div class="page-heading"><div><h1>Rooms & events</h1><p>Browse historical designs, preview a room, or activate an event resource package.</p></div><span class="revision">Revision {{ revision }}</span></div>
+<p class="notice">Changes are published immediately. Players need to reload the game to receive the new configuration. No server restart is needed.</p>
+{% if saved %}<p class="success" role="status">Saved successfully. Published changes will load the next time players start the game.</p>{% endif %}
+{% if error %}<p class="notice" role="alert">{{ error }}</p>{% endif %}
+{% if active_event %}<p class="active-event">Active resource package: <strong>{{ active_event.name }}</strong>. Archived catalogs are in English.</p>{% endif %}
+<section class="room-workspace">
+<div class="room-editor"><h2>Room design</h2>
+<form method="get"><label>Room<div class="input-action"><select name="room">{% for id, r in rooms.items() %}<option value="{{ id }}" {% if id == room %}selected{% endif %}>{{ r.display_name or r.name }} · {{ r.room_key }} (#{{ id }})</option>{% endfor %}</select><button class="secondary">Open</button></div></label></form>
+<form method="post" id="room-design-form"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="room" value="{{ room }}">
+<label>Design<select name="asset"><option value="original" {% if current.asset == 'original' %}selected{% endif %}>Original room</option>{% for a in variants %}<option value="{{ a.token }}" data-music="{{ a.music }}" {% if current.variant|default(current.asset) == a.token %}selected{% endif %}>{{ a.event }}{% if a.origin != 'catalog' %} · {{ a.label }}{% endif %}</option>{% endfor %}</select></label>
+<p class="field-help">{{ variants|length }} designs available for this room.{% if not variants %} Choose another room or upload a custom design below.{% endif %}</p>
+<label>Music<select name="music"><option value="0" {% if current.music_id|int == 0 %}selected{% endif %}>No music</option>{% for id in music %}<option value="{{ id }}" {% if current.music_id|int == id %}selected{% endif %}>Track {{ id }}{% if id == selected.music_id|int %} · Original{% endif %}</option>{% endfor %}</select></label>
+<div class="actions"><button name="action" value="save">Apply room design</button><button class="secondary" name="action" value="restore">Restore room</button></div></form>
+<p class="field-help">Original file: {{ selected.path }}. Choosing a historical design proposes its documented music.</p></div>
+<div class="room-preview-panel"><div class="preview-heading"><h2>Room preview</h2><button id="preview-room" type="button" class="secondary">Load preview</button></div><div class="preview-stage"><iframe id="room-preview-frame" title="Selected room design preview" hidden></iframe><div id="preview-empty"><strong>See the room before applying it</strong><p>Select a design and load its preview.</p></div></div><p class="field-help" id="preview-description">Previewing does not change the active room or event. Interactive elements may require the full game.</p></div>
 </section>
-<section><h2>Paquetes de decoración</h2>
-<p>Un paquete aplica sus salas y músicas de una vez y sustituye todos los cambios anteriores. No activa misiones, poderes, catálogos ni recompensas. Solo se puede aplicar cuando contiene una variante por sala.</p>
-{% for event in events %}<form method="post" class="package"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="action" value="event"><input type="hidden" name="event" value="{{ event.name }}"><input type="hidden" name="room" value="{{ room }}">
-<strong>{{ event.name }}</strong> · {{ event.count }} variantes
-{% if event.valid %}<button>Aplicar decoración y música</button>{% else %}<span>Hay variantes duplicadas para una sala: usa nombres de paquete distintos.</span>{% endif %}</form>
-{% else %}<p>Todavía no hay paquetes subidos. Las referencias históricas del repositorio no se presentan como eventos completos.</p>{% endfor %}
-<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="action" value="restore_all"><input type="hidden" name="room" value="{{ room }}"><button class="secondary">Restaurar todas las salas y músicas</button></form>
+<section><h2>Event library</h2><p>{{ catalogue|length }} preinstalled packages. The listed files are included; no uploads are required.</p>
+<p class="notice">Activating a package applies all its recovered rooms, music and companion files together. Event powers, transformations, missions and special rewards are not enabled unless explicitly marked as supported.</p>
+<div class="event-grid">{% for preset in catalogue %}<article class="event-card"><div class="event-card-heading"><h3>{{ preset.name }}</h3><span class="badge-partial">Resource package</span></div><p>{{ preset.rooms|length }} rooms / {{ preset.resources|length }} companion files</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="room" value="{{ room }}"><input type="hidden" name="action" value="catalog"><input type="hidden" name="event" value="{{ preset.id }}"><button>Activate {{ preset.name }}</button></form>
+<details><summary>Included content & limitations</summary><p><strong>Rooms:</strong> {% for item in preset.rooms %}{{ item.room_key }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% if preset.resources %}<p><strong>Companion files:</strong> {% for item in preset.resources %}<code>{{ item.path }}</code>{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}<ul>{% for missing in preset.missing %}<li>{{ missing }}</li>{% endfor %}</ul><a href="{{ preset.source }}" target="_blank" rel="noopener">Archived source</a></details></article>{% endfor %}</div>
+<form method="post" class="restore-all"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="action" value="restore_all"><input type="hidden" name="room" value="{{ room }}"><button class="secondary">Restore all original rooms & resources</button></form>
 </section>
-<section><h2>Eventos identificados en los archivos</h2>
-<p>Auditoría estática de recursos, no una prueba de juego. Una referencia, un traje o una sala aislada no certifican que el evento esté completo.</p>
-{% for event in audit.events %}<details><summary>{{ event.name }} · {{ event.status }}</summary><p>{{ event.notes }}</p><ul>{% for evidence in event.evidence %}<li><code>{{ evidence }}</code></li>{% endfor %}</ul><p><strong>Para activarlo completo:</strong> {{ event.missing }}</p></details>{% endfor %}
-</section>
-<section><h2>Últimos cambios publicados</h2><div class="table-wrap"><table><thead><tr><th>Fecha UTC</th><th>Moderador</th><th>Acción</th><th>Revisión</th></tr></thead><tbody>{% for row in history %}<tr><td>{{ row.at }}</td><td>{{ row.actor }}</td><td>{{ row.action }}</td><td>{{ row.revision }}</td></tr>{% else %}<tr><td colspan="4">Sin cambios.</td></tr>{% endfor %}</tbody></table></div></section>
-</main></body></html>
+<details class="advanced"><summary>Upload custom designs</summary><section><h2>Add a custom design</h2><p>Optional: add a compatible SWF for {{ selected.display_name or selected.name }}. Uploading does not activate it.</p>
+<form method="post" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="action" value="upload"><input type="hidden" name="room" value="{{ room }}"><label>Package name<input name="event" required maxlength="80" placeholder="Your custom event"></label><label>Design name<input name="label" required maxlength="80" placeholder="Room design"></label><label>Room SWF · maximum 16 MiB<input type="file" name="swf" accept=".swf" required></label><label>Package music<select name="music"><option value="0">No music</option>{% for id in music %}<option value="{{ id }}" {% if id == selected.music_id|int %}selected{% endif %}>Track {{ id }}</option>{% endfor %}</select></label><button>Save custom design</button></form>
+{% for event in events %}<form method="post" class="package"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="revision" value="{{ revision }}"><input type="hidden" name="action" value="event"><input type="hidden" name="event" value="{{ event.name }}"><input type="hidden" name="room" value="{{ room }}"><strong>{{ event.name }}</strong> · {{ event.count }} designs{% if event.valid %}<button>Apply custom package</button>{% else %}<p>This package contains multiple designs for one room. Use separate package names.</p>{% endif %}</form>{% endfor %}</section></details>
+<section><h2>Recent publications</h2><div class="table-wrap"><table><thead><tr><th>Time (UTC)</th><th>Moderator</th><th>Action</th><th>Revision</th></tr></thead><tbody>{% for row in history %}<tr><td>{{ row.at }}</td><td>{{ row.actor }}</td><td>{{ row.action }}</td><td>{{ row.revision }}</td></tr>{% else %}<tr><td colspan="4">No changes have been published.</td></tr>{% endfor %}</tbody></table></div></section>
+{% endblock %}

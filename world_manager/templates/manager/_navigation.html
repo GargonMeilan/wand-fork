@@ -1,0 +1,5 @@
+<header class="manager-header"><a class="manager-brand" href="/manager"><span class="brand-mark" aria-hidden="true">W</span><span>Wand <small>Server manager</small></span></a>
+<nav class="manager-nav" aria-label="Manager navigation">
+{% for key, href, label in [('overview','/manager','Overview'),('world','/manager/world','Rooms & events'),('online','/manager/online','Online players'),('manage','/manager/manage','Players'),('verify','/manager/verify/en','Username review')] %}
+<a href="{{ href }}" {% if manager_section|default('') == key %}aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
+</nav><details class="account-menu"><summary>Account</summary><div><a href="/manager/password">Change password</a><a href="/manager/email">Change email</a><a href="/manager/logout">Sign out</a></div></details></header>

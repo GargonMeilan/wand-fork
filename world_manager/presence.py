@@ -31,7 +31,7 @@ def snapshot(server):
         players.append({"id": player.id, "username": player.username, "nickname": player.nickname,
                         "client": "Legacy" if player.is_legacy_client else "Vanilla",
                         "room_id": room.id if room is not None else None,
-                        "room_name": room.name if room is not None else "Cambiando de sala",
+                        "room_name": room.name if room is not None else "Changing rooms",
                         "room_kind": kind, "owner_id": owner,
                         "seconds_online": max(0, int((datetime.now() - player.login_timestamp).total_seconds()))
                         if player.login_timestamp else 0})

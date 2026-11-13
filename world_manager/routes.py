@@ -33,12 +33,12 @@ def moderator(handler):
         user = await Penguin.query.where(
             func.lower(Penguin.username) == request.ctx.session.get("username")).gino.first()
         if user is None or not user.moderator:
-            return response.text("Se requiere una cuenta moderadora.", status=403)
+            return response.text("A moderator account is required.", status=403)
         if request.method == "POST":
             expected = request.ctx.session.get("world_csrf", "")
             supplied = request.form.get("csrf", "")
             if not expected or not isinstance(supplied, str) or not hmac.compare_digest(expected.encode(), supplied.encode()):
-                return response.text("Sesión caducada. Recarga el panel.", status=403)
+                return response.text("Your session expired. Reload the manager.", status=403)
         return await handler(request, *args, **kwargs)
     return guarded
 
@@ -47,6 +47,32 @@ def moderator(handler):
 @moderator
 async def panel(request):
     return render_panel(request)
+
+
+@world.get("/manager/world/preview")
+@moderator
+async def preview(request):
+    room = request.args.get("room", "100")
+    token = request.args.get("asset", "original")
+    try:
+        store().selection(room, token, 0)
+    except ValueError as exc:
+        return response.text(str(exc), status=400)
+    source = "/manager/world/preview-file?" + urlencode({"room": room, "asset": token})
+    return response.html(env.get_template("manager/preview.html").render(
+        room_name=store().baseline()[room]["name"], source=source), headers={"Cache-Control": "no-store"})
+
+
+@world.get("/manager/world/preview-file")
+@moderator
+async def preview_file(request):
+    room = request.args.get("room", "100")
+    try:
+        selection = store().selection(room, request.args.get("asset", "original"), 0)
+        path = store().asset_path(*selection["asset"].split("/", 1))
+    except ValueError as exc:
+        return response.text(str(exc), status=400)
+    return await response.file(str(path), mime_type="application/x-shockwave-flash", headers={"Cache-Control": "no-store"})
 
 
 @world.get("/manager/online")
@@ -62,7 +88,7 @@ async def online_data(request):
     try:
         data = await read_presence(app.ctx.redis)
     except Exception:
-        return response.json({"error": "No se pudo consultar la presencia. Se volverá a intentar."},
+        return response.json({"error": "Presence could not be loaded. Retrying automatically."},
                              status=503, headers={"Cache-Control": "no-store"})
     return response.json(data, headers={"Cache-Control": "no-store"})
 
@@ -71,13 +97,14 @@ def render_panel(request, error="", status=200):
     rooms = store().baseline()
     room = request.args.get("room", "100")
     if room not in rooms:
-        return response.text("Sala desconocida.", status=404)
+        return response.text("Unknown room.", status=404)
     csrf = request.ctx.session.setdefault("world_csrf", secrets.token_urlsafe(32))
     revision, overrides = store().snapshot()
     assets = store().assets()
     groups = {}
     for asset in assets:
-        groups.setdefault(asset["event"], []).append(asset)
+        if asset.get("origin") == "upload":
+            groups.setdefault(asset["event"], []).append(asset)
     events = [{"name": name, "count": len(values),
                "valid": len({a['room'] for a in values}) == len(values)}
               for name, values in sorted(groups.items())]
@@ -91,6 +118,7 @@ def render_panel(request, error="", status=200):
                            variants=[a for a in assets if a["room"] == room],
                            music=store().music(), csrf=csrf, revision=revision,
                            overrides=overrides, events=events, audit=audit,
+                           catalogue=store().catalogue.events, active_event=store().active_event(),
                            history=store().history(), error=error,
                            saved=request.args.get("saved") == "1")
     return response.html(html, status=status, headers={"Cache-Control": "no-store"})
@@ -105,7 +133,7 @@ async def update(request):
         if action == "upload":
             upload = request.files.get("swf")
             if upload is None or len(upload.body) > MAX_UPLOAD:
-                raise ValueError("Selecciona un archivo SWF de hasta 16 MiB.")
+                raise ValueError("Select a SWF file up to 16 MiB.")
             store().upload(room, upload.body, request.form.get("label", ""),
                            request.form.get("event", ""), request.form.get("music", ""))
         else:
@@ -166,6 +194,16 @@ async def config_bundle(request, language):
         return response.text("Not found", status=404)
     return response.raw(body, content_type="application/octet-stream",
                         headers={"Cache-Control": "no-store"})
+
+
+@world.get("/world/event-resource/<scope>/<language>/<relative:path>")
+async def event_resource(request, scope, language, relative):
+    try:
+        path = store().resource_file(scope, language, relative)
+    except ValueError:
+        return response.text("Not found", status=404)
+    return await response.file(str(path), mime_type="application/x-shockwave-flash",
+                               headers={"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"})
 
 
 def install():
